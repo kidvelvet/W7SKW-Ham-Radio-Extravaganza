@@ -91,7 +91,7 @@ folder: /docs → Save.** It goes live about a minute later.
 
 ## Rebuilding
 
-`docs/index.html` is generated — edit `build/index.template.html`, not the output.
+Everything in `docs/` is generated — edit the sources in `build/`, not the output.
 
 ```bash
 python3 build/extract.py   # re-reads the pools, writes build/pools.json + figures
@@ -119,21 +119,46 @@ Then open <http://localhost:8734>.
 ## Layout
 
 ```
-docs/                    the published site
-  index.html             the app (476 KB, all three pools baked in)
-  sw.js                  generated service worker (offline cache)
+docs/                    the published site (all generated - do not edit)
+  index.html             markup shell (8 KB)
+  app.css                stylesheet (12 KB)
+  app.js                 app logic + all three pools baked in (460 KB)
+  sw.js                  service worker (offline cache)
   manifest.webmanifest   name, icon, standalone display
   icons/                 app icons
   figures/               14 schematic PNGs
 
 build/
-  index.template.html    editable source for the app
+  shell.html             editable markup
+  app.css                editable stylesheet
+  app.js.template        editable app logic (__DATA__ is the injection point)
   extract.py             parses + validates the three pools
-  build.py               generates docs/index.html and docs/sw.js
+  build.py               assembles docs/ and generates sw.js
   pools.json             normalized question data
 
 pools/                   original question pool files
 ```
+
+### Why CSS and JS are separate files
+
+The page runs under a strict Content-Security-Policy with **no `unsafe-inline`**:
+
+```
+default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self';
+manifest-src 'self'; connect-src 'self'; worker-src 'self'; child-src 'self';
+base-uri 'none'; form-action 'none'
+```
+
+That only holds if nothing is inlined, so the markup carries **no `onclick` and no
+`style` attributes**. Instead:
+
+- every control declares `data-act` (plus optional `data-arg`) and one delegated
+  listener dispatches through an `ACTIONS` map in `app.js`
+- dynamic styling (license tint, progress bars) goes through the CSSOM
+  (`el.style.setProperty`), which CSP does not restrict
+
+`build.py` asserts these invariants and **fails the build** if `unsafe-inline`,
+an `onclick=`, or a `style="` reappears.
 
 ---
 

@@ -1,26 +1,45 @@
-"""Inject the pool data into the template and generate a service worker
-whose cache name is derived from the content, so every rebuild self-invalidates."""
+"""Assemble docs/ from the shell, stylesheet and script, then generate a service
+worker whose cache name is derived from the content, so every rebuild
+self-invalidates.
+
+CSS and JS are emitted as separate files (not inlined) so the page's
+Content-Security-Policy can use script-src/style-src 'self' with no
+'unsafe-inline'."""
 import hashlib, pathlib
 
 root = pathlib.Path('.')
 app  = root/'docs'
-tpl  = (root/'build/index.template.html').read_text(encoding='utf-8')
-data = (root/'build/pools.json').read_text(encoding='utf-8')
+app.mkdir(exist_ok=True)
 
-assert tpl.count('__DATA__') == 1, 'expected exactly one __DATA__ placeholder'
-# A literal </script> inside the JSON would close the tag early.
-data = data.replace('</', '<\\/')
-html = tpl.replace('__DATA__', data)
-(app/'index.html').write_text(html, encoding='utf-8')
+shell = (root/'build/shell.html').read_text(encoding='utf-8')
+css   = (root/'build/app.css').read_text(encoding='utf-8')
+js    = (root/'build/app.js.template').read_text(encoding='utf-8')
+data  = (root/'build/pools.json').read_text(encoding='utf-8')
+
+assert js.count('__DATA__') == 1, 'expected exactly one __DATA__ placeholder'
+
+# Guard the CSP posture: check the directive itself, not prose in the comments.
+import re as _re
+_csp = _re.search(r'Content-Security-Policy"\s+content="([^"]+)"', shell)
+assert _csp, 'CSP meta tag missing from shell.html'
+assert 'unsafe-inline' not in _csp.group(1), 'CSP regression: unsafe-inline is back'
+assert 'unsafe-eval'   not in _csp.group(1), 'CSP regression: unsafe-eval present'
+for bad in ('onclick=', 'style="'):
+    assert bad not in shell, f'CSP regression: {bad} found in shell.html'
+    assert bad not in js,    f'CSP regression: {bad} found in app.js'
+
+js = js.replace('__DATA__', data)
+(app/'app.js').write_text(js, encoding='utf-8')
+(app/'app.css').write_text(css, encoding='utf-8')
+(app/'index.html').write_text(shell, encoding='utf-8')
 
 # Every static file the app needs offline.
-assets = ['./', './index.html', './manifest.webmanifest']
+assets = ['./', './index.html', './app.css', './app.js', './manifest.webmanifest']
 assets += sorted('./icons/' + p.name for p in (app/'icons').glob('*.png'))
 assets += sorted('./figures/' + p.name for p in (app/'figures').glob('*.png'))
 
 # Cache name tracks content: bumping it is no longer something to remember.
 h = hashlib.sha256()
-h.update(html.encode())
 for rel in assets:
     p = app/rel[2:]
     if p.is_file(): h.update(p.read_bytes())
@@ -62,8 +81,7 @@ self.addEventListener('fetch', e => {{
 '''
 (app/'sw.js').write_text(sw, encoding='utf-8')
 
-total = sum(f.stat().st_size for f in app.rglob('*') if f.is_file())
-print(f'index.html   {len(html.encode())/1024:6.0f} KB')
-print(f'assets       {len(assets)} files listed in sw.js')
-print(f'cache        w7skw-{ver}')
-print(f'app total    {total/1024:6.0f} KB')
+kb = lambda p: (app/p).stat().st_size/1024
+print(f'index.html {kb("index.html"):7.1f} KB   app.css {kb("app.css"):6.1f} KB   app.js {kb("app.js"):7.1f} KB')
+print(f'assets     {len(assets)} files listed in sw.js')
+print(f'cache      w7skw-{ver}')

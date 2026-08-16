@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<!-- "default" keeps the status bar legible in BOTH light and dark appearance;
+     black-translucent would put white text over our white light-mode header. -->
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="W7SKW Study">
+<meta name="theme-color" content="#0a1628">
+<!-- No 'unsafe-inline' anywhere: the CSS and JS are external files, every handler
+     is bound with addEventListener, and no element carries a style attribute.
+     Dynamic styling goes through the CSSOM, which CSP does not restrict. -->
+<meta http-equiv="Content-Security-Policy" content="
+  default-src 'none';
+  script-src 'self';
+  style-src 'self';
+  img-src 'self';
+  manifest-src 'self';
+  connect-src 'self';
+  worker-src 'self';
+  child-src 'self';
+  base-uri 'none';
+  form-action 'none'">
+<title>W7SKW Ham Radio Study Extravaganza</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="icons/icon-180.png">
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+
+<!-- ============ HOME : choose a license ============ -->
+<section id="s-home" class="screen on">
+  <div class="body">
+    <div class="hero safe-t">
+      <img class="mark" src="icons/icon-192.png" alt="">
+      <div class="call">W7SKW</div>
+      <h1>Ham Radio Study<br>Extravaganza</h1>
+      <p>Pick a license class to study</p>
+    </div>
+    <div class="stack" id="poolList"></div>
+    <p class="homefoot" id="homeFoot"></p>
+  </div>
+</section>
+
+<!-- ============ MODE PICKER (per license) ============ -->
+<section id="s-modes" class="screen">
+  <div class="bar">
+    <div class="side"><button class="link" data-act="home">&lsaquo; Licenses</button></div>
+    <h2 id="modeTitle">&mdash;</h2><div class="side r"></div>
+  </div>
+  <div class="body">
+    <div class="hero compact">
+      <h1 id="modeName" class="md">&mdash;</h1>
+      <p id="modeSub">&mdash;</p>
+    </div>
+    <div class="stack">
+      <button class="tile" data-act="studyPick">
+        <span class="ico sym">&#9782;</span>
+        <span class="tx"><b>Study Mode</b><span id="mStudySub">Flashcards by section</span></span>
+        <span class="chev">&rsaquo;</span>
+      </button>
+      <button class="tile" data-act="startExam">
+        <span class="ico sym">&#9636;</span>
+        <span class="tx"><b>Exam Mode</b><span id="mExamSub">&mdash;</span></span>
+        <span class="chev">&rsaquo;</span>
+      </button>
+      <button class="tile" data-act="history">
+        <span class="ico sym">&#9201;</span>
+        <span class="tx"><b>Exam History</b><span id="mHistSub">No exams taken yet</span></span>
+        <span class="chev">&rsaquo;</span>
+      </button>
+    </div>
+    <div class="statrow">
+      <div class="stat"><b id="stTaken">0</b><span>Exams</span></div>
+      <div class="stat"><b id="stBest">&mdash;</b><span>Best</span></div>
+      <div class="stat"><b id="stAvg">&mdash;</b><span>Average</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ STUDY PICKER ============ -->
+<section id="s-studyPick" class="screen">
+  <div class="bar">
+    <div class="side"><button class="link" data-act="modes">&lsaquo; Back</button></div>
+    <h2 id="studyPickTitle">Study Mode</h2><div class="side r"></div>
+  </div>
+  <div class="body">
+    <div class="toggle top" data-act="shuffle">
+      <span class="nm"><b>Shuffle questions</b><span>Random order instead of pool order</span></span>
+      <span class="sw" id="swStudy"><i></i></span>
+    </div>
+    <h3 class="sec">Choose a section</h3>
+    <div class="pad" id="subList"></div>
+    <div class="sp26"></div>
+  </div>
+</section>
+
+<!-- ============ STUDY ============ -->
+<section id="s-study" class="screen">
+  <div class="bar">
+    <div class="side"><button class="link" data-act="studyPick">&lsaquo; Sections</button></div>
+    <h2 id="studyTitle">Study</h2>
+    <div class="side r"><span class="chip" id="studyCount">1 / 1</span></div>
+  </div>
+  <div class="prog"><i id="studyBar"></i></div>
+  <div class="body" id="studyBody"></div>
+  <div class="foot">
+    <button class="btn sec" id="sPrev" data-act="studyPrev">&larr; Prev</button>
+    <button class="btn sec" data-act="reveal">Show Answer</button>
+    <button class="btn" id="sNext" data-act="studyNext">Next &rarr;</button>
+  </div>
+</section>
+
+<!-- ============ EXAM ============ -->
+<section id="s-exam" class="screen">
+  <div class="bar">
+    <div class="side"><button class="link" data-act="quit">Quit</button></div>
+    <h2 id="examTitle">&mdash;</h2>
+    <div class="side r"><button class="link" data-act="review">Review</button></div>
+  </div>
+  <div class="prog"><i id="examBar"></i></div>
+  <div class="body" id="examBody"></div>
+  <div class="foot">
+    <button class="btn sec" id="ePrev" data-act="examPrev">&larr; Prev</button>
+    <button class="btn sec" data-act="skip">Skip</button>
+    <button class="btn" id="eNext" data-act="examNext">Next &rarr;</button>
+  </div>
+</section>
+
+<!-- ============ REVIEW ============ -->
+<section id="s-review" class="screen">
+  <div class="bar">
+    <div class="side"><button class="link" data-act="exam">&lsaquo; Exam</button></div>
+    <h2>Review Answers</h2><div class="side r"></div>
+  </div>
+  <div class="body">
+    <div id="revNote"></div>
+    <h3 class="sec">Tap any question to go to it</h3>
+    <div class="grid" id="revGrid"></div>
+    <div class="legend"><span><i class="a"></i>Answered</span><span><i class="b"></i>Skipped</span></div>
+    <h3 class="sec">Your answers</h3>
+    <div class="rows" id="revList"></div>
+    <div class="sp20"></div>
+  </div>
+  <div class="foot"><button class="btn" data-act="finish">Finish Exam</button></div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section id="s-results" class="screen">
+  <div class="bar">
+    <div class="side"><button class="link" data-act="modes">Done</button></div>
+    <h2 id="resTitle">Exam Results</h2><div class="side r"></div>
+  </div>
+  <div class="body">
+    <div class="score">
+      <div class="ring">
+        <svg width="150" height="150" viewBox="0 0 150 150">
+          <circle cx="75" cy="75" r="64" fill="none" stroke="var(--line)" stroke-width="13"/>
+          <circle id="ringArc" cx="75" cy="75" r="64" fill="none" stroke="var(--good)" stroke-width="13"
+                  stroke-linecap="round" stroke-dasharray="402" stroke-dashoffset="402"/>
+        </svg>
+        <div class="val"><b id="rScore">0</b><span id="rOf"></span></div>
+      </div>
+      <h2 class="verdict" id="rVerdict">&mdash;</h2>
+      <p id="rSub"></p>
+    </div>
+    <h3 class="sec">By section</h3>
+    <div class="rows" id="rBySub"></div>
+    <h3 class="sec" id="missHdr">Questions missed</h3>
+    <div class="rows" id="rMissed"></div>
+    <div class="pad pb26">
+      <button class="btn" data-act="startExam">Take Another Exam</button>
+      <div class="sp9"></div>
+      <button class="btn sec" data-act="modes">Back</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HISTORY ============ -->
+<section id="s-history" class="screen">
+  <div class="bar">
+    <div class="side"><button class="link" data-act="modes">&lsaquo; Back</button></div>
+    <h2 id="histTitle">Exam History</h2>
+    <div class="side r"><button class="link" id="clrBtn" data-act="clearHist">Clear</button></div>
+  </div>
+  <div class="body"><div class="rows pt16" id="histList"></div></div>
+</section>
+
+<div class="scrim" id="scrim">
+  <div class="modal">
+    <h3 id="mTitle"></h3><p id="mBody"></p>
+    <button class="btn" id="mOk"></button>
+    <button class="btn ghost" id="mNo"></button>
+  </div>
+</div>
+<div class="zoom" id="zoom" data-act="closeZoom"><img id="zoomImg" src="" alt=""></div>
+
+<script src="app.js"></script>
+</body>
+</html>

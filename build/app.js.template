@@ -1,0 +1,451 @@
+"use strict";
+const DATA = __DATA__;
+const L = ['A','B','C','D'];
+
+/* current pool */
+let P = null;              // active pool object
+let byId = {};             // id -> question, for the active pool
+
+/* ---------- storage (namespaced per license) ---------- */
+const SET_KEY = 'htx.settings';
+const histKey = k => 'htx.hist.' + k;
+const runKey  = k => 'htx.run.'  + k;
+const load = (k,d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch(e){ return d; } };
+const save = (k,v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch(e){} };
+const drop = k => { try { localStorage.removeItem(k); } catch(e){} };
+let settings = Object.assign({shuffleStudy:false, shuffleAnswers:true}, load(SET_KEY,{}));
+
+/* ---------- helpers ---------- */
+const $ = s => document.querySelector(s);
+const ESC_MAP = {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'};
+const esc = s => String(s).replace(/[&<>"']/g, c => ESC_MAP[c]);
+const num = (v, d) => Number.isFinite(+v) ? +v : d;   // for anything read back from storage
+function shuffled(a){ a = a.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+const isDark = () => window.matchMedia('(prefers-color-scheme:dark)').matches;
+
+let curScreen = 'home';
+function go(s){
+  curScreen = s;
+  document.querySelectorAll('.screen').forEach(el => el.classList.remove('on'));
+  $('#s-'+s).classList.add('on');
+  const b = $('#s-'+s+' .body'); if(b) b.scrollTop = 0;
+  applyAccent();                       // after curScreen is set, so home resets correctly
+  if(s==='home')    paintHome();
+  if(s==='modes')   paintModes();
+  if(s==='history') paintHistory();
+}
+
+/* ---------- accent follows the selected license ---------- */
+function applyAccent(){
+  const el = document.documentElement;
+  // Home is license-agnostic, so it always shows the neutral default.
+  if(!P || curScreen === 'home') el.style.removeProperty('--accent');
+  else el.style.setProperty('--accent', isDark() ? P.accentDark : P.accent);
+}
+window.matchMedia('(prefers-color-scheme:dark)').addEventListener('change', applyAccent);
+
+/* Index each pool once, on first use, instead of re-scanning the question array.
+   Without this, building one Extra exam filtered 599 questions 50 times. */
+function indexPool(p){
+  if(p._idx) return p._idx;
+  const byId = {}, byGroup = {}, bySub = {};
+  p.questions.forEach(q => {
+    byId[q.id] = q;
+    (byGroup[q.g] || (byGroup[q.g] = [])).push(q);
+    (bySub[q.s]   || (bySub[q.s]   = [])).push(q);
+  });
+  return (p._idx = {byId, byGroup, bySub});
+}
+function selectPool(key){
+  P = DATA.pools[key];
+  byId = indexPool(P).byId;
+  go('modes');                         // go() applies the license accent
+}
+
+/* ---------- modal ---------- */
+let mYes = null, mNoFn = null;
+function modal(title, body, okTxt, noTxt, onOk, onNo){
+  $('#mTitle').textContent = title;
+  $('#mBody').innerHTML = body;
+  $('#mOk').textContent = okTxt;
+  $('#mNo').textContent = noTxt;
+  mYes = onOk; mNoFn = onNo;
+  $('#scrim').classList.add('on');
+}
+function closeModal(){ $('#scrim').classList.remove('on'); }
+$('#mOk').addEventListener('click', () => { closeModal(); mYes && mYes(); });
+$('#mNo').addEventListener('click', () => { closeModal(); mNoFn && mNoFn(); });
+function zoomFig(src){ $('#zoomImg').src = src; $('#zoom').classList.add('on'); }
+
+/* ---------- shared question rendering ---------- */
+function figHTML(q){
+  const src = q.f && P.figures[q.f];
+  if(!src) return '';
+  return '<img class="fig" src="'+esc(src)+'" alt="Figure '+esc(q.f)+'" loading="lazy" '+
+         'data-act="zoom" data-arg="'+esc(src)+'">';
+}
+function optsHTML(q, order, o){
+  let h = '<div class="opts">';
+  order.forEach((orig, pos) => {
+    const cls = o.cls ? o.cls(orig, pos) : '';
+    const cb  = o.act ? ' data-act="'+o.act+'" data-arg="'+orig+'"' : '';
+    h += '<button class="opt '+cls+'"'+cb+'><span class="ltr">'+L[pos]+'</span><span>'+esc(q.a[orig])+'</span></button>';
+  });
+  return h + '</div>';
+}
+function statsFor(key){
+  const h = load(histKey(key), []);
+  if(!Array.isArray(h) || !h.length) return null;
+  const scores = h.map(x => num(x && x.score, 0));
+  return {n:h.length, best:Math.max(...scores),
+          avg:Math.round(scores.reduce((s,v)=>s+v,0)/scores.length),
+          passed:h.filter(x=>x && x.pass).length};
+}
+
+/* ================= HOME : license picker ================= */
+function paintHome(){
+  const dark = isDark();
+  $('#poolList').innerHTML = DATA.order.map(k => {
+    const p = DATA.pools[k], st = statsFor(k);
+    const tint = dark ? p.accentDark : p.accent;
+    return '<button class="tile" data-act="pool" data-arg="'+esc(k)+'" data-tint="'+esc(tint)+'">'+
+      '<span class="ico">'+esc(p.short)+'</span>'+
+      '<span class="tx"><b>'+esc(p.name)+'</b><span>'+p.element+' &middot; '+p.questions.length+
+        ' questions &middot; '+p.examLen+'-question exam</span></span>'+
+      (st ? '<span class="badge">'+st.best+'/'+p.examLen+'</span>' : '')+
+      '<span class="chev">&rsaquo;</span></button>';
+  }).join('');
+  // CSP forbids style attributes, so per-license tints are applied via the CSSOM.
+  $('#poolList').querySelectorAll('[data-tint]')
+    .forEach(el => el.style.setProperty('--tint', el.dataset.tint));
+  const total = DATA.order.reduce((s,k)=>s+DATA.pools[k].questions.length,0);
+  $('#homeFoot').textContent = total+' questions across three license classes';
+}
+
+/* ================= MODES ================= */
+function paintModes(){
+  $('#modeTitle').textContent = P.name;
+  $('#modeName').textContent  = P.name;
+  $('#modeSub').innerHTML     = P.element+' &middot; '+P.valid+' pool &middot; '+P.questions.length+' questions';
+  $('#mStudySub').textContent = 'Flashcards by section — '+P.questions.length+' questions';
+  $('#mExamSub').textContent  = P.examLen+' questions, one per group — pass at '+P.pass;
+  const st = statsFor(P.key);
+  $('#stTaken').textContent = st ? st.n : 0;
+  $('#stBest').textContent  = st ? st.best+'/'+P.examLen : '—';
+  $('#stAvg').textContent   = st ? st.avg +'/'+P.examLen : '—';
+  $('#mHistSub').textContent = st ? st.n+' exam'+(st.n>1?'s':'')+' · '+st.passed+' passed'
+                                  : 'No exams taken yet';
+  $('#studyPickTitle').textContent = P.name+' · Study';
+  $('#histTitle').textContent      = P.name+' History';
+  $('#resTitle').textContent       = P.name+' Results';
+  paintSubList();
+}
+
+/* ================= STUDY ================= */
+let deck = [], di = 0, revealed = false, studyLabel = '';
+function paintSubList(){
+  let h = '<button class="pick" data-act="section" data-arg="ALL"><span class="tag">ALL</span>'+
+          '<span class="nm"><b>Entire pool</b><span>All '+P.questions.length+' questions</span></span>'+
+          '<span class="chev mut">›</span></button>';
+  const bySub = indexPool(P).bySub;
+  Object.keys(P.subelements).sort().forEach(k => {
+    const n = (bySub[k] || []).length;
+    h += '<button class="pick" data-act="section" data-arg="'+esc(k)+'"><span class="tag">'+k+'</span>'+
+         '<span class="nm"><b>'+esc(P.subelements[k])+'</b><span>'+n+' questions</span></span>'+
+         '<span class="chev mut">›</span></button>';
+  });
+  $('#subList').innerHTML = h;
+  $('#swStudy').classList.toggle('on', settings.shuffleStudy);
+}
+function toggleShuffleStudy(){
+  settings.shuffleStudy = !settings.shuffleStudy;
+  save(SET_KEY, settings);
+  $('#swStudy').classList.toggle('on', settings.shuffleStudy);
+}
+function startStudy(sub){
+  // Unshuffled decks alias the pool arrays - read-only, never mutate `deck`.
+  deck = sub==='ALL' ? P.questions : (indexPool(P).bySub[sub] || []);
+  if(settings.shuffleStudy) deck = shuffled(deck);
+  di = 0; revealed = false;
+  studyLabel = sub==='ALL' ? P.name+' · all' : sub+' · '+P.subelements[sub];
+  go('study'); paintStudy();
+}
+function paintStudy(){
+  const q = deck[di];
+  $('#studyTitle').textContent = studyLabel;
+  $('#studyCount').textContent = (di+1)+' / '+deck.length;
+  $('#studyBar').style.width = ((di+1)/deck.length*100)+'%';
+  $('#sPrev').disabled = di===0;
+  $('#sNext').disabled = di===deck.length-1;
+  let h = '<div class="qwrap"><div class="qmeta"><span class="chip b">'+q.id+'</span>'+
+          '<span class="chip">'+esc(P.subelements[q.s])+'</span>'+
+          (q.r ? '<span class="chip">§'+esc(q.r)+'</span>' : '')+'</div>'+
+          figHTML(q)+'<p class="qtext">'+esc(q.q)+'</p>'+
+          optsHTML(q, [0,1,2,3], {act:'studyAns', cls: o => revealed && o===q.c ? 'right' : ''});
+  if(revealed){
+    h += '<div class="reveal"><b>Correct answer &mdash; '+L[q.c]+'.</b> '+esc(q.a[q.c])+
+         (q.r ? '<span class="ref">FCC reference &sect;'+esc(q.r)+'</span>' : '')+'</div>';
+  }
+  $('#studyBody').innerHTML = h + '</div>';
+}
+function studyPick(i){
+  const q = deck[di];
+  revealed = true; paintStudy();
+  if(i !== q.c){
+    const btns = $('#studyBody').querySelectorAll('.opt');
+    if(btns[i]) btns[i].classList.add('wrong');
+  }
+}
+function studyReveal(){ revealed = true; paintStudy(); }
+function studyStep(d){
+  const n = di + d;
+  if(n < 0 || n >= deck.length) return;
+  di = n; revealed = false; paintStudy();
+  $('#s-study .body').scrollTop = 0;
+}
+
+/* ================= EXAM ================= */
+let ex = null;
+function newExam(){
+  const byGroup = indexPool(P).byGroup;
+  const items = P.groups.map(g => {
+    const pool = byGroup[g];
+    const q = pool[Math.floor(Math.random()*pool.length)];
+    return {id:q.id, order: settings.shuffleAnswers ? shuffled([0,1,2,3]) : [0,1,2,3], pick:null};
+  });
+  return {pool:P.key, items: shuffled(items), i:0, started: Date.now()};
+}
+/* A saved exam is only resumable if it still matches this pool exactly. This
+   guards against corrupt storage and, more usefully, against a question pool
+   being replaced under an exam that was saved against the old one. */
+function validRun(s){
+  if(!s || !Array.isArray(s.items) || s.items.length !== P.examLen) return false;
+  if(!Number.isInteger(s.i) || s.i < 0 || s.i >= P.examLen) return false;
+  return s.items.every(it =>
+    it && byId[it.id] &&
+    Array.isArray(it.order) && it.order.slice().sort().join('') === '0123' &&
+    (it.pick === null || (Number.isInteger(it.pick) && it.pick >= 0 && it.pick < 4)));
+}
+function startExamFlow(){
+  const saved = load(runKey(P.key), null);
+  if(saved && !validRun(saved)) drop(runKey(P.key));   // stale or corrupt - discard
+  if(validRun(saved)){
+    const done = saved.items.filter(x=>x.pick!==null).length;
+    modal('Resume exam?',
+      'You have a '+esc(P.name)+' exam in progress with <b>'+done+' of '+P.examLen+'</b> answered.',
+      'Resume', 'Start New Exam',
+      () => { ex = saved; go('exam'); paintExam(); },
+      () => { ex = newExam(); persist(); go('exam'); paintExam(); });
+    return;
+  }
+  ex = newExam(); persist(); go('exam'); paintExam();
+}
+function persist(){ save(runKey(P.key), ex); }
+
+const answered = () => { let n = 0; for(const it of ex.items) if(it.pick !== null) n++; return n; };
+function paintExam(){
+  const it = ex.items[ex.i], q = byId[it.id];
+  $('#examTitle').textContent = 'Question '+(ex.i+1)+' of '+P.examLen;
+  $('#examBar').style.width = (answered()/P.examLen*100)+'%';
+  $('#ePrev').disabled = ex.i===0;
+  $('#eNext').textContent = ex.i===P.examLen-1 ? 'Finish' : 'Next →';
+  $('#examBody').innerHTML =
+    '<div class="qwrap"><div class="qmeta"><span class="chip b">'+(ex.i+1)+' / '+P.examLen+'</span>'+
+    '<span class="chip">'+esc(P.subelements[q.s])+'</span></div>'+
+    figHTML(q)+'<p class="qtext">'+esc(q.q)+'</p>'+
+    optsHTML(q, it.order, {act:'examAns', cls: o => it.pick===o ? 'sel' : ''})+'</div>';
+}
+function pickAns(orig){
+  const it = ex.items[ex.i];
+  it.pick = orig; persist();
+  // Repaint just the affected bits rather than rebuilding the whole question.
+  $('#examBody').querySelectorAll('.opt')
+    .forEach((b, pos) => b.classList.toggle('sel', it.order[pos] === orig));
+  $('#examBar').style.width = (answered()/P.examLen*100)+'%';
+  setTimeout(() => { if(ex.i < P.examLen-1){ ex.i++; paintExam(); $('#s-exam .body').scrollTop=0; } }, 180);
+}
+function skipQ(){
+  ex.items[ex.i].pick = null; persist();
+  if(ex.i < P.examLen-1){ ex.i++; paintExam(); $('#s-exam .body').scrollTop=0; }
+  else openReview();
+}
+function examStep(d){
+  if(d>0 && ex.i===P.examLen-1){ openReview(); return; }
+  const n = ex.i + d;
+  if(n<0 || n>=P.examLen) return;
+  ex.i = n; paintExam(); $('#s-exam .body').scrollTop = 0;
+}
+function jumpTo(i){ ex.i = i; go('exam'); paintExam(); }
+
+function openReview(){ paintReview(); go('review'); }
+function paintReview(){
+  const skipped = ex.items.filter(x=>x.pick===null).length;
+  $('#revNote').innerHTML = skipped
+    ? '<div class="note"><b>'+skipped+' question'+(skipped>1?'s':'')+' still unanswered.</b> '+
+      'Tap any amber square below to go back and answer '+(skipped>1?'them':'it')+'.</div>'
+    : '<div class="note ok">'+
+      '<b>All '+P.examLen+' questions answered.</b> Review your choices, then tap Finish Exam.</div>';
+  $('#revGrid').innerHTML = ex.items.map((it,i) => {
+    const done = it.pick !== null;
+    return '<button class="cell '+(done?'done':'skip')+'" data-act="jump" data-arg="'+i+'">'+
+           (i+1)+'<small>'+(done ? L[it.order.indexOf(it.pick)] : '—')+'</small></button>';
+  }).join('');
+  $('#revList').innerHTML = ex.items.map((it,i) => {
+    const q = byId[it.id], done = it.pick !== null;
+    const cut = (s,n) => s.length>n ? s.slice(0,n)+'…' : s;
+    return '<button class="row jump" data-act="jump" data-arg="'+i+'">'+
+      '<span class="idx">'+(i+1)+'</span>'+
+      '<span class="lbl"><b>'+esc(cut(q.q,74))+'</b><span>'+
+      (done ? L[it.order.indexOf(it.pick)]+'. '+esc(cut(q.a[it.pick],52))
+            : '<span class="skipmark">Skipped — tap to answer</span>')+
+      '</span></span><span class="chev mut">›</span></button>';
+  }).join('');
+}
+
+function askFinish(){
+  const skipped = ex.items.filter(x=>x.pick===null).length;
+  if(skipped){
+    modal('End exam with '+skipped+' unanswered?',
+      'You still have <b>'+skipped+' unanswered question'+(skipped>1?'s':'')+'</b>. '+
+      'Unanswered questions are scored as incorrect.',
+      'End Exam Anyway', 'Return to Exam', gradeExam, () => go('review'));
+  } else {
+    modal('End the exam?',
+      'All <b>'+P.examLen+' questions</b> are answered. Once you end the exam your score is final.',
+      'End Exam', 'Return to Exam', gradeExam, () => go('review'));
+  }
+}
+function confirmQuit(){
+  modal('Quit this exam?', 'Your progress will be discarded and no score will be recorded.',
+    'Quit Exam', 'Keep Going', () => { drop(runKey(P.key)); ex=null; go('modes'); });
+}
+function gradeExam(){
+  let score = 0; const missed = [], bySub = {};
+  ex.items.forEach(it => {
+    const q = byId[it.id], ok = it.pick === q.c;
+    if(ok) score++; else missed.push({q, pick: it.pick});
+    (bySub[q.s] = bySub[q.s] || {n:0, ok:0}).n++;
+    if(ok) bySub[q.s].ok++;
+  });
+  const prev = load(histKey(P.key), []);
+  const h = Array.isArray(prev) ? prev : [];
+  h.unshift({date:Date.now(), score, total:P.examLen, pass:score>=P.pass});
+  save(histKey(P.key), h.slice(0,100));
+  drop(runKey(P.key));
+  paintResults(score, missed, bySub);
+  go('results');
+}
+function paintResults(score, missed, bySub){
+  const N = P.examLen, pct = Math.round(score/N*100), pass = score >= P.pass;
+  $('#rScore').textContent = score;
+  $('#rOf').textContent = 'of '+N+' · '+pct+'%';
+  const arc = $('#ringArc'), C = 402;
+  arc.setAttribute('stroke', pass ? 'var(--good)' : 'var(--bad)');
+  arc.style.transition = 'none';
+  arc.setAttribute('stroke-dashoffset', C);
+  setTimeout(() => {
+    arc.style.transition = 'stroke-dashoffset .9s cubic-bezier(.2,.7,.3,1)';
+    arc.setAttribute('stroke-dashoffset', C - C*(score/N));
+  }, 60);
+  const v = $('#rVerdict');
+  v.textContent = pass ? 'PASS' : 'NOT PASSED';
+  v.className = 'verdict ' + (pass ? 'pass' : 'fail');
+  $('#rSub').textContent = pass
+    ? 'You needed '+P.pass+' correct — nicely done.'
+    : 'You needed '+P.pass+' correct to pass. '+(P.pass-score)+' more.';
+  $('#rBySub').innerHTML = Object.keys(P.subelements).sort().map(k => {
+    const d = bySub[k]; if(!d) return '';
+    return '<div class="row"><span class="lbl"><b>'+k+' · '+esc(P.subelements[k])+'</b>'+
+      '<span class="mini"><i class="'+(d.ok===d.n?'full':'')+'" data-pct="'+(d.ok/d.n*100)+'"></i></span></span>'+
+      '<span class="num">'+d.ok+'/'+d.n+'</span></div>';
+  }).join('');
+  $('#rBySub').querySelectorAll('.mini i[data-pct]')
+    .forEach(el => { el.style.width = el.dataset.pct + '%'; });
+  $('#missHdr').classList.toggle('hidden', !missed.length);
+  $('#rMissed').innerHTML = missed.map(m => {
+    const q = m.q;
+    return '<div class="miss"><div class="qid">'+q.id+(q.r?' · §'+esc(q.r):'')+'</div>'+
+      '<div class="qq">'+esc(q.q)+'</div>'+
+      (m.pick===null ? '<div class="ans y"><b>Skipped</b> — no answer given</div>'
+                     : '<div class="ans y"><b>You chose:</b> '+esc(q.a[m.pick])+'</div>')+
+      '<div class="ans g"><b>Correct:</b> '+esc(q.a[q.c])+'</div></div>';
+  }).join('');
+}
+
+/* ================= HISTORY ================= */
+function paintHistory(){
+  const raw = load(histKey(P.key), []);
+  const h = (Array.isArray(raw) ? raw.filter(Boolean) : []).sort((a,b)=>num(b.date,0)-num(a.date,0));
+  $('#clrBtn').style.display = h.length ? '' : 'none';
+  if(!h.length){
+    $('#histList').innerHTML = '<div class="empty">No '+esc(P.name)+' exams yet.<br>'+
+      'Take one and your scores will show up here.</div>';
+    return;
+  }
+  // Everything here comes back from localStorage, so nothing is trusted:
+  // scores are coerced to numbers and the date is rendered from a real Date.
+  $('#histList').innerHTML = h.map(r => {
+    const d = new Date(num(r.date, 0));
+    const when = isNaN(d) ? '' : d.toLocaleDateString(undefined,{month:'short',day:'numeric',year:'numeric'}) +
+                 ' · ' + d.toLocaleTimeString(undefined,{hour:'numeric',minute:'2-digit'});
+    return '<div class="row"><span class="lbl"><b class="'+(r.pass?'hist-pass':'hist-fail')+'">'+
+      (r.pass?'PASS':'NOT PASSED')+'</b><span>'+esc(when)+
+      '</span></span><span class="num">'+num(r.score,0)+'/'+num(r.total,P.examLen)+'</span></div>';
+  }).join('');
+}
+function askClear(){
+  modal('Clear '+P.name+' history?', 'This permanently deletes the recorded '+esc(P.name)+
+    ' scores on this device. Other license classes are not affected.',
+    'Clear History', 'Cancel', () => { drop(histKey(P.key)); paintHistory(); });
+}
+
+/* ================= swipe (study only) ================= */
+let tx = 0, ty = 0;
+document.addEventListener('touchstart', e => { tx = e.touches[0].clientX; ty = e.touches[0].clientY; }, {passive:true});
+document.addEventListener('touchend', e => {
+  if(curScreen !== 'study') return;
+  const dx = e.changedTouches[0].clientX - tx, dy = e.changedTouches[0].clientY - ty;
+  if(Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy)*2) studyStep(dx < 0 ? 1 : -1);
+}, {passive:true});
+
+/* ================= delegated events =================
+   Every interactive element declares data-act (+ optional data-arg); one
+   listener dispatches them. This is what lets the CSP drop 'unsafe-inline'. */
+const ACTIONS = {
+  home:      () => go('home'),
+  modes:     () => go('modes'),
+  studyPick: () => go('studyPick'),
+  exam:      () => go('exam'),
+  history:   () => go('history'),
+  startExam: () => startExamFlow(),
+  quit:      () => confirmQuit(),
+  review:    () => openReview(),
+  finish:    () => askFinish(),
+  clearHist: () => askClear(),
+  shuffle:   () => toggleShuffleStudy(),
+  reveal:    () => studyReveal(),
+  studyPrev: () => studyStep(-1),
+  studyNext: () => studyStep(1),
+  examPrev:  () => examStep(-1),
+  examNext:  () => examStep(1),
+  skip:      () => skipQ(),
+  pool:      a => selectPool(a),
+  section:   a => startStudy(a),
+  studyAns:  a => studyPick(+a),
+  examAns:   a => pickAns(+a),
+  jump:      a => jumpTo(+a),
+  zoom:      a => zoomFig(a),
+  closeZoom: () => $('#zoom').classList.remove('on'),
+};
+document.addEventListener('click', e => {
+  const el = e.target.closest('[data-act]');
+  if(!el) return;
+  const fn = ACTIONS[el.dataset.act];
+  if(fn) fn(el.dataset.arg, el);
+});
+
+/* ================= boot ================= */
+paintHome();
+if('serviceWorker' in navigator){
+  window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(()=>{}));
+}

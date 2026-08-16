@@ -113,8 +113,9 @@ for p in POOLS:
         'short':p['short'], 'accent':p['accent'], 'accentDark':p['accentDark'],
         'examLen':examLen, 'pass':passing,
         'subelements':subs, 'groups':groups, 'questions':qs, 'figures':figs,
-        'withdrawn':sorted(withdrawn),
     }
+    # `withdrawn` is a build-time assertion only - the app never reads it,
+    # so it is deliberately not shipped in pools.json.
     report.append((p['name'], len(qs), len(groups), examLen, passing, len(figs), len(withdrawn)))
 
 pathlib.Path('build/pools.json').write_text(json.dumps(out, separators=(',',':')), encoding='utf-8')
