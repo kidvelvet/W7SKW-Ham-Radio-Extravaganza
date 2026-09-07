@@ -1,5 +1,53 @@
 {
  "_README": "Explanations for correct answers, shown in study mode only. Keyed by question ID. 'src' names the authority, 'x' is the explanation (<150 words). Style: exam focused. Lead with the rule or principle that IS the answer, quote the decisive language, give a recall cue. Do not walk through why each distractor fails. Source priority: 47 CFR Part 97 > other FCC rules > ARRL > peer-reviewed engineering (IEEE/university) > third-party study sites as a last resort. Answers themselves are never modified by this file; extract.py asserts that.",
+ "E0A01": {
+  "src": "NFPA 70 Article 250; lightning protection practice",
+  "x": "Dissipating a lightning charge into the earth. That is the job an external ground rod exists to do. It is not there to improve your signal or complete the antenna's return path, which are separate functions handled by radials and bonding."
+ },
+ "E0A02": {
+  "src": "47 CFR §1.1310; FCC OET Bulletin 65",
+  "x": "Keep the exposure below the uncontrolled limits. Your neighbours have not agreed to any exposure and cannot control it, so the stricter general-population figures apply to them. The occupational limits only cover you and your own household."
+ },
+ "E0A03": {
+  "src": "47 CFR §1.1310 (MPE limits)",
+  "x": "30 to 300 MHz, which is the VHF range. The human body is roughly resonant at those frequencies and therefore absorbs energy most efficiently, so the FCC sets the allowable exposure lowest there. Same reasoning behind the Technician question about 50 MHz."
+ },
+ "E0A04": {
+  "src": "47 CFR §1.1307(b)(5)(i)",
+  "x": "Each transmitter contributing more than 5 percent of the applicable limit in the affected area. The rule makes compliance a shared responsibility among those licensees, so a small contributor is not dragged in but a meaningful one cannot walk away."
+ },
+ "E0A05": {
+  "src": "FCC OET Bulletin 65; microwave practice",
+  "x": "High-gain antennas concentrate power into a narrow beam, so the power density close in can be very high even at modest transmitter output. A dish that gives you 30 dB of gain is also giving you 30 dB of exposure in that direction."
+ },
+ "E0A06": {
+  "src": "47 CFR §1.1310; IEEE C95.1",
+  "x": "Several reasons apply at once, so the inclusive answer is right. Below 300 MHz you may be within the near field, where the two fields are not simply related, and the body responds differently to each. That is why the rules specify both separately."
+ },
+ "E0A07": {
+  "src": "OSHA 1926 Subpart M; tower safety practice",
+  "x": "At least one lanyard attached to the structure at every moment, including while moving past an obstruction. The point is that there is never an instant when you are unattached, which is when falls happen."
+ },
+ "E0A08": {
+  "src": "IEEE C95.1; SAR definition",
+  "x": "Specific Absorption Rate, the rate at which body tissue absorbs RF energy, measured in watts per kilogram. It is the underlying quantity the exposure limits are derived from, and it is what handheld device testing measures directly."
+ },
+ "E0A09": {
+  "src": "FCC Report and Order, ET Docket 13-84",
+  "x": "Hand-held transceivers sold before May 3, 2021 are grandfathered. Everything else lost its blanket exemption when the new rules took effect, which is why the categorical power-based exemption amateurs once relied on no longer exists."
+ },
+ "E0A10": {
+  "src": "47 CFR §97.13(c); §1.1307(b)",
+  "x": "Always. There is no band or power level that exempts an amateur station any more. Eighty meters is no different from any other, so the evaluation is required regardless of what you run."
+ },
+ "E0A11": {
+  "src": "OSHA 1926 Subpart M; tower safety practice",
+  "x": "The tower legs, which are the structural members designed to carry load. Never a rung, a guy wire or an antenna mount, since none of those is built to arrest a falling climber."
+ },
+ "E0A12": {
+  "src": "OSHA 1926 Subpart M; fall arrest geometry",
+  "x": "Above head level. Anchoring high shortens the distance you would fall before the lanyard catches, which reduces the shock load on both you and the anchor. Attaching below your waist can let you fall far enough to be injured even while tied off."
+ },
  "E1A01": {
   "src": "47 CFR §97.307(b); §97.301",
   "x": "USB puts your energy above the displayed carrier frequency. Add the 3 kHz bandwidth to 14.348 and the signal reaches 14.351 MHz, while 20 meters stops at 14.350. That top 1 kHz falls outside the band, and §97.307(b) requires emissions to stay confined to the segment available to you."
@@ -271,6 +319,2082 @@
  "E1F11": {
   "src": "47 CFR §97.317(a)(1)",
   "x": "For certification the amplifier must meet the §97.307 spurious emission standards \"when operated at the lesser of 1.5 kW PEP or its full output power.\" Two other conditions ride along: no more than 15 dB gain, and no amplification at all between 26 and 28 MHz."
+ },
+ "E2A01": {
+  "src": "AMSAT; orbital mechanics",
+  "x": "Ascending means the satellite is climbing in latitude, so it crosses the equator heading north. A descending pass runs the other way, north to south. Tracking software labels each pass so you know which side of the sky to watch."
+ },
+ "E2A02": {
+  "src": "AMSAT; linear transponder theory",
+  "x": "All three follow from the same mixing arithmetic. The band position reverses, upper sideband becomes lower, and uplink and downlink Doppler shifts move in opposite directions so they partly cancel. Inverting is genuinely useful, not just a quirk."
+ },
+ "E2A03": {
+  "src": "Heterodyne theory; AMSAT",
+  "x": "The uplink is mixed with a local oscillator and the difference product is transmitted. Taking the difference is what flips the spectrum, because tuning higher on the uplink now moves you lower on the downlink."
+ },
+ "E2A04": {
+  "src": "AMSAT mode designations",
+  "x": "Mode names the uplink and downlink bands, not the modulation. U/V means you transmit on 70 centimeters and listen on 2 meters. Uplink is always first, which is the detail people reverse."
+ },
+ "E2A05": {
+  "src": "AMSAT mode designations",
+  "x": "Each letter is a band: H for 15 m, A for 10 m, V for 2 m, U for 70 cm, L for 23 cm, S for 13 cm. Two letters give you the whole story, uplink then downlink."
+ },
+ "E2A06": {
+  "src": "Orbital mechanics; NORAD two-line elements",
+  "x": "Keplerian elements are the six numbers that define an orbit's size, shape and orientation in space. Feed a current set into tracking software and it computes where the satellite will be. They decay in accuracy, so refresh them regularly."
+ },
+ "E2A07": {
+  "src": "AMSAT; linear transponder theory",
+  "x": "A linear transponder retransmits whatever it receives across its passband, so every listed mode works. It does not demodulate anything, unlike an FM repeater, which is why several contacts can share the same transponder at once."
+ },
+ "E2A08": {
+  "src": "AMSAT operating guidance",
+  "x": "A linear transponder shares one fixed output among every signal passing through it, so an overpowered uplink captures a disproportionate share and pushes everyone else down. Match your downlink to the beacon and you are using a fair portion."
+ },
+ "E2A09": {
+  "src": "IEEE Std 521 (radar band designations)",
+  "x": "L band is 23 centimeters near 1.2 GHz and S band is 13 centimeters near 2.4 GHz. The letters come from radar-era nomenclature, and satellite operators use them as shorthand for those two microwave bands."
+ },
+ "E2A10": {
+  "src": "Orbital mechanics",
+  "x": "Geostationary. An orbit about 35,800 km above the equator has a period of exactly one day, so the satellite keeps pace with Earth's rotation and hangs in a fixed spot. No tracking needed, which is why QO-100 works with a fixed dish."
+ },
+ "E2A11": {
+  "src": "AMSAT; antenna polarization theory",
+  "x": "Circular polarization. A spinning satellite and the ionosphere's Faraday rotation both keep changing the arriving polarization, and a circularly polarized antenna responds nearly equally to any of it. That removes most of the fading rather than fighting it."
+ },
+ "E2A12": {
+  "src": "AMSAT; store-and-forward design",
+  "x": "A store-and-forward satellite records messages on one pass and plays them back on another, so two stations that never see the satellite at the same time can still exchange traffic. The spacecraft acts as a mailbox in orbit."
+ },
+ "E2B01": {
+  "src": "Coding theory; DVB-T standard",
+  "x": "A rate of 3 over 4 means three of every four transmitted bits are data and the fourth is forward error correction, so 25 percent is overhead. Lower coding rates add more protection at the cost of throughput."
+ },
+ "E2B02": {
+  "src": "ITU-R BT.470; NTSC standard",
+  "x": "525 lines per frame, at roughly 30 frames per second. The number is worth memorizing because it sets everything else about NTSC timing, including the interlaced field structure in E2B03."
+ },
+ "E2B03": {
+  "src": "ITU-R BT.470; NTSC standard",
+  "x": "One field scans the odd-numbered lines, the next scans the even ones, and the two interleave into a full frame. That halves the bandwidth needed for a given flicker rate, which is why interlace was invented."
+ },
+ "E2B04": {
+  "src": "SSTV protocol specifications",
+  "x": "Colour lines are sent one after another, typically as separate red, green and blue scans of each line. The receiver reassembles them, which is why interference in analog SSTV often shows up as a colour shift rather than plain noise."
+ },
+ "E2B05": {
+  "src": "Vestigial sideband theory; NTSC standard",
+  "x": "Vestigial sideband transmits one full sideband plus a stub of the other. Video needs its low-frequency components reproduced accurately, and keeping that stub preserves them while still saving most of the bandwidth a full double-sideband signal would need."
+ },
+ "E2B06": {
+  "src": "Modulation theory",
+  "x": "Amplitude modulation with one complete sideband and only a portion of the other. It sits between full AM and true single sideband, which is exactly the compromise analog television needed."
+ },
+ "E2B07": {
+  "src": "ETSI EN 300 744 (DVB-T)",
+  "x": "QAM and QPSK. DVB-T picks between them according to how much protection the link needs: QPSK survives poor conditions, while higher-order QAM carries more data when the path is good."
+ },
+ "E2B08": {
+  "src": "ARRL Handbook; cable TV channel allocations",
+  "x": "Some cable television channels fall inside the 70-centimeter band, so a commercial receiver tuned to those channels can pick up amateur fast-scan TV directly. No modification is needed, just the right channel."
+ },
+ "E2B09": {
+  "src": "ETSI ES 201 980 (DRM); SSTV practice",
+  "x": "An SSB receiver. DRM-based SSTV is a digital signal carried in an audio passband, so the radio only has to deliver the audio to software. The decoding happens in the computer, not the receiver."
+ },
+ "E2B10": {
+  "src": "SSTV protocol specifications",
+  "x": "Tone frequency carries the brightness. Higher audio frequency means a brighter pixel, so the picture is encoded as a continuously varying tone swept along each line. Frequency errors therefore show up as brightness errors."
+ },
+ "E2B11": {
+  "src": "SSTV protocol specifications",
+  "x": "The VIS code identifies which SSTV mode follows, sent as a digital header before the picture. Without it the receiving software would not know the line timing or colour sequence to expect."
+ },
+ "E2B12": {
+  "src": "SSTV protocol specifications",
+  "x": "A specific sync tone marks the start of each line. The software listens for that tone to keep the picture aligned, which is why a missed sync pulse skews the image diagonally."
+ },
+ "E2C01": {
+  "src": "47 CFR §97.119",
+  "x": "No extra indicator. Section 97.119 lists the cases that require one, such as operating under §97.9(b) upgrade privileges or under alien reciprocal authority, and remote control inside the US is not among them. The station is where the transmitter is, and it is a US station."
+ },
+ "E2C02": {
+  "src": "ADIF specification",
+  "x": "ADIF, the Amateur Data Interchange Format. It is the common language for moving log data between programs and services, which is what lets you export from one logger and import to another without losing fields."
+ },
+ "E2C03": {
+  "src": "ARRL contest guidance; IARU band plans",
+  "x": "Thirty meters. The band is narrow, shared with other services, and by convention reserved for casual and digital work, so contest organizers exclude it. The same convention keeps 60, 17 and 12 meters out of contests."
+ },
+ "E2C04": {
+  "src": "AREDN project; 47 CFR §97.303",
+  "x": "Amateur mesh runs on frequencies that overlap the unlicensed wireless data bands, notably parts of 2.4 and 5 GHz. That overlap is exactly why repurposed Wi-Fi hardware works, though you operate there under Part 97 rather than Part 15."
+ },
+ "E2C05": {
+  "src": "ARRL DXCC and QSL practice",
+  "x": "A QSL manager handles confirmations on behalf of a DX station, receiving and answering cards so the operator does not have to. It is common for rare-entity operations that would otherwise drown in mail."
+ },
+ "E2C06": {
+  "src": "ARRL VHF/UHF band plans",
+  "x": "In the weak-signal segment near the calling frequency, at the bottom of each band. That is where the CW and SSB operators live, and during a contest activity concentrates around the calling frequency because that is where people listen."
+ },
+ "E2C07": {
+  "src": "Cabrillo format specification",
+  "x": "Cabrillo is the standard text format for submitting contest logs electronically. Nearly every sponsor accepts it, which is why logging programs export to it directly."
+ },
+ "E2C08": {
+  "src": "ARRL Logbook of The World",
+  "x": "LoTW confirms contacts for DXCC, WAS, VUCC and other award programs, domestic and international alike. Since every listed category qualifies, the inclusive answer applies. Both stations must upload for a confirmation to match."
+ },
+ "E2C09": {
+  "src": "AREDN project",
+  "x": "A consumer wireless router running custom firmware such as AREDN. Reflashing it moves the radio onto amateur frequencies and allows amateur power levels and antennas, turning inexpensive hardware into a licensed data network."
+ },
+ "E2C10": {
+  "src": "ARRL Operating Manual; DX practice",
+  "x": "All three reasons hold. Splitting keeps the DX station's transmit frequency clear of the pileup, separates callers from the station being called, and lets stations respond even when the DX frequency is one they are not permitted to use."
+ },
+ "E2C11": {
+  "src": "ARRL Operating Manual",
+  "x": "Your full call sign, once or twice. Partial calls waste time because the DX station has to ask for the rest, and repeating endlessly means you are transmitting while they are answering someone else. Full call, short call, then listen."
+ },
+ "E2C12": {
+  "src": "IEEE Std 610; network terminology",
+  "x": "Latency is the delay between an action and its effect. On a remote station that means the gap between pressing the key and RF actually appearing, which matters for CW timing and for avoiding transmitting over someone."
+ },
+ "E2D01": {
+  "src": "WSJT-X documentation (Taylor and Franke, Princeton)",
+  "x": "MSK144 is built for meteor scatter. Meteor trails last a fraction of a second, so the mode sends very short, rapidly repeated transmissions designed to be decoded from a burst lasting only milliseconds."
+ },
+ "E2D02": {
+  "src": "WSJT-X documentation",
+  "x": "The grid square replaces the signal report. On VHF the useful contest information is where you are, since distance worked is what scores, so the four-character grid takes the slot the SNR would occupy on HF."
+ },
+ "E2D03": {
+  "src": "WSJT-X documentation",
+  "x": "Q65 is the current mode for earth-moon-earth work. It handles the long path delay, deep fading and Doppler spreading that moonbounce imposes, and it can average several receive cycles to pull a signal out of noise."
+ },
+ "E2D04": {
+  "src": "APRS specification (Bruninga, WB4APR)",
+  "x": "APRS. A balloon carries a small tracker that beacons GPS position over packet, and any digipeater in range relays it, so the flight path appears live on a map. It is the standard way high-altitude balloon flights are followed."
+ },
+ "E2D05": {
+  "src": "WSJT-X documentation",
+  "x": "JT65 decodes signals far below what an ear can hear, roughly minus 25 dB signal to noise. It achieves that with long transmissions, a small fixed message structure and heavy error correction."
+ },
+ "E2D06": {
+  "src": "WSJT-X documentation; EME practice",
+  "x": "Stations alternate on a synchronized schedule, typically one-minute periods keyed to UTC. Both ends must agree on who transmits when, because the mode's decoding depends on knowing exactly when a transmission began."
+ },
+ "E2D07": {
+  "src": "AX.25 protocol specification; APRS specification",
+  "x": "APRS runs on AX.25, the same packet protocol used for keyboard-to-keyboard packet and BBS work. APRS is a particular way of using AX.25 rather than a separate protocol."
+ },
+ "E2D08": {
+  "src": "AX.25 protocol specification",
+  "x": "Unnumbered Information frames. UI frames are connectionless: they are broadcast without establishing a link or expecting acknowledgment, which suits beacons that anyone may hear and nobody needs to confirm."
+ },
+ "E2D09": {
+  "src": "WSJT-X documentation",
+  "x": "Multitone AFSK. JT65 uses 65 tones, one sync tone plus 64 data tones, generated as audio and fed through an SSB transmitter. The tone count is where the name comes from."
+ },
+ "E2D10": {
+  "src": "APRS specification; WIDEn-N paths",
+  "x": "The first digit is how many hops were requested and the second how many remain. WIDE3-1 started as WIDE3-3, so two digipeaters have already relayed it and one hop is left. Watching that count is how you avoid flooding the network."
+ },
+ "E2D11": {
+  "src": "APRS specification; AX.25",
+  "x": "Digipeaters relay the packets. Each one hears a frame, decrements the remaining hop count, and retransmits, so a low-power tracker reaches far beyond its own range through a chain of stations."
+ },
+ "E2E01": {
+  "src": "47 CFR §97.309; ARRL Handbook",
+  "x": "FSK, frequency shift keying, in one form or another. Below 30 MHz data modes shift frequency rather than amplitude because FSK survives fading and noise far better, whether generated directly or as audio tones through an SSB transmitter."
+ },
+ "E2E02": {
+  "src": "WSJT-X documentation",
+  "x": "Synchronized computer clocks. The WSJT modes divide time into fixed windows and decode on that schedule, so both ends must agree on the time to within about a second. Most operators run NTP to keep it right."
+ },
+ "E2E03": {
+  "src": "WSJT-X documentation",
+  "x": "Four-tone continuous-phase frequency shift keying. The 4 counts the tones, exactly as the 8 in FT8 does. Fewer tones and a shorter cycle make FT4 faster but less sensitive than FT8."
+ },
+ "E2E04": {
+  "src": "WSJT-X documentation",
+  "x": "FST4 uses four-tone Gaussian FSK, offers several transmit and receive period lengths, and provides seven different tone spacings. All the listed characteristics are accurate, so the inclusive answer applies. The flexibility is what suits it to the LF and MF bands."
+ },
+ "E2E05": {
+  "src": "WSPR documentation (Taylor, Princeton)",
+  "x": "WSPR carries only a call sign, grid square and power level in a fixed message, so there is nothing to type. It exists to report propagation, not to hold conversations, which is what separates it from the other modes listed."
+ },
+ "E2E06": {
+  "src": "WSJT-X documentation",
+  "x": "Fifteen seconds. Transmissions start on multiples of 15 seconds past the minute, giving four slots per minute, which is why an accurate clock matters and why you answer in the alternate slot."
+ },
+ "E2E07": {
+  "src": "WSJT-X documentation",
+  "x": "Q65 can average several receive cycles together, accumulating evidence across repeated transmissions until a decode emerges. That averaging is what makes it better than JT65 on the very weak, fading paths of EME work."
+ },
+ "E2E08": {
+  "src": "PACTOR protocol specification",
+  "x": "PACTOR moves binary files, because it is an ARQ protocol with error correction and acknowledgment. Modes such as RTTY and PSK31 carry only characters, so they cannot guarantee the byte-exact delivery a file needs."
+ },
+ "E2E09": {
+  "src": "PSK31 documentation (Martinez, G3PLX)",
+  "x": "PSK31 uses Varicode, which gives frequent characters short bit patterns and rare ones longer patterns. That variable length keeps average throughput useful at a very low symbol rate, which is what makes PSK31 so narrow."
+ },
+ "E2E10": {
+  "src": "WSJT-X documentation; mode bandwidths",
+  "x": "Of the four modes offered, FT8 is narrowest at about 50 Hz. RTTY at 170 Hz shift is several times wider, MFSK16 wider still, and PACTOR IV widest of all since throughput demands bandwidth."
+ },
+ "E2E11": {
+  "src": "FSK theory; ARRL Handbook",
+  "x": "Direct FSK shifts the transmitter's own oscillator with the data. Audio FSK feeds tones into an SSB transmitter instead, so the radio never knows it is sending data. Same signal on the air, different place in the chain."
+ },
+ "E2E12": {
+  "src": "MIL-STD-188-141 (Automatic Link Establishment)",
+  "x": "An ALE station continuously scans a list of channels, and when it hears its own call sign it stops and answers. The system finds a working frequency for you rather than requiring you to guess which band is open."
+ },
+ "E2E13": {
+  "src": "PACTOR protocol specification",
+  "x": "PACTOR IV has the highest throughput of these under good conditions, since it adapts its modulation to the path and uses the widest bandwidth. The weak-signal modes trade throughput for sensitivity, which is the opposite bargain."
+ },
+ "E3A01": {
+  "src": "EME practice; spherical geometry",
+  "x": "About 12,000 miles, and the limiting condition is that both stations can see the Moon at once. Two points on Earth can share a view of the Moon only if they are within roughly half the planet's circumference, so mutual visibility sets the ceiling."
+ },
+ "E3A02": {
+  "src": "EME practice; ARRL Handbook",
+  "x": "A fluttery, irregular fading. The Moon's surface is rough and it wobbles slightly as it rotates, so your signal reflects off thousands of features whose relative distances keep changing. Those reflections drift in and out of phase."
+ },
+ "E3A03": {
+  "src": "Inverse-square law; orbital mechanics",
+  "x": "At perigee, the Moon's closest approach. Path loss depends on distance, and over a round trip it works out to roughly 2 dB better at perigee than at apogee. On a path where every decibel counts, 2 dB is worth scheduling around."
+ },
+ "E3A04": {
+  "src": "Maxwell's equations",
+  "x": "At right angles to both fields. The electric field, the magnetic field and the direction of travel are mutually perpendicular, so the wave moves along the one axis left over once the two fields are placed."
+ },
+ "E3A05": {
+  "src": "Maxwell's equations",
+  "x": "At right angles to each other, and both perpendicular to the direction of travel. This is the companion to E3A04: that question asks about the direction of travel, this one about the fields themselves."
+ },
+ "E3A06": {
+  "src": "ITU-R Rec. P.533",
+  "x": "Move to a lower band. Darkness reduces ionization, so the MUF falls and the frequency you were using may no longer be returned. Following the MUF downward as evening advances is normal HF operating."
+ },
+ "E3A07": {
+  "src": "ITU-R Rec. P.834; ARRL Handbook",
+  "x": "Over large bodies of water. Cool moist air sitting under warmer dry air creates the sharp refractive index change a duct needs, and that layering forms readily over water. Long overwater microwave paths are the classic case."
+ },
+ "E3A08": {
+  "src": "ITU-R Rec. P.534; meteor scatter theory",
+  "x": "The E region, around 60 to 70 miles up, where meteors burn and leave a narrow trail of ionization. The trail lasts from a fraction of a second to a few seconds, which is why meteor scatter modes send very short bursts."
+ },
+ "E3A09": {
+  "src": "ITU-R Rec. P.534; ARRL Handbook",
+  "x": "Roughly 28 to 148 MHz. Below that the ordinary ionosphere interferes; above it the trails reflect too poorly. Six meters sits in the sweet spot, which is why most meteor scatter work happens there."
+ },
+ "E3A10": {
+  "src": "Maxwell's equations; refractive index",
+  "x": "The index of refraction. A wave travels at c divided by that index, so anything with an index above 1 slows it down. That is also why coaxial cable has a velocity factor below 1."
+ },
+ "E3A11": {
+  "src": "ITU-R Rec. P.834",
+  "x": "Typically 100 to 300 miles, well beyond the normal radio horizon. The duct guides the signal like a waveguide instead of letting it escape upward, which is why paths that should be impossible open for hours at a time."
+ },
+ "E3A12": {
+  "src": "NOAA Space Weather Prediction Center",
+  "x": "Severe geomagnetic storms. Charged particles funnelled toward the poles ionize the upper atmosphere into auroral curtains, and those curtains reflect VHF. The same storm that ruins high-latitude HF creates this opportunity."
+ },
+ "E3A13": {
+  "src": "ARRL Handbook; auroral propagation",
+  "x": "CW. Auroral reflections come off fast-moving ionized gas, so the signal is Doppler-smeared into a rough buzz. Voice becomes unintelligible while CW survives, since a rasping tone is still a readable tone."
+ },
+ "E3A14": {
+  "src": "IEEE Std 145; polarization theory",
+  "x": "Waves whose electric and magnetic fields rotate as the wave travels, tracing a helix rather than staying in one plane. Circular polarization is what satellite work uses, because it couples to any linear orientation at the far end."
+ },
+ "E3B01": {
+  "src": "ITU-R Rec. P.533; TEP research",
+  "x": "Between points 2,000 to 3,000 miles apart on a path crossing the geomagnetic equator at right angles. TEP depends on the equatorial anomaly, two bands of dense ionization either side of the magnetic equator, so the path has to cut across them."
+ },
+ "E3B02": {
+  "src": "TEP research; ARRL Handbook",
+  "x": "About 5,000 miles. TEP regularly returns frequencies well above the normal MUF, which is why it opens 6 meters between continents when nothing else will."
+ },
+ "E3B03": {
+  "src": "TEP research",
+  "x": "Afternoon or early evening. The equatorial ionization builds through the day and peaks after local noon, so the openings come late in the day rather than at midday or overnight."
+ },
+ "E3B04": {
+  "src": "Magnetoionic theory; ITU-R Rec. P.533",
+  "x": "A wave entering the ionosphere splits into two elliptically polarized components that travel independently, because Earth's magnetic field makes the medium behave differently for each. They arrive by slightly different paths, which contributes to fading."
+ },
+ "E3B05": {
+  "src": "ITU-R Rec. P.533",
+  "x": "A path entirely in darkness. The D region absorbs 160 meters heavily and exists only in sunlight, so a fully dark path is the only way a signal gets through. Even one sunlit end can close the band."
+ },
+ "E3B06": {
+  "src": "ARRL Antenna Book; great-circle geometry",
+  "x": "Forty and 20 meters. Long path needs a route the ionosphere can support for the whole way around, and those two bands hit the balance between enough ionization to be returned and low enough absorption to survive the distance."
+ },
+ "E3B07": {
+  "src": "Ionospheric geometry",
+  "x": "Each hop covers more ground. A shallower takeoff angle strikes the ionosphere at a glancing angle and comes down much farther away. That is why low-angle radiation matters so much for DX, and why height above ground affects a horizontal antenna's usefulness."
+ },
+ "E3B08": {
+  "src": "ITU-R Rec. P.368 (ground-wave propagation)",
+  "x": "It decreases. Ground wave travels by following the Earth's surface, and losses into the ground climb steeply with frequency. That is why AM broadcast at 1 MHz covers a region by day while 10 MHz ground wave barely leaves town."
+ },
+ "E3B09": {
+  "src": "ITU-R Rec. P.534; sporadic-E research",
+  "x": "Around the solstices, with the summer one much stronger. The northern summer peak from roughly late May through July is the main sporadic-E season, and there is a weaker showing near the December solstice."
+ },
+ "E3B10": {
+  "src": "ITU-R Rec. P.533; chordal-hop theory",
+  "x": "Less loss than ordinary multi-hop. Every ground reflection wastes energy, so a path that stays up in the ionosphere between refractions avoids those losses. That is how signals sometimes arrive far stronger than a hop count would predict."
+ },
+ "E3B11": {
+  "src": "ITU-R Rec. P.534",
+  "x": "Between sunrise and sunset. Sporadic-E clouds are a daylight phenomenon, forming and dissipating over minutes to hours. Combine this with E3B09 and the picture is a summer daytime opening."
+ },
+ "E3B12": {
+  "src": "Chordal-hop theory; ITU-R Rec. P.533",
+  "x": "Successive refractions within the ionosphere with no ground reflection in between. The signal skips along inside the layer, chord-like, rather than bouncing down and up. E3B10 explains why that costs less loss."
+ },
+ "E3B13": {
+  "src": "ITU-R Rec. P.368",
+  "x": "Vertical. A horizontal wave close to the ground induces currents that cancel its own field, so it dies quickly. A vertical wave works with the ground as part of the system, which is why AM broadcast towers are vertical."
+ },
+ "E3C01": {
+  "src": "NOAA Space Weather Prediction Center",
+  "x": "Solar flares. X-rays from a flare arrive in about 8 minutes and flood the D region with ionization, so HF absorption spikes and the low bands go dead on the sunlit side. Recovery takes minutes to hours."
+ },
+ "E3C02": {
+  "src": "NOAA SWPC",
+  "x": "A disturbed geomagnetic field. Both indices measure that disturbance, K over three-hour intervals and A over the day, so either rising means the field is being stirred up and HF paths will suffer, especially at high latitudes."
+ },
+ "E3C03": {
+  "src": "NOAA SWPC; ITU-R Rec. P.533",
+  "x": "Paths through the auroral oval. Earth's field funnels charged particles toward the poles, so that is where the extra ionization and absorption land. Polar paths degrade first while equatorial paths often stay usable."
+ },
+ "E3C04": {
+  "src": "NOAA SWPC (interplanetary magnetic field)",
+  "x": "Bz is the north-south component of the interplanetary magnetic field carried by the solar wind. Its direction, not just its strength, decides how easily solar particles couple into Earth's magnetosphere."
+ },
+ "E3C05": {
+  "src": "NOAA SWPC",
+  "x": "Southward. Earth's own field points north at the equator, so a southward Bz opposes it and allows the two fields to link up, letting solar wind energy pour in. A northward Bz shields us instead."
+ },
+ "E3C06": {
+  "src": "ITU-R Rec. P.834 (4/3 Earth radius model)",
+  "x": "About 15 percent farther. Air density falls with altitude, so a radio wave bends gently downward and follows the curve a little past where light would leave. Engineers model it as a 4/3 Earth radius, which works out to 15.5 percent."
+ },
+ "E3C07": {
+  "src": "NOAA SWPC flare classification",
+  "x": "Class X. The scale runs A, B, C, M, X with each letter ten times the previous, so X is the top. M-class flares cause noticeable HF degradation and X-class can black out the sunlit side entirely."
+ },
+ "E3C08": {
+  "src": "NOAA SWPC geomagnetic storm scale",
+  "x": "G5, the top of a scale running G1 through G5. A G5 storm means HF is largely unusable at high and middle latitudes, with aurora visible far south of its normal range."
+ },
+ "E3C09": {
+  "src": "Reverse Beacon Network; PSK Reporter; WSPRnet",
+  "x": "Digital-mode and CW signals, because those are what software can decode and identify automatically. Networks such as the Reverse Beacon Network and PSK Reporter log every decode with call sign and location, which turns the bands into a live propagation map."
+ },
+ "E3C10": {
+  "src": "NOAA SWPC; solar EUV measurement",
+  "x": "Ultraviolet emission at 304 angstroms, the helium II line in the extreme ultraviolet. It tracks solar activity closely enough to correlate with the 10.7 cm solar flux index, giving a second way to gauge how well the ionosphere will perform."
+ },
+ "E3C11": {
+  "src": "VOACAP (Voice of America Coverage Analysis Program)",
+  "x": "HF propagation. VOACAP predicts path reliability, signal strength and usable frequencies between two points given the date, time and solar conditions. It grew out of Voice of America's need to plan broadcast coverage."
+ },
+ "E3C12": {
+  "src": "NOAA SWPC",
+  "x": "A solar flare or a coronal mass ejection impact. Either injects enough energy to raise radio noise right across HF, so the whole spectrum grows louder at once. A single noisy band points at something local; every band at once points at the Sun."
+ },
+ "E4A01": {
+  "src": "Nyquist sampling theorem",
+  "x": "The analog-to-digital converter's sampling rate. Nyquist says you must sample at more than twice the highest frequency you want to represent, so the converter sets the ceiling no matter how good the rest of the instrument is."
+ },
+ "E4A02": {
+  "src": "Spectrum analyzer operation",
+  "x": "Amplitude vertically, frequency horizontally. That is the opposite arrangement from an oscilloscope, which plots amplitude against time. A scope shows you the waveform, an analyzer shows you what frequencies are in it."
+ },
+ "E4A03": {
+  "src": "Spectrum analyzer operation; ARRL Handbook",
+  "x": "A spectrum analyzer, because spurious outputs and intermodulation products are separate frequencies. They are invisible on a scope, where they simply blend into the waveform, but on an analyzer each one appears as its own line."
+ },
+ "E4A04": {
+  "src": "Oscilloscope probe compensation",
+  "x": "Display a square wave and adjust the probe's trimmer until the tops are flat. A square wave contains many harmonics, so any frequency error in the probe shows up as overshoot or rounding on the corners. Flat tops mean the response is even."
+ },
+ "E4A05": {
+  "src": "Frequency counter design",
+  "x": "A prescaler divides the input frequency down into a range the counter can handle, typically by 10 or 100. The counter then multiplies its reading back up. It buys frequency coverage at the cost of resolution."
+ },
+ "E4A06": {
+  "src": "Nyquist sampling theorem",
+  "x": "Aliasing shows a false low-frequency waveform that looks jittery and unstable. Sampling too slowly makes a high frequency masquerade as a lower one, and the display looks plausible while being entirely wrong. That is why it is dangerous."
+ },
+ "E4A07": {
+  "src": "ARRL Antenna Book",
+  "x": "An antenna analyzer computes SWR and impedance for you, and sweeps a range of frequencies while doing it. An SWR bridge gives you a single number at one frequency and requires you to transmit to get it."
+ },
+ "E4A08": {
+  "src": "ARRL Handbook",
+  "x": "An SWR bridge, a directional wattmeter and an antenna analyzer all measure SWR, so the inclusive answer applies. They differ in whether you must transmit and whether they also report impedance."
+ },
+ "E4A09": {
+  "src": "Oscilloscope probe technique",
+  "x": "Keep the ground lead as short as possible. That lead plus the probe forms a loop, and its inductance rings when it meets fast edges, adding overshoot that is not in the circuit. At RF, a long ground lead invents its own waveform."
+ },
+ "E4A10": {
+  "src": "Oscilloscope trigger modes",
+  "x": "Line trigger, which locks the sweep to the AC mains. Ripple from a linear supply is derived from the mains, so triggering on the line holds the ripple waveform steady rather than letting it drift across the screen."
+ },
+ "E4A11": {
+  "src": "ARRL Antenna Book",
+  "x": "An antenna analyzer measures SWR, complex impedance, and the electrical characteristics of transmission line, so the inclusive answer is right. It works by generating its own low-level signal and measuring what reflects."
+ },
+ "E4B01": {
+  "src": "Frequency counter design",
+  "x": "Time base accuracy. A counter works by counting cycles during a precisely known interval, so any error in that interval scales directly into the reading. A counter is only as good as its reference oscillator."
+ },
+ "E4B02": {
+  "src": "Analog voltmeter design; Ohm's law",
+  "x": "Ohms per volt times the full-scale reading gives the input impedance on that range. A 20,000 ohms-per-volt meter on a 10-volt range presents 200,000 ohms, so higher ohms per volt means less loading on the circuit you are probing."
+ },
+ "E4B03": {
+  "src": "S-parameter definitions; IEEE microwave standards",
+  "x": "S21, read as out of port 2 for a signal in at port 1. Forward gain is what leaves the output for what you put into the input, so the output port is named first."
+ },
+ "E4B04": {
+  "src": "S-parameter definitions",
+  "x": "S11, the signal reflected back out of port 1 when driven at port 1. Both subscripts the same means a reflection measurement, which is directly equivalent to return loss and therefore to VSWR."
+ },
+ "E4B05": {
+  "src": "Vector network analyzer calibration",
+  "x": "Short, open and 50-ohm load. Those three known conditions let the instrument solve for its own errors, because each produces a reflection the analyzer can predict exactly. It is called SOL calibration for that reason."
+ },
+ "E4B06": {
+  "src": "Power conservation; transmission line theory",
+  "x": "Subtract the reflected from the forward: 100 minus 25 leaves 75 watts absorbed by the load. The reflected 25 watts travels back toward the transmitter rather than disappearing."
+ },
+ "E4B07": {
+  "src": "S-parameter definitions",
+  "x": "The ports involved, with the output port listed first and the input second. So S21 means into port 1 and out of port 2, while S11 means in and back out of port 1. Reading the order correctly is most of understanding S parameters."
+ },
+ "E4B08": {
+  "src": "Q definition; resonance theory",
+  "x": "Its bandwidth. Q is the resonant frequency divided by the 3 dB bandwidth, so measuring how sharp the response is tells you Q directly. A narrow response means high Q."
+ },
+ "E4B09": {
+  "src": "Vector network analyzer operation",
+  "x": "Filter frequency response, since that is a two-port measurement: drive one side and measure what emerges from the other. A one-port analyzer can only measure reflections, not what passes through."
+ },
+ "E4B10": {
+  "src": "Two-tone testing; intermodulation theory",
+  "x": "Feed two non-harmonically related audio tones and look at the RF output on a spectrum analyzer. Non-harmonic matters, because then any products you see cannot be simple harmonics and must be intermodulation the transmitter created."
+ },
+ "E4B11": {
+  "src": "Vector network analyzer operation",
+  "x": "A VNA measures impedance, return loss and insertion loss, all with phase information, so the inclusive answer applies. The vector part is the point: it captures phase as well as magnitude."
+ },
+ "E4C01": {
+  "src": "Phase noise theory; SDR design",
+  "x": "Phase noise spreads the oscillator's energy into a skirt either side of its nominal frequency. A strong nearby signal mixes with that skirt and lands on top of the weak signal you were trying to hear, so the interference is manufactured inside your own radio."
+ },
+ "E4C02": {
+  "src": "Receiver front-end design",
+  "x": "A front-end filter or preselector, placed ahead of the first active stage. Out-of-band signals never reach the mixer to cause trouble, which is the only reliable cure once they have already overloaded it."
+ },
+ "E4C03": {
+  "src": "FM capture effect",
+  "x": "Capture effect. An FM detector responds to the strongest signal present and suppresses weaker ones on the same frequency, so you hear one station cleanly rather than two garbling each other. SSB has no equivalent behaviour."
+ },
+ "E4C04": {
+  "src": "Noise figure definition; IEEE Std 1149",
+  "x": "Noise figure is how much noise the receiver adds, expressed in dB above the theoretical minimum. A perfect receiver would have a noise figure of 0 dB. It matters most on VHF and above, where atmospheric noise is low."
+ },
+ "E4C05": {
+  "src": "Johnson-Nyquist noise; kTB at 290 K",
+  "x": "The thermal noise in a 1 Hz bandwidth at room temperature, which is the floor physics imposes on any receiver. Every real bandwidth and every real receiver sits above it, which is why -174 dBm/Hz is the reference everything is measured against."
+ },
+ "E4C06": {
+  "src": "Noise bandwidth relationship",
+  "x": "Noise power scales with bandwidth, so the rise is 10 log of the ratio: 1000 over 50 is 20, and 10 log 20 is 13 dB. Opening the filter twentyfold costs you 13 dB of noise floor, which is why filter choice matters so much."
+ },
+ "E4C07": {
+  "src": "MDS definition; receiver specifications",
+  "x": "Minimum discernible signal, the weakest input the receiver can produce a usable output from. It is sometimes called the noise floor of the receiver, and it depends on both noise figure and bandwidth."
+ },
+ "E4C08": {
+  "src": "SDR design; ADC dynamic range",
+  "x": "When input exceeds the analog-to-digital converter's reference voltage. Beyond that the converter simply clips, and the result is gross distortion across the whole passband rather than the graceful degradation an analog front end gives."
+ },
+ "E4C09": {
+  "src": "Superheterodyne theory",
+  "x": "A high IF puts the image response far from the desired frequency, which makes it easy to filter out before the mixer. Image rejection is the main argument for a high first IF, and it is why up-conversion designs are common."
+ },
+ "E4C10": {
+  "src": "Matched filter theory",
+  "x": "Match the receive bandwidth to the mode's bandwidth and you admit the signal while rejecting everything else. That maximizes signal to noise and minimizes interference at the same time, which is why a good radio offers many filter widths."
+ },
+ "E4C11": {
+  "src": "Noise theory; HF band noise",
+  "x": "On the low bands atmospheric noise arriving on the antenna is far louder than anything the receiver generates internally. Attenuating both by the same amount leaves the ratio between them unchanged, so you shed overload without losing readability."
+ },
+ "E4C12": {
+  "src": "Roofing filter design",
+  "x": "A narrow roofing filter sits early in the IF chain and removes strong signals near your frequency before the later stages can be driven into compression. That improves blocking dynamic range, since the stages downstream never see the offending signal."
+ },
+ "E4C13": {
+  "src": "Phase noise theory",
+  "x": "Reciprocal mixing is local oscillator phase noise beating against a strong adjacent signal to produce interference on the frequency you are listening to. The culprit is your own oscillator's spectral purity, not the other station."
+ },
+ "E4C14": {
+  "src": "IF shift operation",
+  "x": "IF Shift moves the passband relative to the signal, so you can slide an interfering station out of the filter while keeping the one you want inside it. The received pitch stays the same, unlike RIT, which retunes the whole receiver."
+ },
+ "E4D01": {
+  "src": "Blocking dynamic range definition",
+  "x": "The span in dB between the noise floor and the signal level that compresses receiver gain by 1 dB. It measures how strong an unwanted signal can be before it starts squashing everything, including the signal you want."
+ },
+ "E4D02": {
+  "src": "Receiver dynamic range theory",
+  "x": "Spurious signals from cross modulation and desensitization from strong nearby signals. Both come from the same root cause: stages driven beyond their linear range by more signal than they can handle."
+ },
+ "E4D03": {
+  "src": "Intermodulation theory; repeater practice",
+  "x": "Each transmitter's final amplifier receives the other's signal and mixes it with its own, since a power amplifier is not perfectly linear. The products then radiate from both antennas as if they were legitimate signals."
+ },
+ "E4D04": {
+  "src": "Circulator theory; repeater practice",
+  "x": "A properly terminated circulator passes power outward to the antenna but routes anything arriving from the antenna into a load instead of back into the final. The offending signal never reaches the amplifier, so no mixing occurs."
+ },
+ "E4D06": {
+  "src": "Desensitization definition",
+  "x": "Desensitization, or desense. A strong nearby signal drives the front end toward compression, so receiver gain drops and weak signals that were readable disappear. Nothing is wrong with your receiver except that it is being overwhelmed."
+ },
+ "E4D07": {
+  "src": "Receiver front-end design",
+  "x": "Attenuate before the first RF stage. That reduces the offending signal to a level the front end handles linearly. You lose sensitivity, but on a band where external noise dominates you were not using that sensitivity anyway."
+ },
+ "E4D08": {
+  "src": "Intermodulation theory",
+  "x": "Nonlinearity. A perfectly linear circuit produces only what you put in; any departure from linearity generates sums and differences of the input frequencies. That is why corroded connections and overdriven amplifiers both cause it."
+ },
+ "E4D09": {
+  "src": "Receiver front-end design",
+  "x": "A preselector is a tuned filter ahead of the mixer that improves rejection of signals outside the band you are receiving. It keeps out-of-band energy from reaching stages that would mix it into your passband."
+ },
+ "E4D10": {
+  "src": "Third-order intercept definition",
+  "x": "At a theoretical input of 40 dBm, the third-order products would be as strong as the signals producing them. No real receiver survives that input; the number is an extrapolated figure of merit, and higher means better linearity."
+ },
+ "E4D11": {
+  "src": "Intermodulation theory",
+  "x": "Odd-order products of two in-band signals land inside the same band, where no filter can remove them. Even-order products fall far away and are filtered out easily. That is why third-order performance is the specification that matters."
+ },
+ "E4D12": {
+  "src": "Link budget analysis",
+  "x": "Add gains and subtract losses: 40 plus 10 minus 3 minus 136 gives -89 dBm received. The receiver needs its MDS plus the required SNR, so -103 plus 6 is -97 dBm. The margin is the difference, -89 minus -97, which is +8 dB."
+ },
+ "E4D13": {
+  "src": "Link budget analysis",
+  "x": "Sum everything in dB: 40 plus 6 plus 3 minus 100 gives -51 dBm. Working in decibels turns the multiplications of a link budget into additions, which is the whole reason the units are used."
+ },
+ "E4D14": {
+  "src": "dBm definition",
+  "x": "dBm is referenced to 1 milliwatt, so -100 dBm is 10 to the minus tenth of a milliwatt. That works out to 10 to the minus thirteenth watts, or 0.1 picowatts. Receivers routinely hear signals this faint."
+ },
+ "E4E01": {
+  "src": "Automatic notch filter operation",
+  "x": "An automatic notch hunts for steady carriers and removes them, and an unmodulated CW signal looks exactly like a steady carrier. So the filter deletes the signal you were copying along with the interference. Switch it off for CW."
+ },
+ "E4E02": {
+  "src": "DSP noise reduction",
+  "x": "Digital noise reduction helps with several noise types, so the inclusive answer applies. It works by recognizing which parts of the audio look like a signal and suppressing the rest, which is why pushing it too hard distorts voices."
+ },
+ "E4E03": {
+  "src": "Noise blanker operation",
+  "x": "Impulse noise: sharp, short spikes such as ignition noise or power line arcing. The blanker mutes the receiver for the microseconds a pulse lasts. It does nothing for steady hiss, which has no pulses to blank."
+ },
+ "E4E04": {
+  "src": "Ferrite suppression; automotive EMC",
+  "x": "Ferrite chokes on the charging system leads. Alternator noise travels along the wiring as common-mode current, and a choke adds impedance to that current while leaving the DC untouched."
+ },
+ "E4E05": {
+  "src": "AC line filter design",
+  "x": "A brute-force AC line filter in series with the motor's power leads. Motor brushes arc continuously, generating broadband noise that leaves along the power cord, so the filter blocks it at the source."
+ },
+ "E4E06": {
+  "src": "EMC practice; digital device emissions",
+  "x": "Unstable modulated or unmodulated carriers at particular frequencies. Network gear runs clocks at fixed rates, so its emissions appear as discrete signals rather than broadband hash, sometimes drifting as the equipment warms."
+ },
+ "E4E07": {
+  "src": "EMC practice; common-mode current",
+  "x": "Common-mode current flowing on the shield and conductors together. The shield only works against differential signals; common-mode current makes the whole cable behave as an antenna regardless of how good the braid is."
+ },
+ "E4E08": {
+  "src": "EMC practice",
+  "x": "Common-mode current, by definition: the component travelling the same direction on every conductor at once. Differential current flows out on one conductor and back on another, and that is the part carrying your intended signal."
+ },
+ "E4E09": {
+  "src": "Noise blanker operation",
+  "x": "A blanker mutes on fast-rising signals, and a very strong desired signal can trip it repeatedly. The chopping distorts the audio and can make a clean signal look as if it is producing spurious emissions."
+ },
+ "E4E10": {
+  "src": "EMC practice; power line noise",
+  "x": "Arcing at loose hardware, cracked insulators and faulty equipment all produce that roaring buzz, so the inclusive answer applies. The intermittent quality is the clue: arcing comes and goes with wind, load and moisture."
+ },
+ "E4E11": {
+  "src": "Nonlinear junction theory; EMC practice",
+  "x": "Corroded metal joints behave as crude diodes, and a diode is a nonlinear device. Two strong broadcast signals mixing there produce sums and differences that the same hardware then reradiates. Rusty guy wires and gutters are classic offenders."
+ },
+ "E4E12": {
+  "src": "Switch-mode power supply emissions",
+  "x": "A switching supply chops DC at a fixed rate, and that square-wave switching generates harmonics at regular intervals across a wide range. The evenly spaced carriers are the signature, distinguishing it from arcing or broadband hash."
+ },
+ "E4E13": {
+  "src": "NFPA 70 Article 250; lightning protection practice",
+  "x": "On the single point ground panel, alongside the coax arrestors. Everything must reference the same ground point, or a surge will find a potential difference between two protectors and route through your equipment."
+ },
+ "E4E14": {
+  "src": "NFPA 70 Article 250; lightning protection practice",
+  "x": "A single point ground brings every protector to a common reference so they all see the same voltage and fire together. Separate grounds sit at different potentials during a strike, and current flows between them through whatever is connected."
+ },
+ "E5A01": {
+  "src": "Series resonance theory",
+  "x": "Resonance. At resonance the inductive and capacitive reactances cancel each other, but each still has the full circuit current flowing through it. Voltage across either one is that current times its own reactance, which can be many times the applied voltage. High-Q circuits can be genuinely dangerous for this reason."
+ },
+ "E5A02": {
+  "src": "Resonant frequency, f = 1/(2π√LC)",
+  "x": "Resonance depends only on L and C; the resistance does not enter into it. Multiply 50 microhenries by 40 picofarads, take the square root, then divide into 1 over 2 pi. That gives 3.56 MHz. Ignore the 22 ohms entirely."
+ },
+ "E5A03": {
+  "src": "Series resonance theory",
+  "x": "Approximately the circuit resistance. The two reactances are equal and opposite at resonance so they cancel, leaving only R. That is why series resonance gives minimum impedance and maximum current."
+ },
+ "E5A04": {
+  "src": "Parallel resonance theory",
+  "x": "Approximately the circuit resistance, same as the series case, but for the opposite reason. In parallel the cancelling reactances present a very high impedance, and what remains across the terminals is the resistance."
+ },
+ "E5A05": {
+  "src": "Q and bandwidth relationship",
+  "x": "Bandwidth decreases. Q and bandwidth are inversely related, so a sharper matching network covers a narrower range of frequencies. That is the tradeoff every matching design makes: selectivity against usable bandwidth."
+ },
+ "E5A06": {
+  "src": "Parallel resonance theory",
+  "x": "Maximum. Energy sloshes back and forth between the inductor and capacitor, and at resonance that circulating current is far larger than the current entering the circuit. The tank current can be Q times the line current."
+ },
+ "E5A07": {
+  "src": "Parallel resonance theory",
+  "x": "Minimum. A parallel resonant circuit looks like a high impedance from outside, so it draws very little current from the source even while a large current circulates internally. Compare with E5A06: high inside, low at the input."
+ },
+ "E5A08": {
+  "src": "Series resonance theory",
+  "x": "In phase. Once the reactances cancel, the circuit looks purely resistive, and a resistor has no phase shift between its voltage and current. Zero phase angle is one definition of resonance."
+ },
+ "E5A09": {
+  "src": "Q definition, parallel resonance",
+  "x": "Resistance divided by the reactance of either the L or the C, since the two are equal at resonance. Note this is the reciprocal of the series case, where Q is reactance over resistance. Parallel and series are inverted."
+ },
+ "E5A10": {
+  "src": "Resonant frequency, f = 1/(2π√LC)",
+  "x": "Same formula as E5A02 with a smaller capacitor: 50 microhenries and 10 picofarads gives 7.12 MHz. Note the pattern, since a quarter of the capacitance doubles the frequency; f varies as one over the square root of C."
+ },
+ "E5A11": {
+  "src": "Bandwidth, BW = f/Q",
+  "x": "Half-power bandwidth is resonant frequency divided by Q: 7.1 MHz over 150 gives 47.3 kHz. Higher Q means narrower bandwidth, which is the same relationship E5A05 describes in words."
+ },
+ "E5A12": {
+  "src": "Bandwidth, BW = f/Q",
+  "x": "3.7 MHz divided by 118 gives 31.4 kHz. Same arithmetic as E5A11. If a bandwidth question hands you a frequency and a Q, you are dividing."
+ },
+ "E5A13": {
+  "src": "Series resonance theory",
+  "x": "Internal voltages increase. Higher Q means the circulating energy is larger relative to the losses, so the voltage developed across each reactance climbs. This is the mechanism behind E5A01, and it is why high-Q circuits need components rated well above the supply voltage."
+ },
+ "E5B01": {
+  "src": "RC time constant definition",
+  "x": "One time constant, equal to R times C. The 63.2 percent figure is 1 minus 1 over e, and 36.8 percent is 1 over e. Five time constants gets you to within one percent of the final value, which is the practical rule."
+ },
+ "E5B02": {
+  "src": "IEEE Std 260 (letter symbols)",
+  "x": "B for susceptance, which pairs with G for conductance. Together they form admittance, Y equals G plus jB, the mirror of impedance's Z equals R plus jX."
+ },
+ "E5B03": {
+  "src": "Complex arithmetic; admittance",
+  "x": "Take the reciprocal of the magnitude and flip the sign of the angle. Admittance is one over impedance, and dividing into a polar quantity inverts the magnitude and negates the angle. Two steps, no trigonometry."
+ },
+ "E5B04": {
+  "src": "RC time constant; parallel combinations",
+  "x": "Combine first, then multiply. Two 220 microfarad capacitors in parallel give 440 microfarads; two 1 megohm resistors in parallel give 0.5 megohms. Multiply and you get 220 seconds. Capacitors add in parallel, resistors halve."
+ },
+ "E5B05": {
+  "src": "Susceptance definition",
+  "x": "It is replaced by its reciprocal. Susceptance is the inverse of reactance for a pure reactance, so 100 ohms of reactance becomes 0.01 siemens of susceptance. The sign also flips, but the magnitude is simply inverted."
+ },
+ "E5B06": {
+  "src": "IEEE Std 270; admittance",
+  "x": "The imaginary part of admittance. Admittance is Y equals G plus jB, where G is conductance and B is susceptance. It is the admittance world's counterpart to reactance."
+ },
+ "E5B07": {
+  "src": "Phase angle, θ = arctan((XL−XC)/R)",
+  "x": "Net reactance first: 250 inductive minus 500 capacitive leaves 250 ohms capacitive. Then arctan of 250 over 1000 gives 14 degrees. Net capacitive means voltage lags current, since current leads in a capacitor."
+ },
+ "E5B08": {
+  "src": "Phase angle, θ = arctan((XL−XC)/R)",
+  "x": "Net reactance is 100 minus 300, or 200 ohms capacitive. Arctan of 200 over 100 is arctan 2, which is 63 degrees. Capacitive again, so voltage lags. Note the reactance here exceeds the resistance, which is why the angle passes 45 degrees."
+ },
+ "E5B09": {
+  "src": "Capacitor AC behaviour",
+  "x": "Current leads voltage by 90 degrees. A capacitor must be charged before voltage appears across it, so current arrives first. The memory aid ELI the ICE man puts I before E in the C, meaning current leads in a capacitor."
+ },
+ "E5B10": {
+  "src": "Inductor AC behaviour",
+  "x": "Voltage leads current by 90 degrees, the mirror image of the capacitor. An inductor opposes a change in current, so current lags behind. In ELI the ICE man, E comes before I in the L."
+ },
+ "E5B11": {
+  "src": "Phase angle, θ = arctan((XL−XC)/R)",
+  "x": "Here the net reactance is inductive: 75 minus 25 leaves 50 ohms. Arctan of 50 over 100 gives 27 degrees, and inductive means voltage leads. This is the one in the set where the sign goes the other way, so check which reactance is larger before answering."
+ },
+ "E5B12": {
+  "src": "IEEE Std 270",
+  "x": "The inverse of impedance, measured in siemens. High admittance means current flows easily, which is why it is convenient for parallel circuits where admittances simply add."
+ },
+ "E5C01": {
+  "src": "Complex impedance notation",
+  "x": "0 minus j100. Rectangular notation is R plus jX, so a pure reactance has zero real part. Capacitive reactance carries the minus sign and inductive the plus, which is the convention behind every impedance question in this subelement."
+ },
+ "E5C02": {
+  "src": "Polar coordinates; complex impedance",
+  "x": "By magnitude and phase angle, written as a length and an angle rather than two components. Polar form suits multiplication and division; rectangular form suits addition. Both describe the same impedance."
+ },
+ "E5C03": {
+  "src": "Complex impedance notation",
+  "x": "A positive 90 degree phase angle. Pure inductance has no resistive part, so the impedance vector points straight up the imaginary axis. Pure capacitance points straight down at minus 90."
+ },
+ "E5C04": {
+  "src": "Frequency response plotting convention",
+  "x": "Logarithmic, normally in decibels. Circuit responses span enormous ranges, and a log scale compresses that into something readable while turning the rolloff of a filter into a straight line."
+ },
+ "E5C05": {
+  "src": "Phasor diagram convention",
+  "x": "A phasor diagram, which draws each impedance as a vector whose length is magnitude and whose angle is phase. Because they are vectors, you can add them graphically, which is what makes the diagram useful."
+ },
+ "E5C06": {
+  "src": "Complex impedance notation",
+  "x": "50 ohms of resistance in series with 25 ohms of capacitive reactance. Read it straight off: the real part is resistance, the imaginary part is reactance, and the minus sign means capacitive."
+ },
+ "E5C07": {
+  "src": "Complex plane conventions",
+  "x": "On the horizontal axis, since a pure resistance has no reactive part and therefore no vertical component. Anything off the horizontal axis has reactance in it."
+ },
+ "E5C08": {
+  "src": "Polar coordinates",
+  "x": "Polar coordinates, because phase angle is one of the two numbers polar form reports directly. Rectangular form contains the same information but requires trigonometry to extract the angle."
+ },
+ "E5C09": {
+  "src": "Complex plane conventions",
+  "x": "X axis is resistance, Y axis is reactance. Inductive reactance goes up and capacitive goes down, so the four quadrants tell you at a glance whether a circuit is inductive or capacitive."
+ },
+ "E5C10": {
+  "src": "Capacitive reactance, XC = 1/(2πfC)",
+  "x": "Work out the reactance: 38 picofarads at 14 MHz gives about 299 ohms, capacitive so negative. The impedance is 400 minus j299, which plots at 400 across and 300 down. That is Point 4."
+ },
+ "E5C11": {
+  "src": "Inductive reactance, XL = 2πfL",
+  "x": "18 microhenries at 3.505 MHz gives about 396 ohms, inductive so positive. The impedance is 300 plus j396, plotting at 300 across and 400 up. That is Point 3. Inductive reactance puts you above the axis."
+ },
+ "E5C12": {
+  "src": "Capacitive reactance, XC = 1/(2πfC)",
+  "x": "19 picofarads at 21.2 MHz gives about 395 ohms of capacitive reactance, so 300 minus j395: 300 across and 400 down, which is Point 1. Note that Points 5 and 7 have negative resistance, which no passive circuit can produce."
+ },
+ "E5D01": {
+  "src": "Skin effect theory",
+  "x": "Resistance rises with frequency, because RF current crowds into a thinner and thinner layer at the conductor's surface. The centre carries almost nothing, so the effective cross-section shrinks even though the wire has not changed."
+ },
+ "E5D02": {
+  "src": "Lead inductance; VHF practice",
+  "x": "To minimize inductive reactance. Every millimetre of lead has inductance, and reactance climbs with frequency, so at VHF a component's leads can present more reactance than the component itself is worth."
+ },
+ "E5D03": {
+  "src": "Reactive power definition",
+  "x": "Ninety degrees out of phase. When voltage and current are in quadrature, the product averages to zero over a cycle, so energy flows back and forth without being consumed. That is exactly what makes the power reactive."
+ },
+ "E5D04": {
+  "src": "Phase shift; microwave practice",
+  "x": "To reduce phase shift. At microwave frequencies a wavelength may be centimetres, so even a short connection is an appreciable fraction of one and introduces phase delay that upsets the circuit's behaviour."
+ },
+ "E5D05": {
+  "src": "Capacitor parasitics",
+  "x": "Inductance. An electrolytic is built from a long rolled strip, which is effectively a coil, so it has substantial series inductance. That makes it useless at RF even though its capacitance is large."
+ },
+ "E5D06": {
+  "src": "Inductor parasitics",
+  "x": "Inter-turn capacitance. Adjacent turns form small capacitors, and that stray capacitance resonates with the coil's own inductance. Above that frequency the part behaves capacitively rather than inductively."
+ },
+ "E5D07": {
+  "src": "Self-resonance theory",
+  "x": "The component's intended reactance combined with its parasitic reactance. Every real inductor carries stray capacitance and every real capacitor carries stray inductance, and each pair resonates somewhere. No component is purely one thing."
+ },
+ "E5D08": {
+  "src": "Skin effect; capacitor loss mechanisms",
+  "x": "Skin effect in the plates and leads. At RF the current is confined to the metal's surface, raising the effective series resistance, and that resistance is where the loss appears. It is the same mechanism as E5D01."
+ },
+ "E5D09": {
+  "src": "Reactive power; energy storage",
+  "x": "Energy is stored in the magnetic or electric field and returned to the circuit, so nothing is dissipated. An ideal reactance is a temporary reservoir rather than a consumer, which is why reactive power does no work."
+ },
+ "E5D10": {
+  "src": "Antenna theory; conductor diameter effects",
+  "x": "Electrical length increases, so a fatter conductor behaves as though it were longer. That is why thick elements must be cut slightly shorter for the same resonant frequency, and why they also give wider bandwidth."
+ },
+ "E5D11": {
+  "src": "Real power, P = I²R",
+  "x": "Only the resistance consumes power, so P equals I squared R: 1 squared times 100 is 100 watts. The 100 ohms of inductive reactance stores and returns energy without dissipating any, so it contributes nothing."
+ },
+ "E5D12": {
+  "src": "Reactive power definition",
+  "x": "Wattless, nonproductive power. It flows into a reactance and back out again each cycle, measured in volt-amperes reactive rather than watts. Real current flows and real conductors heat, but no net energy is delivered."
+ },
+ "E6A01": {
+  "src": "Semiconductor materials science",
+  "x": "Microwave circuits. Electrons move faster through gallium arsenide than through silicon, so GaAs devices stay useful at frequencies where silicon has run out of speed. That electron mobility is the whole argument, and E6E01 asks it directly."
+ },
+ "E6A02": {
+  "src": "Semiconductor physics",
+  "x": "N-type, where the N stands for negative. Doping silicon with a donor such as phosphorus leaves spare electrons free to move. P-type is the opposite, doped to create holes."
+ },
+ "E6A03": {
+  "src": "Semiconductor physics; PN junction",
+  "x": "Reverse bias pulls the holes and electrons away from the junction, widening the depletion region into an insulating barrier. With no carriers in that zone there is nothing to carry current, so the diode blocks."
+ },
+ "E6A04": {
+  "src": "Semiconductor physics; doping",
+  "x": "An acceptor impurity, so called because it accepts an electron and leaves a hole behind. Acceptors make P-type material; donors make N-type. The names describe what the impurity atom does to the crystal."
+ },
+ "E6A05": {
+  "src": "Semiconductor physics; FET structure",
+  "x": "An FET's input impedance is far higher, often megohms or better. Its gate is either insulated by oxide or reverse-biased, so almost no DC flows into it, whereas a bipolar transistor's base must be fed real current."
+ },
+ "E6A06": {
+  "src": "Bipolar transistor parameters",
+  "x": "Beta is current gain: the change in collector current divided by the change in base current. A beta of 100 means one milliamp into the base controls 100 milliamps at the collector."
+ },
+ "E6A07": {
+  "src": "Semiconductor physics; silicon bandgap",
+  "x": "About 0.6 to 0.7 volts base to emitter. That is the silicon junction's forward drop, the same figure as a silicon diode, because the base-emitter junction is a silicon diode. Below it the transistor is off."
+ },
+ "E6A08": {
+  "src": "Bipolar transistor frequency response",
+  "x": "Alpha cutoff frequency, the point where grounded-base current gain has fallen to 0.7 of its low-frequency value. That 0.7 is the 3 dB point, the same half-power convention used for filters."
+ },
+ "E6A09": {
+  "src": "FET operating modes",
+  "x": "A depletion-mode FET conducts with zero gate voltage, and you apply bias to pinch the channel off. Enhancement mode is the reverse: off until you apply voltage to create a channel. Depletion is normally on."
+ },
+ "E6A10": {
+  "src": "IEEE Std 315",
+  "x": "Symbol 4. Two gate leads labelled G1 and G2 narrow it immediately to symbols 4 and 5, since only those are dual-gate. The substrate arrow direction then distinguishes N-channel from P-channel, and 4 is the N-channel one."
+ },
+ "E6A11": {
+  "src": "IEEE Std 315",
+  "x": "Symbol 1. The JFETs in this figure are the ones whose gate connects straight to the channel with no separate substrate lead, which leaves symbols 1 and 6. The gate arrow pointing away from the channel marks P-channel, so symbol 1."
+ },
+ "E6A12": {
+  "src": "MOSFET gate protection",
+  "x": "To protect the gate from static damage. The gate oxide is extremely thin and a few hundred volts of static will punch through it, destroying the device. Back-to-back Zeners clamp any such spike before it reaches that limit."
+ },
+ "E6B01": {
+  "src": "Zener diode operation",
+  "x": "It holds a nearly constant voltage across itself while the current through it varies widely. That makes it a voltage reference: feed it through a resistor and the voltage across the Zener stays put as the load changes."
+ },
+ "E6B02": {
+  "src": "Schottky diode physics",
+  "x": "Lower forward voltage drop, roughly 0.2 to 0.4 volts against silicon's 0.7. Less voltage dropped means less power wasted as heat, which matters most in a low-voltage supply where 0.7 volts is a large fraction of the output."
+ },
+ "E6B03": {
+  "src": "Semiconductor physics; LED band gap",
+  "x": "Band gap. The energy an electron loses crossing the junction sets both the photon's colour and the forward voltage needed, so the two are linked. Blue LEDs need a wider band gap and therefore a higher forward voltage than red ones."
+ },
+ "E6B04": {
+  "src": "Varactor diode operation",
+  "x": "A varactor. Reverse bias widens the depletion region, and a wider gap between the charged regions means less capacitance, so the applied voltage tunes the capacitance. It is how a VFO can be tuned electronically."
+ },
+ "E6B05": {
+  "src": "PIN diode operation",
+  "x": "Low junction capacitance. A switch is only useful if the off state really blocks, and any capacitance across the junction lets RF leak through. The PIN diode's thick intrinsic layer keeps that capacitance small."
+ },
+ "E6B06": {
+  "src": "Schottky diode physics",
+  "x": "As a VHF/UHF mixer or detector. A metal-semiconductor junction stores no minority carriers, so it switches extremely fast and works well at frequencies where an ordinary junction diode is too slow."
+ },
+ "E6B07": {
+  "src": "Semiconductor thermal failure",
+  "x": "Excessive junction temperature. Current itself does not destroy the diode; the heat it produces at the junction does. That is why a diode on a heat sink handles far more current than the same part in free air."
+ },
+ "E6B08": {
+  "src": "Schottky diode physics",
+  "x": "A metal-semiconductor junction rather than the usual P-N junction between two doped semiconductors. That construction is what gives it both the low forward drop and the fast switching."
+ },
+ "E6B09": {
+  "src": "Point-contact diode operation",
+  "x": "As an RF detector. A tiny point contact means very little junction capacitance, so it responds at high frequencies. The old cat's whisker crystal set detector was exactly this device."
+ },
+ "E6B10": {
+  "src": "IEEE Std 315",
+  "x": "Symbol 6. Look at the cathode bar: the Schottky symbol draws it with a squared hook at each end, forming an S shape. Every other diode in the figure has either a plain bar or some other marking."
+ },
+ "E6B11": {
+  "src": "PIN diode operation",
+  "x": "Forward DC bias current. The more forward current you pass, the lower the diode's RF resistance becomes, so a DC control current sets how much RF attenuation you get. That makes it an electronically variable attenuator."
+ },
+ "E6C01": {
+  "src": "Comparator design; Schmitt trigger",
+  "x": "Hysteresis makes the switching threshold move once the output changes, so a noisy input hovering near the threshold cannot cause the output to chatter. The output must travel a defined distance back before it will switch again."
+ },
+ "E6C02": {
+  "src": "Comparator operation",
+  "x": "The output changes state. A comparator has only two output levels, and which one it produces depends entirely on whether the input is above or below the threshold. Crossing the threshold flips it."
+ },
+ "E6C03": {
+  "src": "Digital logic; tri-state outputs",
+  "x": "Three output states: logic 0, logic 1, and high impedance. The third state effectively disconnects the output, which is what lets several devices share one bus with only the selected one driving it."
+ },
+ "E6C04": {
+  "src": "BiCMOS logic families",
+  "x": "BiCMOS combines both technologies to get the best of each: CMOS inputs for high input impedance and low power, bipolar outputs for the current drive CMOS lacks."
+ },
+ "E6C05": {
+  "src": "CMOS logic",
+  "x": "CMOS. Its complementary transistor pairs are never both fully on, so it draws current mainly while switching. TTL conducts continuously, which is why battery-powered equipment uses CMOS."
+ },
+ "E6C06": {
+  "src": "CMOS logic thresholds",
+  "x": "The switching threshold sits near half the supply voltage, so noise has to be large enough to swing the input across the midpoint before anything changes. That wide margin either side is what gives CMOS its noise immunity."
+ },
+ "E6C07": {
+  "src": "Digital logic design",
+  "x": "A resistor tied to the positive or negative supply to hold a line at a known level when nothing is driving it. Without one, a floating input picks up noise and reads unpredictably."
+ },
+ "E6C08": {
+  "src": "IEEE Std 91 (logic symbols)",
+  "x": "Symbol 2. The flat back and rounded front make it an AND gate, and the small bubble on the output inverts it, giving NAND. The bubble always means inversion, whatever shape it is attached to."
+ },
+ "E6C09": {
+  "src": "FPGA design; VHDL/Verilog",
+  "x": "A hardware description language such as VHDL or Verilog. You describe the behaviour you want in text and the tools work out the gate configuration, which is a very different process from drawing a circuit."
+ },
+ "E6C10": {
+  "src": "IEEE Std 91 (logic symbols)",
+  "x": "Symbol 4. The curved back and pointed front are the OR shape, and the output bubble inverts it into NOR. Compare symbol 2, which is the same idea applied to an AND gate."
+ },
+ "E6C11": {
+  "src": "IEEE Std 91 (logic symbols)",
+  "x": "Symbol 5, a triangle with a bubble on its output. The triangle alone would be a buffer, doing nothing but drive; adding the bubble makes it an inverter, which performs the NOT operation."
+ },
+ "E6D01": {
+  "src": "Piezoelectric effect",
+  "x": "Piezoelectric materials work both ways: squeeze one and it produces a voltage, apply a voltage and it physically flexes. That two-way behaviour is what makes a quartz crystal act as a resonator, since the mechanical vibration and the electrical signal drive each other."
+ },
+ "E6D02": {
+  "src": "Crystal equivalent circuit",
+  "x": "A series RLC branch representing the mechanical resonance, with a shunt capacitance across it for the electrodes and stray capacitance. Those two paths are why a crystal has both a series and a parallel resonant frequency, a few kilohertz apart."
+ },
+ "E6D03": {
+  "src": "Piezoelectric effect",
+  "x": "Mechanical deformation when voltage is applied. That is the reverse direction of the effect described in E6D01, and it is how ultrasonic transducers and quartz oscillators are driven."
+ },
+ "E6D04": {
+  "src": "Eddy current losses; transformer design",
+  "x": "To reduce eddy current losses. A changing magnetic field induces circulating currents in the core metal, and those currents just make heat. Splitting the core into thin insulated laminations breaks up the paths those currents would take."
+ },
+ "E6D05": {
+  "src": "Ferrite and powdered iron magnetics",
+  "x": "Ferrite needs fewer turns, because its permeability is much higher than powdered iron's. More permeability means more inductance per turn. The tradeoff appears in E6D08: powdered iron is the more temperature-stable material."
+ },
+ "E6D06": {
+  "src": "Magnetic materials; permeability",
+  "x": "Permeability, which is how readily the material carries magnetic flux. Inductance scales with it directly, so an identical coil wound on a high-permeability core has far more inductance than the same coil in air."
+ },
+ "E6D08": {
+  "src": "Ferrite and powdered iron magnetics",
+  "x": "Powdered iron. Its magnetic properties drift far less with temperature than ferrite's, which is why it is chosen for oscillator and filter circuits where the frequency must stay put as the equipment warms up."
+ },
+ "E6D09": {
+  "src": "Parasitic suppression; ARRL Handbook",
+  "x": "Ferrite beads. Slipped over the leads, a bead adds impedance at VHF and UHF while barely affecting HF, so it damps out parasitic oscillations without touching the amplifier's intended operation."
+ },
+ "E6D10": {
+  "src": "Toroid magnetics",
+  "x": "A toroid keeps nearly all of its magnetic field inside the core, since the flux path is a closed loop. That means less coupling to nearby components and less stray pickup, plus fewer turns for a given inductance."
+ },
+ "E6D11": {
+  "src": "Magnetic materials; brass slugs",
+  "x": "Brass. It is non-magnetic but conductive, so inserting it into a coil induces eddy currents whose fields oppose the coil's own, reducing the inductance. Ferrite and iron slugs do the opposite and increase it."
+ },
+ "E6D12": {
+  "src": "Magnetic saturation",
+  "x": "Excessive magnetic flux. Once the core's magnetic domains are all aligned it cannot carry any more flux, so inductance collapses and the waveform distorts. More current past that point produces no more magnetic field."
+ },
+ "E6E01": {
+  "src": "Semiconductor materials science; electron mobility",
+  "x": "Higher electron mobility. Charge carriers move through gallium arsenide faster than through silicon, so the device can respond to higher frequencies before the carriers can no longer keep up."
+ },
+ "E6E02": {
+  "src": "IC package types",
+  "x": "DIP, the dual in-line package, whose pins pass through holes in the board and are soldered on the far side. Surface-mount parts sit on top of the board instead, with no holes involved."
+ },
+ "E6E03": {
+  "src": "Semiconductor materials science",
+  "x": "Gallium nitride. GaN handles higher frequencies and much higher power densities than either silicon or gallium arsenide, which is why it now appears in microwave power amplifiers and modern switching supplies alike."
+ },
+ "E6E04": {
+  "src": "MMIC design conventions",
+  "x": "Fifty ohms, matching the standard used throughout RF work. Building MMICs to that impedance means they drop into a 50-ohm system without matching networks, which is much of their appeal."
+ },
+ "E6E05": {
+  "src": "Low-noise amplifier design",
+  "x": "About 0.5 dB, meaning the preamplifier adds only half a decibel of noise above the theoretical minimum. Figures that low matter at UHF and above, where there is little atmospheric noise to mask the receiver's own contribution."
+ },
+ "E6E06": {
+  "src": "MMIC design",
+  "x": "Controlled gain, a low noise figure, and consistent input and output impedance across the specified range. Getting all three at once from discrete parts is difficult, and having it in one component is why MMICs are popular."
+ },
+ "E6E07": {
+  "src": "Microstrip transmission line",
+  "x": "Microstrip: a track on the board surface with a ground plane underneath, whose width and the board thickness set its impedance. At microwave frequencies the printed circuit trace becomes the transmission line."
+ },
+ "E6E08": {
+  "src": "MMIC biasing practice",
+  "x": "Through a resistor or RF choke connected to the output lead. Most MMICs take their DC on the same pin as their RF output, so the choke or resistor feeds the supply in while keeping the RF from escaping into it."
+ },
+ "E6E09": {
+  "src": "Package parasitics; RF layout",
+  "x": "Surface mount. With no leads to speak of, the stray inductance is a small fraction of a through-hole part's, and above HF that lead inductance is what limits performance."
+ },
+ "E6E10": {
+  "src": "RF layout practice",
+  "x": "Surface mount offers shorter leads and therefore lower parasitic inductance and capacitance, along with smaller size and easier automated assembly. All the listed advantages are genuine, so the inclusive answer applies."
+ },
+ "E6E11": {
+  "src": "IC package types",
+  "x": "Two rows of pins along opposite sides, which is exactly what dual in-line describes. The 0.1 inch pin spacing makes DIPs convenient for breadboards and sockets."
+ },
+ "E6E12": {
+  "src": "Package parasitics",
+  "x": "Excessive lead length. A DIP's leads add inductance that becomes significant reactance at UHF, upsetting the circuit. This is the same reasoning as E6E09, seen from the other side."
+ },
+ "E6F01": {
+  "src": "Photovoltaic physics",
+  "x": "Electrons. A photon with enough energy knocks an electron loose from the crystal lattice, and the cell's internal field sweeps it out as current. No electron freed means no current, which is why photon energy and band gap determine which wavelengths work."
+ },
+ "E6F02": {
+  "src": "Photoconductivity",
+  "x": "Resistance decreases. Light frees additional charge carriers in the material, and more carriers mean easier conduction. That is the basis of the light-dependent resistor in a streetlight sensor."
+ },
+ "E6F03": {
+  "src": "Optoisolator design",
+  "x": "An LED facing a phototransistor inside one opaque package. The signal crosses as light, so the two sides share no electrical connection at all, which is exactly the point."
+ },
+ "E6F04": {
+  "src": "Photovoltaic physics",
+  "x": "The conversion of light directly into electrical energy, with no heat engine or moving part in between. Photons free charge carriers and the junction's field does the rest."
+ },
+ "E6F05": {
+  "src": "Optical encoder design",
+  "x": "A patterned wheel interrupting a light beam, with a detector counting the interruptions. Turning the shaft produces pulses, and a two-channel pattern also reveals which direction it is turning."
+ },
+ "E6F06": {
+  "src": "Photoconductive materials",
+  "x": "A crystalline semiconductor, most often cadmium sulfide. The band gap has to match the light you want to detect, and semiconductors are the materials where that gap falls in the right range."
+ },
+ "E6F07": {
+  "src": "Solid-state relay design",
+  "x": "A solid-state relay does an electromechanical relay's job with semiconductors instead of a coil and contacts. No moving parts means no contact wear or arcing, and switching is silent and much faster."
+ },
+ "E6F08": {
+  "src": "Optoisolator application; safety",
+  "x": "They provide electrical isolation between the low-voltage control circuit and the 120 volt AC side. Since the only link is light, a fault on the mains side cannot reach the control electronics or the person touching it."
+ },
+ "E6F09": {
+  "src": "Photovoltaic efficiency",
+  "x": "The fraction of incident light energy the cell converts into electrical output. Typical silicon cells manage 15 to 22 percent, with most of the remainder lost as heat or passing straight through."
+ },
+ "E6F10": {
+  "src": "Photovoltaic materials",
+  "x": "Silicon, because it is abundant, well understood from the semiconductor industry, and has a band gap reasonably matched to sunlight. Other materials beat it on efficiency but not on cost per watt."
+ },
+ "E6F11": {
+  "src": "Semiconductor physics; photovoltaic cells",
+  "x": "About 0.5 volts, set by the silicon junction's physics rather than by the cell's size. Area determines current, not voltage, which is why a 12 volt panel needs roughly 36 cells wired in series."
+ },
+ "E7A01": {
+  "src": "Digital logic; bistable circuits",
+  "x": "A flip-flop. Bistable means it has two stable states and stays in whichever one it was put into until told otherwise. That memory is what makes it the building block of counters and registers."
+ },
+ "E7A02": {
+  "src": "Digital counter design",
+  "x": "One output pulse for every ten input pulses. Decade means ten, so the counter divides by ten. Chain two and you divide by a hundred."
+ },
+ "E7A03": {
+  "src": "Flip-flop operation",
+  "x": "A flip-flop, which changes state once per input pulse and therefore takes two input pulses to complete one output cycle. That is division by two, and it is why flip-flops chain into binary dividers."
+ },
+ "E7A04": {
+  "src": "Binary division",
+  "x": "Four. Each flip-flop halves the frequency, so n of them divide by 2 to the n. Two to the fourth is 16, so four stages. Division by 8 would need three, by 32 five."
+ },
+ "E7A05": {
+  "src": "Multivibrator circuits",
+  "x": "An astable multivibrator. Astable means no stable state at all, so it flips back and forth on its own and acts as an oscillator. It needs no external clock because it is the clock."
+ },
+ "E7A06": {
+  "src": "Multivibrator circuits",
+  "x": "It has one stable state, jumps to the other when triggered, and returns after a set time. That makes it a one-shot timer. Astable has no stable state, bistable has two, monostable has one."
+ },
+ "E7A07": {
+  "src": "Boolean logic; IEEE Std 91",
+  "x": "NAND is AND followed by inversion, so the output is 0 only when every input is 1. AND alone gives 1 in that case, and the inversion flips it."
+ },
+ "E7A08": {
+  "src": "Boolean logic",
+  "x": "OR produces 1 if any input is 1, requiring only one. AND needs them all. That is the whole distinction, and every other gate in this group is built from those two plus inversion."
+ },
+ "E7A09": {
+  "src": "Boolean logic",
+  "x": "Exclusive NOR outputs 0 when exactly one input is 1, and 1 when the inputs match each other. XOR is the reverse, so XNOR is really an equality detector."
+ },
+ "E7A10": {
+  "src": "Digital logic; truth tables",
+  "x": "A truth table lists every possible input combination alongside the output it produces. It defines a logic function completely, which is why it is the reference for what a gate actually does."
+ },
+ "E7A11": {
+  "src": "Logic level conventions",
+  "x": "High voltage is 1 and low voltage is 0, which is the ordinary convention. Negative logic inverts that, so the same voltages mean the opposite values."
+ },
+ "E7B01": {
+  "src": "Amplifier class theory",
+  "x": "More than 180 degrees but less than 360. Class AB sits between A, which conducts the whole cycle, and B, which conducts exactly half. The overlap past 180 degrees is what removes the crossover distortion pure Class B suffers."
+ },
+ "E7B02": {
+  "src": "Class D amplifier theory",
+  "x": "A switching amplifier. The device is driven fully on or fully off rather than anywhere in between, so it dissipates very little, and efficiency can exceed 90 percent. The output is then filtered back into a waveform."
+ },
+ "E7B03": {
+  "src": "Switching amplifier design",
+  "x": "A filter to remove harmonics. Switching produces a square wave, and a square wave is full of odd harmonics, so a low-pass filter is not optional. Without it the amplifier radiates across many bands."
+ },
+ "E7B04": {
+  "src": "Amplifier biasing",
+  "x": "Roughly halfway between saturation and cutoff. Sitting in the middle lets the signal swing equally in both directions before clipping, which is what makes Class A linear and also why it wastes power at idle."
+ },
+ "E7B05": {
+  "src": "Amplifier stability",
+  "x": "Install parasitic suppressors, neutralize the stage, or both. Unwanted oscillation comes from feedback through internal capacitance, so you either cancel that feedback or add loss at the frequency where it would oscillate."
+ },
+ "E7B06": {
+  "src": "Grounded-grid amplifier design",
+  "x": "Low input impedance, typically a few tens of ohms. The cathode is driven directly, which presents a low impedance but also means the driving stage supplies real power. The grounded grid does provide good isolation between input and output."
+ },
+ "E7B07": {
+  "src": "Amplifier class theory; modulation",
+  "x": "Distortion and excessive bandwidth. SSB carries its information in the envelope, and Class C destroys the envelope. The splatter that follows is why linear amplification is mandatory for SSB."
+ },
+ "E7B08": {
+  "src": "Switching amplifier theory",
+  "x": "The device spends nearly all its time either saturated or cut off. Dissipation is voltage times current, and in saturation the voltage is tiny while at cutoff the current is nearly zero, so either state wastes very little."
+ },
+ "E7B09": {
+  "src": "Common-collector amplifier",
+  "x": "Input and output are in phase. An emitter follower gives no voltage gain and no phase inversion; what it provides is current gain and impedance transformation, taking a high impedance in and giving a low impedance out."
+ },
+ "E7B10": {
+  "src": "IEEE Std 315; transistor biasing",
+  "x": "R1 and R2 form a voltage divider that sets the base at a fixed fraction of the supply, establishing the operating point. Divider bias is more stable against transistor variation than feeding the base through a single resistor."
+ },
+ "E7B11": {
+  "src": "Transistor biasing; emitter degeneration",
+  "x": "R3 is the emitter resistor and provides self bias. Rising collector current raises the emitter voltage, which reduces the base-emitter difference and throttles the current back. That negative feedback stabilizes the stage against temperature."
+ },
+ "E7B12": {
+  "src": "IEEE Std 315; amplifier topologies",
+  "x": "Common emitter, identified by where the signal enters and leaves: in at the base, out at the collector, with the emitter common to both. It is the configuration that gives both voltage and current gain, and it inverts."
+ },
+ "E7C01": {
+  "src": "Filter topology; Pi network",
+  "x": "Shunt capacitor at the input, shunt capacitor at the output, series inductor between them. Picture the Greek letter pi: two legs to ground and a bar across the top. That shape passes low frequencies and blocks high ones."
+ },
+ "E7C02": {
+  "src": "Filter topology; T network",
+  "x": "High-pass. Series capacitors block low frequencies while the shunt inductor sends them to ground, so only the high end gets through. Swap the components and the same T becomes a low-pass."
+ },
+ "E7C03": {
+  "src": "Pi-L network design",
+  "x": "Greater harmonic suppression. Adding a series inductor at the output extends the low-pass action, giving the network more attenuation at harmonic frequencies than a plain Pi achieves."
+ },
+ "E7C04": {
+  "src": "Impedance matching theory",
+  "x": "It cancels the reactive part and transforms the resistive part to the value you want. Two jobs at once, which is why a matching network needs at least two adjustable elements."
+ },
+ "E7C05": {
+  "src": "Filter response types",
+  "x": "A Chebyshev filter. It accepts deliberate ripple in the passband in exchange for a steeper cutoff than a Butterworth of the same order. Ripple traded for sharpness is the design bargain."
+ },
+ "E7C06": {
+  "src": "Filter response types",
+  "x": "An extremely sharp cutoff with notches in the stop band. The elliptical filter places transmission zeros just outside the passband, which is what buys that sharpness. Those notches are the giveaway in the answer."
+ },
+ "E7C07": {
+  "src": "Pi-L network design",
+  "x": "A Pi network with an extra series inductor on the output. That description is the definition, and E7C03 explains what the addition buys you."
+ },
+ "E7C08": {
+  "src": "Helical filter design",
+  "x": "A helical filter, a coil inside a shielded cavity. It gives a high-Q resonator small enough to fit in a VHF or UHF radio, which is why it appears as the band-pass or notch element in those transceivers."
+ },
+ "E7C09": {
+  "src": "Crystal filter design",
+  "x": "A filter built from several quartz crystals arranged in a lattice, used for low-level signals in receiver IF stages. Crystals give Q values no LC circuit can approach, which is where a receiver's selectivity comes from."
+ },
+ "E7C10": {
+  "src": "Cavity filter design; duplexer practice",
+  "x": "A cavity filter. A repeater duplexer must separate transmit and receive frequencies only 600 kHz apart while handling full transmitter power, and only a high-Q resonant cavity does both at once."
+ },
+ "E7C11": {
+  "src": "Filter specifications",
+  "x": "Shape factor, the ratio of the filter's bandwidth at 60 dB down to its bandwidth at 6 dB down. A value approaching 1 means nearly vertical skirts and excellent adjacent-channel rejection."
+ },
+ "E7D01": {
+  "src": "Linear regulator theory",
+  "x": "A control element, usually a pass transistor, has its conduction varied continuously so the output stays put as input or load changes. It works like an automatically adjusted resistor, which is also why it dissipates the difference as heat."
+ },
+ "E7D02": {
+  "src": "Switchmode regulator theory",
+  "x": "By varying the duty cycle of pulses fed into a filter. The switch is either fully on or fully off, so little is wasted, and the filter averages those pulses into smooth DC. Changing the on-time changes the average."
+ },
+ "E7D03": {
+  "src": "Zener diode operation",
+  "x": "A Zener diode, which holds a nearly fixed voltage across itself over a wide range of current. That stability is what a reference needs, and it is why the Zener appears in almost every regulator design."
+ },
+ "E7D04": {
+  "src": "Voltage regulator topologies",
+  "x": "A series regulator. Input, output and ground account for the three terminals, and the control element sits in series with the load. A shunt regulator would need a different arrangement."
+ },
+ "E7D05": {
+  "src": "Voltage regulator topologies",
+  "x": "A shunt regulator, which is placed across the load and draws whatever current is needed to hold the voltage down. It loads the source rather than restricting it, so it wastes most power when the load is light."
+ },
+ "E7D06": {
+  "src": "IEEE Std 315; linear regulator design",
+  "x": "Q1 is the pass transistor, and it varies its conduction to hold the output voltage constant. All the load current flows through it, which is why it needs a heat sink in any real supply."
+ },
+ "E7D07": {
+  "src": "Linear regulator design",
+  "x": "C2 bypasses rectifier ripple around D1, keeping that ripple out of the reference. The Zener sets the output voltage, so any noise on it appears directly at the output multiplied by the circuit's gain."
+ },
+ "E7D08": {
+  "src": "IEEE Std 315; regulator topologies",
+  "x": "A linear voltage regulator: a Zener reference, a pass transistor in series with the load, and no switching element anywhere. Continuous control rather than pulses is what makes it linear."
+ },
+ "E7D09": {
+  "src": "Battery capacity definition",
+  "x": "Amp-hours divided by average current gives hours. A 20 Ah battery supplying 2 amps lasts about 10 hours on paper. Real capacity falls under heavy load and in cold weather, so treat it as an upper bound."
+ },
+ "E7D10": {
+  "src": "Switchmode supply design",
+  "x": "Operating at high frequency lets the transformer and filter components be far smaller, since both shrink as frequency rises. Less iron and less copper means less weight and lower cost for the same output power."
+ },
+ "E7D11": {
+  "src": "Power conversion",
+  "x": "To convert the panel's DC into AC. Solar cells produce only DC, so anything designed for mains power needs an inverter between it and the panel."
+ },
+ "E7D12": {
+  "src": "Linear regulator specifications",
+  "x": "The minimum input-to-output difference the regulator needs to keep regulating. Fall below it and the output simply follows the input down. It is why a 5 volt regulator with 2 volts of dropout needs at least 7 volts in."
+ },
+ "E7D13": {
+  "src": "Power dissipation, P = ΔV × I",
+  "x": "Multiply the input-to-output voltage difference by the output current. A regulator dropping 5 volts at 2 amps dissipates 10 watts as heat, which is the fundamental inefficiency of the linear approach."
+ },
+ "E7D14": {
+  "src": "Capacitor voltage balancing",
+  "x": "Equalizing resistors do several jobs at once: they share the voltage evenly across series capacitors, compensate for differences in leakage, and bleed the charge off when power is removed. All the listed purposes apply."
+ },
+ "E7D15": {
+  "src": "Step-start circuit design",
+  "x": "To let the filter capacitors charge gradually. An empty capacitor bank looks like a short circuit at switch-on, so the inrush would blow fuses and stress the rectifiers. A resistor in series limits it, then shorts out once charged."
+ },
+ "E7E01": {
+  "src": "FM generation",
+  "x": "Reactance modulation of an oscillator. Varying a reactance in the oscillator's tank shifts its frequency in step with the audio, which is frequency modulation by definition."
+ },
+ "E7E02": {
+  "src": "Reactance modulator theory",
+  "x": "It produces PM or FM by varying a capacitance in step with the modulating signal. Whether you get FM or PM depends on where in the chain it acts: at the oscillator you get FM, at a later amplifier stage you get PM."
+ },
+ "E7E03": {
+  "src": "FM detection",
+  "x": "A circuit that detects FM by converting frequency variations into amplitude variations the following stages can handle. Its response curve is centred on the carrier, which is why tuning off frequency distorts the audio."
+ },
+ "E7E04": {
+  "src": "SSB generation; filter method",
+  "x": "A balanced modulator followed by a filter. The modulator suppresses the carrier and leaves both sidebands; the filter then removes one of them. That two-step process is the classic filter method."
+ },
+ "E7E05": {
+  "src": "FM pre-emphasis",
+  "x": "A pre-emphasis network, which boosts the higher audio frequencies before modulation. FM noise rises with frequency, so lifting the treble at the transmitter and cutting it at the receiver improves the signal-to-noise ratio where noise is worst."
+ },
+ "E7E06": {
+  "src": "FM de-emphasis",
+  "x": "De-emphasis restores the balance that pre-emphasis upset, and it keeps the system compatible with phase-modulated transmitters, whose output naturally rises with modulating frequency. The receiver's falling response cancels that rise."
+ },
+ "E7E07": {
+  "src": "Communications terminology",
+  "x": "Baseband is the frequency range a message occupies before modulation, such as the few kilohertz of a voice signal. Modulation moves that baseband up to a radio frequency for transmission."
+ },
+ "E7E08": {
+  "src": "Heterodyne theory",
+  "x": "Both inputs plus their sum and difference. Filtering afterwards decides which you keep, and the ones you did not want become spurious products if the filtering is inadequate."
+ },
+ "E7E09": {
+  "src": "Mixer overload; intermodulation",
+  "x": "Spurious mixer products. A mixer relies on a controlled nonlinearity, and driving it too hard makes that nonlinearity generate far more than the intended sum and difference. The extra products appear as signals that are not really there."
+ },
+ "E7E10": {
+  "src": "AM detection",
+  "x": "By rectifying the RF and then filtering it, leaving the envelope behind as audio. It is the simplest detector there is, which is why a diode and a capacitor made a crystal set work."
+ },
+ "E7E11": {
+  "src": "SSB detection",
+  "x": "A product detector. SSB arrives with its carrier removed, so the receiver must supply a substitute and multiply the two together. That multiplication is the product the name refers to."
+ },
+ "E7F01": {
+  "src": "SDR architecture; direct sampling",
+  "x": "The incoming RF goes straight into an analog-to-digital converter with no mixer ahead of it. Everything after that point happens in software, which removes the mixers and their spurious products entirely."
+ },
+ "E7F02": {
+  "src": "Adaptive DSP filtering",
+  "x": "An adaptive filter, which measures the incoming signal and adjusts itself continuously to suppress whatever looks like noise. Because it adapts, it can track interference that moves, unlike a fixed filter."
+ },
+ "E7F03": {
+  "src": "Hilbert transform; SSB generation",
+  "x": "A Hilbert-transform filter, which shifts every frequency component by exactly 90 degrees. That quadrature version of the signal is what lets the unwanted sideband be cancelled mathematically instead of filtered out."
+ },
+ "E7F04": {
+  "src": "Phasing method; SDR SSB generation",
+  "x": "Two signals are combined in quadrature, 90 degrees apart. Done correctly one sideband adds while the other cancels, which is the phasing method implemented in software rather than with analog networks."
+ },
+ "E7F05": {
+  "src": "Nyquist sampling theorem",
+  "x": "At least twice the highest frequency present. That is the Nyquist criterion, and sampling any slower means the reconstruction is wrong rather than merely imperfect."
+ },
+ "E7F06": {
+  "src": "ADC resolution; binary arithmetic",
+  "x": "A 1 volt range at 1 millivolt resolution needs 1000 steps. Nine bits give only 512, and 10 bits give 1024, so 10 bits is the minimum. Each bit doubles the available steps."
+ },
+ "E7F07": {
+  "src": "Fast Fourier Transform",
+  "x": "It converts a signal from the time domain into the frequency domain, turning a series of samples into a spectrum. That is what puts the waterfall display on an SDR screen."
+ },
+ "E7F08": {
+  "src": "Decimation; DSP theory",
+  "x": "Reducing the effective sample rate by discarding samples. Once a signal has been filtered down to a narrow bandwidth it no longer needs a high sample rate, and decimating cuts the processing load."
+ },
+ "E7F09": {
+  "src": "Anti-aliasing; Nyquist theorem",
+  "x": "Because decimating lowers the sample rate, any content above the new Nyquist limit would fold down and appear as false low-frequency signals. Filtering it out first is the only way to prevent that."
+ },
+ "E7F10": {
+  "src": "SDR architecture; Nyquist theorem",
+  "x": "Sample rate. Nyquist caps the usable bandwidth at half the sampling frequency, so the converter's rate sets the widest chunk of spectrum the radio can present at once."
+ },
+ "E7F11": {
+  "src": "ADC dynamic range",
+  "x": "The reference voltage and the number of bits together. Those two set the size of the smallest step the converter can distinguish, and nothing smaller than one step can be represented. That quantization floor is the limit in the absence of other noise."
+ },
+ "E7F12": {
+  "src": "FIR filter theory",
+  "x": "An FIR filter can delay every frequency component equally, which is linear phase response. That matters because unequal delay smears a waveform, and FIR filters can avoid it by design."
+ },
+ "E7F13": {
+  "src": "DSP filter architecture",
+  "x": "Taps provide the incremental delays the filter algorithm works with. Each tap holds a sample from a slightly earlier moment, and the filter's response comes from how those delayed samples are weighted and summed."
+ },
+ "E7F14": {
+  "src": "DSP filter architecture",
+  "x": "More taps. Each additional tap gives the algorithm another delayed sample to work with, and more samples allow a steeper, more precisely shaped response. The cost is more computation and more delay through the filter."
+ },
+ "E7G01": {
+  "src": "Operational amplifier characteristics",
+  "x": "Very low, often a fraction of an ohm with feedback applied. Low output impedance means the op-amp holds its output voltage regardless of what the load draws, which is what lets it drive following stages without loading effects."
+ },
+ "E7G02": {
+  "src": "Op-amp filter design",
+  "x": "Low-pass. A capacitor across the feedback resistor reduces the feedback impedance as frequency rises, and since gain is set by that impedance, gain falls with frequency. Falling high-frequency gain is a low-pass response."
+ },
+ "E7G03": {
+  "src": "Operational amplifier characteristics",
+  "x": "Very high, typically megohms or far more. High input impedance means the op-amp barely loads the circuit feeding it, which pairs with the very low output impedance in E7G01."
+ },
+ "E7G04": {
+  "src": "Op-amp specifications",
+  "x": "The small differential input voltage needed to bring the open-loop output to zero. A perfect op-amp would need none, but real ones have slight internal mismatches, and that offset shows up as a DC error at the output."
+ },
+ "E7G05": {
+  "src": "Active filter stability",
+  "x": "Restrict both gain and Q. High Q means a sharply peaked response that rings, and high gain makes any stray feedback more likely to sustain oscillation. Keeping both moderate is what keeps an active audio filter well behaved."
+ },
+ "E7G06": {
+  "src": "Op-amp gain-bandwidth product",
+  "x": "The frequency at which open-loop gain has fallen to one, meaning no gain at all. Gain and bandwidth trade off along the way, so an amplifier with a 1 MHz product gives a gain of 10 up to about 100 kHz."
+ },
+ "E7G07": {
+  "src": "Inverting amplifier gain, −RF/R1",
+  "x": "Gain is the feedback resistor over the input resistor: 470 divided by 10 is 47. The circuit inverts, so the true gain is minus 47, but the question asks only for the magnitude."
+ },
+ "E7G08": {
+  "src": "Ideal op-amp model",
+  "x": "It does not vary with frequency. That is part of the definition of an ideal op-amp, along with infinite gain and infinite input impedance. Real devices depart from it, which is what the gain-bandwidth product in E7G06 describes."
+ },
+ "E7G09": {
+  "src": "Inverting amplifier gain, −RF/R1",
+  "x": "Gain is minus 10000 over 1000, which is minus 10. Multiply by the 0.23 volt input and the output is minus 2.3 volts. The minus sign matters here, since this question asks for the actual output rather than the magnitude."
+ },
+ "E7G10": {
+  "src": "Inverting amplifier gain, −RF/R1",
+  "x": "68000 divided by 1800 is 37.8, which rounds to 38. Convert kilohms to ohms before dividing, or keep both in kilohms, but do not mix the units."
+ },
+ "E7G11": {
+  "src": "Inverting amplifier gain, −RF/R1",
+  "x": "47000 over 3300 is 14.2, so 14. Same formula as the other three in this group: the ratio of the two resistors is the whole answer."
+ },
+ "E7G12": {
+  "src": "Operational amplifier definition",
+  "x": "A high-gain, direct-coupled differential amplifier with very high input impedance and very low output impedance. Every one of those properties matters, which is why the answer is the long one."
+ },
+ "E7H01": {
+  "src": "Oscillator topologies",
+  "x": "Colpitts, Hartley and Pierce. They differ in how feedback is taken: capacitive divider for Colpitts, tapped inductor for Hartley, and a crystal for Pierce. Learn which element each uses and E7H04 and E7H05 come free."
+ },
+ "E7H02": {
+  "src": "Oscillator stability",
+  "x": "Frequency shifts caused by mechanical vibration. Tap the chassis and the note moves, because the components are physically deforming slightly. Capacitors and crystals are both sensitive to it."
+ },
+ "E7H03": {
+  "src": "Phase-locked loop theory",
+  "x": "A servo loop built from a phase detector, a low-pass filter, a voltage-controlled oscillator and a stable reference. The detector compares VCO output against the reference and steers the VCO until the two agree."
+ },
+ "E7H04": {
+  "src": "Colpitts oscillator",
+  "x": "Through a capacitive divider. Two capacitors across the tank provide the tap that feeds signal back to the input. Hartley does the same job with a tapped coil instead, which is the only real difference between them."
+ },
+ "E7H05": {
+  "src": "Pierce oscillator",
+  "x": "Through a quartz crystal, which is itself the frequency-determining feedback element. That makes the Pierce circuit simple and very stable, and it is why so many microprocessor clock oscillators use it."
+ },
+ "E7H06": {
+  "src": "Phase-locked loop applications",
+  "x": "Frequency synthesis and FM demodulation. For synthesis the loop multiplies a reference up to the wanted frequency; for demodulation the control voltage that keeps the VCO locked is itself the recovered audio."
+ },
+ "E7H07": {
+  "src": "Oscillator mechanical design",
+  "x": "Isolate the oscillator mechanically from its enclosure, using soft mounts so vibration reaching the chassis does not reach the components. Rigid mounting transmits every knock straight into the tank circuit."
+ },
+ "E7H08": {
+  "src": "Capacitor temperature coefficients",
+  "x": "NP0 capacitors, also called C0G, whose capacitance barely changes with temperature. Using them in the frequency-determining part of the circuit keeps the oscillator from drifting as the equipment warms."
+ },
+ "E7H09": {
+  "src": "Direct digital synthesis",
+  "x": "A direct digital synthesizer. The phase accumulator steps through phase, the lookup table converts phase to amplitude, the converter turns those numbers into a voltage, and the filter smooths the result."
+ },
+ "E7H10": {
+  "src": "Direct digital synthesis",
+  "x": "Amplitude values describing the waveform, indexed by phase. Stepping through the table faster produces a higher frequency, and changing the table's contents changes the waveform's shape."
+ },
+ "E7H11": {
+  "src": "DDS spectral purity",
+  "x": "Spurious signals at discrete frequencies rather than broadband noise. They arise because the output is built from quantized steps at a fixed clock rate, so the errors are periodic and land on specific frequencies."
+ },
+ "E7H12": {
+  "src": "Crystal load capacitance",
+  "x": "Provide the parallel load capacitance the manufacturer specifies. A crystal's marked frequency assumes a particular load, and the wrong value pulls the oscillator slightly off frequency."
+ },
+ "E7H13": {
+  "src": "Microwave frequency standards",
+  "x": "Several techniques all serve: locking to GPS, using a rubidium or other atomic standard, or holding a crystal in a temperature-controlled oven. All the listed methods are used, so the inclusive answer applies. At microwave frequencies a small fractional error is a large absolute one."
+ },
+ "E8A01": {
+  "src": "Fourier analysis",
+  "x": "Fourier analysis, which decomposes any repeating waveform into a fundamental plus harmonics. A square wave turns out to be the fundamental with odd harmonics only, at amplitudes falling as one over the harmonic number."
+ },
+ "E8A02": {
+  "src": "ADC architectures",
+  "x": "Successive approximation, which narrows the answer one bit at a time like a binary search. It is slower than flash conversion but needs far less silicon, which is why it dominates general-purpose converters."
+ },
+ "E8A03": {
+  "src": "Time and frequency domains",
+  "x": "Amplitude plotted against time, which is what an oscilloscope shows. The frequency domain is the other view, amplitude against frequency, and the Fourier transform converts between them."
+ },
+ "E8A04": {
+  "src": "ADC dither theory",
+  "x": "A small amount of noise deliberately added before conversion. It sounds backwards, but the noise randomizes the rounding at each step so quantization error stops being correlated with the signal, which reduces the distortion it would otherwise cause."
+ },
+ "E8A05": {
+  "src": "True-RMS measurement",
+  "x": "It reads correctly for non-sinusoidal waveforms as well as sine waves. Ordinary meters measure average and apply a factor that only holds for a sine, so they misread square waves and distorted waveforms badly."
+ },
+ "E8A06": {
+  "src": "SSB envelope statistics",
+  "x": "About 2.5 to 1 for unprocessed speech. Voice spends most of its time well below its peaks, so the average power is far under the peak. Speech processing compresses that range, which is why it raises average power without raising PEP."
+ },
+ "E8A07": {
+  "src": "SSB envelope statistics",
+  "x": "Speech characteristics, meaning the voice itself. Since the ratio comes from how peaky the talker's speech is, it varies from operator to operator and even word to word. Nothing about the radio sets it."
+ },
+ "E8A08": {
+  "src": "Flash ADC architecture; SDR design",
+  "x": "Their very high speed. A flash converter decides every bit simultaneously with a bank of comparators, so it can sample fast enough to digitize RF directly, which is exactly what direct-sampling SDR needs."
+ },
+ "E8A09": {
+  "src": "Binary arithmetic; ADC resolution",
+  "x": "256, since 2 to the eighth is 256. Every extra bit doubles the count, so 10 bits gives 1024 and 12 bits gives 4096. Resolution is always a power of two."
+ },
+ "E8A10": {
+  "src": "Reconstruction filtering; Nyquist theorem",
+  "x": "To remove sampling artifacts. The converter's stepped output contains images of the wanted signal around multiples of the sample rate, and the low-pass filter strips those away leaving a smooth waveform."
+ },
+ "E8A11": {
+  "src": "ADC specifications",
+  "x": "Total harmonic distortion. An ideal converter would add none, so the harmonics it generates measure how faithfully it turns voltages into numbers. It captures errors that a simple bit count cannot."
+ },
+ "E8B01": {
+  "src": "FM modulation index definition",
+  "x": "Deviation divided by modulating frequency. Note it depends on the modulating frequency at that instant, so the index changes as the audio pitch changes even at constant deviation."
+ },
+ "E8B02": {
+  "src": "PM theory",
+  "x": "It does not depend on carrier frequency at all. Modulation index is a ratio of deviation to modulating frequency, and the carrier appears in neither. Multiplying a signal up in frequency multiplies deviation too, so the index survives."
+ },
+ "E8B03": {
+  "src": "FM modulation index, deviation/modulating frequency",
+  "x": "3000 divided by 1000 gives 3. Take the deviation on one side of the carrier, not the total swing, and divide by the modulating frequency."
+ },
+ "E8B04": {
+  "src": "FM modulation index, deviation/modulating frequency",
+  "x": "6 kHz divided by 2 kHz gives 3, the same answer as E8B03 with both numbers doubled. Only the ratio matters, which is worth noticing when two questions look different but are not."
+ },
+ "E8B05": {
+  "src": "Deviation ratio definition",
+  "x": "Deviation ratio uses the maximum deviation and the highest modulating frequency: 5 over 3 is 1.67. It differs from modulation index only in that both terms are the maximum values rather than instantaneous ones."
+ },
+ "E8B06": {
+  "src": "Deviation ratio definition",
+  "x": "7.5 divided by 3.5 gives 2.14. Same formula as E8B05. If a question says maximum swing and highest modulating frequency, you are computing deviation ratio."
+ },
+ "E8B07": {
+  "src": "OFDM; digital mode design",
+  "x": "Digital modes. OFDM spreads data across many narrow subcarriers at once, which suits digital transmission and is what modern broadband systems use. It has no application to analog voice."
+ },
+ "E8B08": {
+  "src": "OFDM theory",
+  "x": "Many subcarriers spaced so their spectra do not interfere with each other, which is what orthogonal means here. Each carries a slow data stream, and because each symbol is long, multipath spreading has less chance to smear one symbol into the next."
+ },
+ "E8B09": {
+  "src": "Deviation ratio definition",
+  "x": "The ratio of maximum carrier deviation to the highest audio modulating frequency. Both terms are maximums, which is the distinction from modulation index in E8B01."
+ },
+ "E8B10": {
+  "src": "Frequency division multiplexing",
+  "x": "The signal is split into separate frequency bands, each carrying its own data stream simultaneously. Everything transmits at once but on different frequencies, which is the opposite arrangement from time division."
+ },
+ "E8B11": {
+  "src": "Time division multiplexing",
+  "x": "Signals take turns in assigned time slots on the same frequency. DMR does exactly this with two slots, which is how one repeater channel carries two conversations at once."
+ },
+ "E8C01": {
+  "src": "QAM theory",
+  "x": "Two carriers at the same frequency but 90 degrees apart, each amplitude modulated with its own data. Because they are in quadrature the receiver can separate them, so one channel carries two independent streams."
+ },
+ "E8C02": {
+  "src": "Symbol rate definition",
+  "x": "The rate at which the transmitted waveform changes state to convey information. It is not the same as bit rate: if each symbol encodes several bits, the bit rate is a multiple of the symbol rate."
+ },
+ "E8C03": {
+  "src": "PSK theory; bandwidth control",
+  "x": "To minimize bandwidth. An abrupt phase change is a discontinuity, and discontinuities generate wide sidebands. Switching at the zero crossing means the waveform is already passing through zero, so the change is far smoother."
+ },
+ "E8C04": {
+  "src": "PSK31 documentation (Martinez, G3PLX)",
+  "x": "Sinusoidal data pulses, which shape each transition gradually instead of switching abruptly. Smooth transitions generate far fewer sidebands, which is what keeps PSK31 inside about 31 Hz."
+ },
+ "E8C05": {
+  "src": "CW bandwidth, BW = baud × K",
+  "x": "Convert speed to baud by dividing WPM by 1.2, giving 10.8 baud at 13 WPM, then multiply by about 4.8 for CW. That yields roughly 52 Hz. The 1.2 comes from the standard PARIS word length."
+ },
+ "E8C06": {
+  "src": "WSJT-X documentation",
+  "x": "About 50 Hz. FT8 fits eight tones into that span, which is why it is one of the narrowest modes in use and why many signals coexist inside a normal SSB passband."
+ },
+ "E8C07": {
+  "src": "FSK bandwidth, BW = baud + (1.2 × shift)",
+  "x": "Add the baud rate to 1.2 times the shift: 9600 plus 1.2 times 4800 is 9600 plus 5760, giving 15,360 Hz or 15.36 kHz. Both the data rate and the frequency shift contribute."
+ },
+ "E8C08": {
+  "src": "ARQ protocol theory",
+  "x": "By requesting retransmission when it detects an error. That is what ARQ stands for, automatic repeat request. Compare forward error correction, which fixes errors without asking for anything again."
+ },
+ "E8C09": {
+  "src": "Gray code",
+  "x": "Gray code, in which consecutive values differ by exactly one bit. That matters for position encoders, because a normal binary count can have several bits changing at once and a momentary misread gives a wildly wrong value."
+ },
+ "E8C10": {
+  "src": "Information theory; coding efficiency",
+  "x": "Use a more efficient code, packing more bits into each symbol. QAM does this by using both amplitude and phase, so more information rides the same symbol rate and therefore the same bandwidth."
+ },
+ "E8C11": {
+  "src": "Symbol rate and baud",
+  "x": "They mean the same thing: symbols per second. Baud is often misused as a synonym for bits per second, but when each symbol carries several bits the two numbers differ."
+ },
+ "E8C12": {
+  "src": "CW bandwidth theory",
+  "x": "Keying speed and the rise and fall time of the keying waveform. Faster keying needs more bandwidth, and abrupt edges add sidebands, which is the same principle behind the key click questions in E8D04 and E8D05."
+ },
+ "E8C13": {
+  "src": "Constellation diagram",
+  "x": "Every phase and amplitude state a symbol may take, plotted as points. A clean signal shows tight clusters; noise and distortion smear them, so the diagram is a quick visual health check on a digital link."
+ },
+ "E8C14": {
+  "src": "AREDN project; IP networking",
+  "x": "Internet Protocol addresses. Amateur mesh networks run standard IP over amateur frequencies, which is why ordinary network services work across them without modification."
+ },
+ "E8C15": {
+  "src": "Mesh routing protocols",
+  "x": "Discovery and link establishment protocols. Each node advertises itself, finds neighbours, and works out routes, so the network assembles itself and heals when a node disappears."
+ },
+ "E8D01": {
+  "src": "Spread spectrum theory",
+  "x": "The receiver correlates against the same spreading sequence the transmitter used, so anything not following that sequence fails to correlate and is suppressed. Interference is not filtered out so much as never assembled into a signal."
+ },
+ "E8D02": {
+  "src": "Direct sequence spread spectrum",
+  "x": "Direct sequence, in which a fast pseudorandom bit stream shifts the carrier's phase. That spreads the energy over a wide band, and the receiver reverses the process using the identical sequence."
+ },
+ "E8D03": {
+  "src": "Frequency hopping spread spectrum",
+  "x": "The transmitter hops rapidly among frequencies following a pseudorandom pattern, and the receiver hops in step. Interference on any one frequency affects only the brief moments spent there."
+ },
+ "E8D04": {
+  "src": "CW keying waveform theory",
+  "x": "Key clicks. A very fast rise or fall is effectively a step function, and steps contain energy across a wide spectrum, so the sidebands spread well beyond the signal. Those sidebands are what neighbouring operators hear as clicks."
+ },
+ "E8D05": {
+  "src": "CW keying waveform theory",
+  "x": "Slow the rise and fall times down. Shaping the envelope over a few milliseconds removes the sharp edges that generate the sidebands, without making the code noticeably harder to copy."
+ },
+ "E8D06": {
+  "src": "Parity checking; coding theory",
+  "x": "Some errors can be detected. A parity bit makes the count of ones odd or even, so a single flipped bit shows up. It cannot locate the error or fix it, and two errors can cancel out and slip through."
+ },
+ "E8D07": {
+  "src": "AFSK practice",
+  "x": "Excessive transmit audio. AFSK tones drive an SSB transmitter, so too much audio pushes it past its linear range and the result is distortion products rather than a louder signal."
+ },
+ "E8D08": {
+  "src": "IMD measurement; digital mode practice",
+  "x": "Intermodulation distortion. When the transmitter is overdriven, the tones mix with each other and produce extra products, so measuring IMD tells you directly whether your audio level is too high."
+ },
+ "E8D09": {
+  "src": "PSK operating practice",
+  "x": "About minus 30 dB. Above that your signal is generating noticeable distortion products and splattering onto neighbours. Many programs display IMD from a received idle signal, so you can be told what you sound like."
+ },
+ "E8D10": {
+  "src": "ITU-T Rec. F.1 (Baudot); ASCII standard",
+  "x": "Baudot uses 5 data bits and needs shift characters to switch between letters and figures, while ASCII uses 7 or 8 bits and needs no shift at all. Five bits give only 32 combinations, which is why the shift exists."
+ },
+ "E8D11": {
+  "src": "ASCII standard",
+  "x": "Upper and lower case can both be sent. With 7 or 8 bits there is room for the full character set, whereas Baudot's 32 combinations cannot cover both cases even with shifting."
+ },
+ "E9A01": {
+  "src": "IEEE Std 145",
+  "x": "A hypothetical lossless antenna radiating equally in every direction. No such thing can be built, but it makes a clean mathematical reference, which is why gain figures in dBi are quoted against it."
+ },
+ "E9A02": {
+  "src": "ERP calculation",
+  "x": "Add gains and subtract losses in dB first: 7 minus 2 minus 2.2 leaves plus 2.8 dB net. Then 150 watts times 10 to the 0.28 gives 286 watts. Always net the decibels before touching the watts."
+ },
+ "E9A03": {
+  "src": "IEEE Std 145; ERP definition",
+  "x": "Effective radiated power, which accounts for transmitter output, every loss in the system, and antenna gain. It is what the antenna actually puts out in its favoured direction rather than what the radio produced."
+ },
+ "E9A04": {
+  "src": "ARRL Antenna Book; ground effects",
+  "x": "Antenna height. Bringing an antenna near ground couples it to the earth and changes the feed point impedance, which is why a dipole measured on the ground reads nothing like the same antenna in the air."
+ },
+ "E9A05": {
+  "src": "ARRL Antenna Book; ground reflection",
+  "x": "Extra signal strength from ground reflections adding to the direct wave. Over good ground the reflection can nearly double the field at useful elevation angles, which is worth several decibels for free."
+ },
+ "E9A06": {
+  "src": "ERP calculation",
+  "x": "Net the decibels: 10 minus 4 minus 3.2 minus 0.8 leaves exactly plus 2 dB. Then 200 watts times 10 to the 0.2 gives 317 watts. Three separate losses, but they simply add up before subtracting."
+ },
+ "E9A07": {
+  "src": "EIRP calculation",
+  "x": "Same method, and the dBi in the antenna gain is what makes it EIRP rather than ERP: 7 minus 2 minus 2.8 minus 1.2 leaves plus 1 dB, so 200 times 10 to the 0.1 gives 252 watts. Watch whether the gain is given in dBi or dBd."
+ },
+ "E9A08": {
+  "src": "Fresnel zone geometry",
+  "x": "The highest frequency, 5.8 GHz. Fresnel zone radius shrinks as wavelength shortens, so a microwave path needs far less clearance around the line of sight than an HF path over the same distance."
+ },
+ "E9A09": {
+  "src": "Antenna efficiency definition",
+  "x": "Radiation resistance divided by total resistance. The total includes loss resistance in conductors, loading coils and ground, so the fraction that is radiation resistance is the fraction of your power that actually leaves."
+ },
+ "E9A10": {
+  "src": "ARRL Antenna Book; ground systems",
+  "x": "A ground radial system. A ground-mounted vertical returns its current through the earth, and earth is lossy, so radials give that current a low-resistance path instead. More radials beat longer radials."
+ },
+ "E9A11": {
+  "src": "ARRL Antenna Book; ground losses",
+  "x": "Soil conductivity. The return current flows through the ground near the antenna, and poor soil turns that current into heat. It is why the same vertical performs very differently in wet clay and dry sand."
+ },
+ "E9A12": {
+  "src": "Gain reference conversion",
+  "x": "Subtract 2.15 dB to convert dBi to dBd: 6 minus 2.15 gives 3.85 dBd. A dipole already has 2.15 dBi of gain, so quoting against isotropic always makes the number look 2.15 dB better."
+ },
+ "E9B01": {
+  "src": "IEEE Std 145; beamwidth definition",
+  "x": "Beamwidth is measured between the points 3 dB down from the peak, one either side of the main lobe. Read those two angles off the plot and take the difference, which gives 50 degrees here."
+ },
+ "E9B02": {
+  "src": "IEEE Std 145",
+  "x": "Front-to-back compares the main lobe with the response directly behind it, 180 degrees away. Read the level at the back of the pattern against the peak at the front, giving 18 dB."
+ },
+ "E9B03": {
+  "src": "IEEE Std 145",
+  "x": "Front-to-side compares the main lobe with the response 90 degrees off to the side. Same idea as front-to-back but a quarter turn instead of a half, and here it comes to 14 dB."
+ },
+ "E9B04": {
+  "src": "IEEE Std 145",
+  "x": "Read the level 180 degrees from the main lobe against the peak, which gives 28 dB on this pattern. Same measurement as E9B02 but on a different plot, so check which figure the question names."
+ },
+ "E9B05": {
+  "src": "Antenna pattern conventions",
+  "x": "An elevation pattern, which plots response against angle above the horizon. An azimuth pattern would show response around the compass instead. Look for the horizon line and the vertical angle scale."
+ },
+ "E9B06": {
+  "src": "Antenna pattern conventions",
+  "x": "Find where the pattern reaches furthest from the centre and read the elevation angle there, which is 7.5 degrees. That low takeoff angle is what makes an antenna good for DX."
+ },
+ "E9B07": {
+  "src": "Antenna gain; power conservation",
+  "x": "They radiate exactly the same total power. Gain does not create energy, it redistributes it, concentrating radiation in some directions at the expense of others. The integral over all directions is unchanged."
+ },
+ "E9B08": {
+  "src": "Antenna near and far field",
+  "x": "The far field is where the pattern's shape stops changing with distance. Closer in, the pattern is still forming, which is why antenna measurements must be made far enough away to be meaningful."
+ },
+ "E9B09": {
+  "src": "Method of Moments; NEC modeling",
+  "x": "Method of Moments, the technique behind NEC and the modeling programs built on it. It solves for the currents on a wire structure and derives the pattern and impedance from them."
+ },
+ "E9B10": {
+  "src": "Method of Moments theory",
+  "x": "Each wire is divided into short segments, and the current in each segment is treated as uniform. The program then solves for those currents simultaneously. Finer segmentation approximates the real current distribution better."
+ },
+ "E9B11": {
+  "src": "NEC modeling practice",
+  "x": "The computed feed point impedance may be wrong. Too few segments cannot represent how current actually varies along the wire, and the feed point is where that error shows up most. Ten per half wavelength is the usual minimum."
+ },
+ "E9C01": {
+  "src": "Phased array theory",
+  "x": "A figure-eight along the array's axis, which is end-fire. Fed 180 degrees out of phase at half-wave spacing, the two verticals cancel broadside and reinforce off the ends."
+ },
+ "E9C02": {
+  "src": "Phased array theory",
+  "x": "A cardioid, with one broad lobe and a deep null off the back. Quarter-wave spacing with 90 degrees of phase difference makes the signals cancel in one direction and add in the other."
+ },
+ "E9C03": {
+  "src": "Phased array theory",
+  "x": "A figure-eight broadside to the array, at right angles to the line joining the two antennas. Fed in phase at half-wave spacing they add broadside and cancel off the ends, the opposite of E9C01."
+ },
+ "E9C04": {
+  "src": "Long-wire antenna theory",
+  "x": "More lobes appear, and the major ones swing progressively toward the wire's axis. A long wire many wavelengths long ends up firing nearly along its own direction, which is what makes rhombics work."
+ },
+ "E9C05": {
+  "src": "Off-center-fed dipole design",
+  "x": "To get a workable feed point impedance on several bands at once. Feeding at the exact centre puts a current maximum there on the fundamental but a voltage maximum on the even harmonics, and moving the feed point avoids those extremes."
+ },
+ "E9C06": {
+  "src": "Terminated long-wire theory",
+  "x": "It becomes unidirectional. Without a termination the wave reflects off the far end and travels back, giving response in both directions. The resistor absorbs that reflection so only one direction remains."
+ },
+ "E9C07": {
+  "src": "Folded dipole theory",
+  "x": "About 300 ohms, roughly four times a plain dipole's 73 ohms. The folded construction transforms impedance by a factor of four, which is why 300-ohm twinlead pairs with it naturally."
+ },
+ "E9C08": {
+  "src": "Folded dipole theory",
+  "x": "A half-wave dipole with a second parallel wire joining its two ends, forming a long thin loop. The extra conductor is what produces both the four-to-one impedance step and the wider bandwidth."
+ },
+ "E9C09": {
+  "src": "G5RV antenna design",
+  "x": "A centre-fed wire with a specific length of open-wire line acting as a matching section, then a balun and coax to the shack. The open-wire section's length is critical, since it is doing impedance transformation rather than just carrying power."
+ },
+ "E9C10": {
+  "src": "Zepp antenna design",
+  "x": "An end-fed half-wave dipole, originally trailed behind Zeppelin airships. Feeding at the end means a very high impedance, so it needs a tuned feeder or matching network."
+ },
+ "E9C11": {
+  "src": "Ground reflection; ARRL Antenna Book",
+  "x": "Low-angle radiation increases. Seawater is a far better conductor than soil, so it reflects more efficiently and the reflection reinforces the direct wave at low angles. That is why coastal stations do so well on DX."
+ },
+ "E9C12": {
+  "src": "Extended double Zepp design",
+  "x": "A centre-fed dipole about 1.25 wavelengths long. Stretching a dipole past a half wavelength adds gain broadside, and 1.25 wavelengths is about as far as you can go before the pattern breaks into unwanted lobes."
+ },
+ "E9C13": {
+  "src": "Ground reflection geometry",
+  "x": "The lowest lobe's takeoff angle decreases as the antenna goes higher. Raising a horizontal antenna moves the ground reflection's interference pattern downward, which favours DX. Height matters more than almost anything else for HF."
+ },
+ "E9C14": {
+  "src": "Terrain effects; ARRL Antenna Book",
+  "x": "The takeoff angle drops in the downhill direction. The slope tilts the effective ground plane, so the reflection geometry pushes the main lobe lower that way. A hilltop station facing the right direction gains real advantage."
+ },
+ "E9D01": {
+  "src": "Aperture antenna gain theory",
+  "x": "Six decibels. A dish's gain depends on its area measured in wavelengths, and halving the wavelength makes the same dish four times larger in those terms. Four times power is 6 dB."
+ },
+ "E9D02": {
+  "src": "Circular polarization; antenna arrays",
+  "x": "Mount two Yagis on the same axis, perpendicular to each other, driven elements at the same point on the boom, and feed them 90 degrees apart. The two linear fields in quadrature add to a rotating field, which is circular polarization."
+ },
+ "E9D03": {
+  "src": "ARRL Antenna Book; loading coil placement",
+  "x": "Near the centre of the radiator. Current is what radiates, and centre loading keeps more current in the upper section than base loading does, so more of your power leaves the antenna."
+ },
+ "E9D04": {
+  "src": "Antenna efficiency; coil Q",
+  "x": "To maximize efficiency. A loading coil's resistance dissipates power as heat while its reactance does the useful work, so a high reactance-to-resistance ratio means less of your power is wasted warming the coil."
+ },
+ "E9D05": {
+  "src": "ARRL Antenna Book",
+  "x": "About a half wavelength, since the driven element is essentially a dipole. Reflectors and directors are parasitic, taking no feed line connection at all."
+ },
+ "E9D06": {
+  "src": "Antenna Q and bandwidth",
+  "x": "It decreases. Loading raises the antenna's Q, and high Q always means narrow bandwidth, so a heavily loaded short antenna may need retuning every few tens of kilohertz."
+ },
+ "E9D07": {
+  "src": "Top loading; current distribution",
+  "x": "Better radiation efficiency. Capacitance at the top raises the current in the whole radiator rather than concentrating the compromise at the base, so more of the antenna is doing useful work."
+ },
+ "E9D08": {
+  "src": "Antenna Q and bandwidth",
+  "x": "SWR bandwidth decreases. Q and bandwidth are inversely related in an antenna exactly as in a tuned circuit, which is why fat elements and full-size antennas are broader than thin loaded ones."
+ },
+ "E9D09": {
+  "src": "Loading coil function",
+  "x": "To cancel the capacitive reactance a too-short antenna presents. An electrically short radiator looks capacitive, so adding series inductance brings the total reactance back to zero, which is resonance."
+ },
+ "E9D10": {
+  "src": "Antenna radiation resistance",
+  "x": "Radiation resistance decreases below resonance. A shorter-than-resonant radiator both radiates less effectively and presents less radiation resistance, so loss resistance becomes a larger share of the total and efficiency falls."
+ },
+ "E9D11": {
+  "src": "Yagi design; two-element arrays",
+  "x": "Higher gain. With normal spacing a reflector gives slightly more forward gain than a director does, so two-element designs usually favour it. A director can give better front-to-back ratio instead."
+ },
+ "E9D12": {
+  "src": "Yagi design; parasitic elements",
+  "x": "To control phase shift. A longer element is inductive and a shorter one capacitive, and that reactance sets the phase of the current re-radiated from it. Getting those phases right is what steers the energy forward."
+ },
+ "E9E01": {
+  "src": "Beta match; ARRL Antenna Book",
+  "x": "The beta or hairpin match. It connects a shorted stub across the feed point, so the driven element must be split and insulated from the boom. The gamma match is the one that lets the element stay bonded."
+ },
+ "E9E02": {
+  "src": "Gamma match; ARRL Antenna Book",
+  "x": "The gamma match. Shield to the element's centre, centre conductor tapped out to one side, which taps a fraction of the element's voltage. Because it feeds off-centre, the element can remain grounded to the boom."
+ },
+ "E9E03": {
+  "src": "Stub matching; transmission line theory",
+  "x": "A stub match. A short length of line in parallel near the feed point presents a reactance set by its length and whether it is open or shorted, and that reactance cancels the load's unwanted reactance."
+ },
+ "E9E04": {
+  "src": "Gamma match design",
+  "x": "To cancel unwanted inductive reactance. The gamma rod itself adds inductance, so a series capacitor is needed to bring the net reactance back to zero and complete the match."
+ },
+ "E9E05": {
+  "src": "Beta match design",
+  "x": "Capacitive, meaning the driven element is a little shorter than a half wavelength. The hairpin adds parallel inductance, so it needs a capacitive load to work against."
+ },
+ "E9E06": {
+  "src": "Quarter-wave transformer, Z = √(Z1×Z2)",
+  "x": "A quarter-wave transformer needs the geometric mean of the two impedances: the square root of 100 times 50 is 70.7 ohms. Standard 75-ohm cable is the closest available, so that is the answer."
+ },
+ "E9E07": {
+  "src": "Reflection coefficient definition",
+  "x": "The reflection coefficient, which expresses how much of the incident wave comes back and with what phase. SWR is derived from its magnitude, so the reflection coefficient carries more information."
+ },
+ "E9E08": {
+  "src": "Wilkinson divider design",
+  "x": "It splits power equally into two 50-ohm loads while still presenting 50 ohms at the input. The resistor between the output arms also isolates them, so a fault on one output does not upset the other."
+ },
+ "E9E09": {
+  "src": "Shunt feed; tower matching",
+  "x": "A gamma match. Shunt feeding a grounded tower means tapping the structure part way up, which is exactly what a gamma match does, and it keeps the tower solidly grounded for lightning protection."
+ },
+ "E9E11": {
+  "src": "Phased array theory",
+  "x": "To control the radiation pattern. Feeding several driven elements with deliberate phase relationships steers and shapes the pattern, which is how a phased array beams without physically rotating."
+ },
+ "E9F01": {
+  "src": "Velocity factor definition",
+  "x": "The wave's speed in the line divided by its speed in a vacuum, always less than one. Typical coax runs 0.66 to 0.85, and it is why a physical quarter wavelength of cable is shorter than a quarter wavelength in air."
+ },
+ "E9F02": {
+  "src": "Transmission line dielectrics",
+  "x": "The dielectric material. Velocity factor is essentially one over the square root of the dielectric constant, so the insulation between conductors dominates. That is why foam and air lines are faster than solid polyethylene."
+ },
+ "E9F03": {
+  "src": "Velocity factor; electrical length",
+  "x": "Because waves travel more slowly in the cable than in air, a given physical length represents more electrical degrees. So the electrical length exceeds the physical length, which is why you must apply velocity factor when cutting a stub."
+ },
+ "E9F04": {
+  "src": "Transmission line transformations",
+  "x": "Very low. A half wavelength repeats whatever is at the far end, so a short stays a short. Half-wave sections are impedance repeaters; quarter-wave sections are inverters."
+ },
+ "E9F05": {
+  "src": "Microstrip; microwave design",
+  "x": "Precision printed conductors over a ground plane, whose width and substrate set a constant impedance. At microwave frequencies the circuit board trace has to be treated as a transmission line."
+ },
+ "E9F06": {
+  "src": "Wavelength, λ = 300/f(MHz)",
+  "x": "A wavelength at 14.10 MHz is 300 over 14.10, about 21.3 metres, so half is 10.6 metres. Air-insulated line has a velocity factor near 1, so no correction is needed, which is why the answer is the plain geometric length."
+ },
+ "E9F07": {
+  "src": "Transmission line loss",
+  "x": "Lower loss. Open-wire line keeps most of its field in air rather than in plastic, and dielectric loss is a major part of coax's total. The tradeoff is that it must be kept clear of metal objects."
+ },
+ "E9F08": {
+  "src": "Coaxial cable construction",
+  "x": "Foam changes several things at once: lower loss per foot, higher velocity factor, and less resistance to moisture migration and crushing. All the listed differences are real, so the inclusive answer applies."
+ },
+ "E9F09": {
+  "src": "Transmission line transformations",
+  "x": "Very high. A quarter wavelength inverts impedance, so a short circuit at the far end appears as an open circuit at the input. That inversion is what makes quarter-wave stubs useful as traps and filters."
+ },
+ "E9F10": {
+  "src": "Transmission line transformations",
+  "x": "An inductive reactance. Between zero and a quarter wavelength, a shorted line looks inductive, and it reaches maximum inductive reactance approaching the quarter-wave point. An eighth wave gives a reactance equal to the line's own impedance."
+ },
+ "E9F11": {
+  "src": "Transmission line transformations",
+  "x": "A capacitive reactance, the mirror of E9F10. An open-circuited line behaves oppositely to a shorted one at every length, so an eighth-wave open stub looks capacitive."
+ },
+ "E9F12": {
+  "src": "Transmission line transformations",
+  "x": "Very low. The quarter-wave inversion works both ways: a short becomes an open, and an open becomes a short. Compare E9F09, which is the same line with the opposite termination."
+ },
+ "E9G01": {
+  "src": "Smith chart theory",
+  "x": "Impedance along a transmission line. The chart's real value is that moving along a line becomes rotation around the chart, so you can read the impedance at any point once you know it at one point."
+ },
+ "E9G02": {
+  "src": "Smith chart construction",
+  "x": "Resistance circles and reactance arcs. Every point on the chart is one impedance, located by which resistance circle and which reactance arc pass through it."
+ },
+ "E9G03": {
+  "src": "Smith chart applications",
+  "x": "Impedance and SWR on transmission lines. Distance from the chart's centre corresponds to SWR, and position gives the impedance, so one plotted point shows both at once."
+ },
+ "E9G04": {
+  "src": "Smith chart construction",
+  "x": "Resistance and reactance, the same two quantities that make up any impedance. The chart is simply the complex impedance plane bent into a circle so that infinity fits on the page."
+ },
+ "E9G05": {
+  "src": "Smith chart applications; stub matching",
+  "x": "Working out the length and position of a matching stub. You plot the load, rotate along the line to where the real part is right, then read off the reactance the stub must cancel."
+ },
+ "E9G06": {
+  "src": "Smith chart construction",
+  "x": "The reactance axis. All the reactance arcs begin and end on that outer circle, and it represents pure reactance with zero resistance, which is why it forms the boundary of the chart."
+ },
+ "E9G07": {
+  "src": "Smith chart construction",
+  "x": "The resistance axis, running straight through the middle horizontally. Everything else on the chart is a circle or an arc, so the one straight line is unmistakable. Points on it are purely resistive."
+ },
+ "E9G08": {
+  "src": "Smith chart normalization",
+  "x": "By reassigning the value of the prime centre. Normalizing to 50 ohms makes the centre 50 ohms, and every impedance is then read as a multiple of that, which lets one chart serve any system impedance."
+ },
+ "E9G09": {
+  "src": "Smith chart; constant-SWR circles",
+  "x": "Constant-SWR circles, drawn concentric with the prime centre. Since distance from the centre corresponds to SWR, those circles let you see at a glance whether a candidate match is good enough."
+ },
+ "E9G10": {
+  "src": "Smith chart construction",
+  "x": "Points of constant reactance. Follow one arc and the reactance stays the same while the resistance changes. The circles do the reverse, holding resistance constant."
+ },
+ "E9G11": {
+  "src": "Smith chart scales",
+  "x": "Fractions of an electrical wavelength. A full trip around the chart is a half wavelength of line, which is why a half-wave section returns you to the same impedance, as E9F04 describes."
+ },
+ "E9H01": {
+  "src": "Beverage antenna design",
+  "x": "At least one wavelength long, and longer is better. A Beverage works by letting the wave travel along the wire and add up in phase, so it needs real length to develop its directivity."
+ },
+ "E9H02": {
+  "src": "ITU-R Rec. P.372; low-band receiving practice",
+  "x": "Atmospheric noise on 160 and 80 metres is so high that antenna losses hardly matter. What helps is directivity, since rejecting noise from unwanted directions improves the signal-to-noise ratio in a way more gain never could."
+ },
+ "E9H03": {
+  "src": "RDF definition; receiving antenna design",
+  "x": "Peak gain compared with the average gain over the whole hemisphere around and above the antenna. It measures how well an antenna rejects noise arriving from everywhere else, which is the figure of merit that matters for receiving."
+ },
+ "E9H04": {
+  "src": "Loop antenna design; electrostatic shielding",
+  "x": "It removes unbalanced capacitive coupling to nearby objects. A loop should respond only to the magnetic field, and stray capacitance spoils that balance, filling in the nulls you were relying on for direction finding."
+ },
+ "E9H05": {
+  "src": "Direction finding; loop patterns",
+  "x": "Its nulls point in two opposite directions, so a bearing is ambiguous. You know the line the signal came along but not which end of it, which is what the sense antenna in E9H08 resolves."
+ },
+ "E9H06": {
+  "src": "Beverage antenna termination",
+  "x": "Minimum variation in SWR across the range of interest. A correctly matched termination absorbs the reverse wave, so little reflects and the SWR stays flat as frequency changes."
+ },
+ "E9H07": {
+  "src": "Beverage antenna termination",
+  "x": "To absorb signals arriving from the reverse direction. Without it that energy reflects off the far end and travels back along the wire, giving the antenna response both ways instead of one."
+ },
+ "E9H08": {
+  "src": "Direction finding; sense antenna",
+  "x": "It reshapes the pattern so only one null remains. Combining a loop's bidirectional pattern with a vertical's omnidirectional one produces a cardioid, which resolves the front-to-back ambiguity of E9H05."
+ },
+ "E9H09": {
+  "src": "Terminated loop antennas",
+  "x": "A cardioid, with a single deep null. Terminating the loop makes it respond to travelling waves in one direction preferentially, which is what folds the bidirectional pattern into a one-sided one."
+ },
+ "E9H10": {
+  "src": "Loop antenna theory; Faraday's law",
+  "x": "Increase the number of turns, the enclosed area, or both. Induced voltage is proportional to the rate of change of flux through the loop, and flux depends on area, while each turn adds its own contribution."
+ },
+ "E9H11": {
+  "src": "Direction finding; cardioid patterns",
+  "x": "It has only one null, so a bearing is unambiguous. A figure-eight pattern gives two possible directions, whereas a cardioid's single null points at exactly one."
  },
  "G0A01": {
   "src": "IEEE C95.1; ICNIRP guidelines",
