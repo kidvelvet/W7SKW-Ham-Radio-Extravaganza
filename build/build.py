@@ -5,7 +5,7 @@ self-invalidates.
 CSS and JS are emitted as separate files (not inlined) so the page's
 Content-Security-Policy can use script-src/style-src 'self' with no
 'unsafe-inline'."""
-import hashlib, pathlib
+import hashlib, json, pathlib
 
 root = pathlib.Path('.')
 app  = root/'docs'
@@ -50,7 +50,7 @@ sw = f'''/* W7SKW Ham Radio Study Extravaganza - offline cache.
    The cache name is a content hash, so a rebuild automatically retires the old cache. */
 const CACHE = 'w7skw-{ver}';
 const ASSETS = [
-{chr(10).join("  " + repr(a).replace(chr(39), chr(34)) + "," for a in assets)}
+{chr(10).join("  " + json.dumps(a) + "," for a in assets)}
 ];
 
 self.addEventListener('install', e => {{

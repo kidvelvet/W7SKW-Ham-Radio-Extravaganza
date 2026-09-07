@@ -177,7 +177,7 @@ function paintStudy(){
   $('#studyBar').style.width = ((di+1)/deck.length*100)+'%';
   $('#sPrev').disabled = di===0;
   $('#sNext').disabled = di===deck.length-1;
-  let h = '<div class="qwrap"><div class="qmeta"><span class="chip b">'+q.id+'</span>'+
+  let h = '<div class="qwrap"><div class="qmeta"><span class="chip b">'+esc(q.id)+'</span>'+
           '<span class="chip">'+esc(P.subelements[q.s])+'</span>'+
           (q.r ? '<span class="chip">§'+esc(q.r)+'</span>' : '')+'</div>'+
           figHTML(q)+'<p class="qtext">'+esc(q.q)+'</p>'+
@@ -185,6 +185,11 @@ function paintStudy(){
   if(revealed){
     h += '<div class="reveal"><b>Correct answer &mdash; '+L[q.c]+'.</b> '+esc(q.a[q.c])+
          (q.r ? '<span class="ref">FCC reference &sect;'+esc(q.r)+'</span>' : '')+'</div>';
+    // Study mode only. paintExam() never calls this, so explanations stay out of exams.
+    if(q.x){
+      h += '<div class="why"><h4>Why this is the answer</h4><p>'+esc(q.x)+'</p>'+
+           (q.xs ? '<cite>'+esc(q.xs)+'</cite>' : '')+'</div>';
+    }
   }
   $('#studyBody').innerHTML = h + '</div>';
 }
@@ -364,7 +369,7 @@ function paintResults(score, missed, bySub){
   $('#missHdr').classList.toggle('hidden', !missed.length);
   $('#rMissed').innerHTML = missed.map(m => {
     const q = m.q;
-    return '<div class="miss"><div class="qid">'+q.id+(q.r?' · §'+esc(q.r):'')+'</div>'+
+    return '<div class="miss"><div class="qid">'+esc(q.id)+(q.r?' · §'+esc(q.r):'')+'</div>'+
       '<div class="qq">'+esc(q.q)+'</div>'+
       (m.pick===null ? '<div class="ans y"><b>Skipped</b> — no answer given</div>'
                      : '<div class="ans y"><b>You chose:</b> '+esc(q.a[m.pick])+'</div>')+

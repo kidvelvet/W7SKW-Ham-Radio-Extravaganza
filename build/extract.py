@@ -75,6 +75,10 @@ for p in POOLS:
             if c['answers'].get(L, '').strip() != ch.get(L, '').strip(): mism += 1
 
     # hard guarantees
+    # Question ids are rendered into the DOM, so pin their shape explicitly here
+    # rather than relying on the cross-check against the text pool to imply it.
+    bad_ids = [c['id'] for c in arr if not re.fullmatch(r'[EGT]\d[A-Z]\d{2}', c['id'])]
+    assert not bad_ids, f"{p['name']}: malformed question ids {bad_ids[:5]}"
     assert mism == 0, f"{p['name']}: {mism} mismatches vs text pool"
     assert not (withdrawn & {c['id'] for c in arr}), f"{p['name']}: withdrawn question present"
     assert all(set(c['answers']) == set('ABCD') and c['correct_letter'] in 'ABCD' for c in arr)
@@ -89,9 +93,17 @@ for p in POOLS:
         if name in figs: continue
         head, b64 = c['figure_data'].split(',', 1)
         assert 'image/png' in head, f'unexpected image type for {name}: {head[:40]}'
-        stem = name if name.lower().endswith('.png') else name + '.png'
+        # The decks are third-party input, so a figure name is never trusted as a
+        # path. Strip any directories, allowlist the characters, then confirm the
+        # resolved target really lands inside docs/figures.
+        stem = pathlib.PurePosixPath(name.replace('\\', '/')).name
+        if not stem.lower().endswith('.png'):
+            stem += '.png'
+        assert re.fullmatch(r'[A-Za-z0-9._-]{1,64}\.png', stem), f'unsafe figure name: {name!r}'
         fname = f"{p['key']}-{stem}"
-        (figdir/fname).write_bytes(base64.b64decode(b64))
+        target = (figdir/fname).resolve()
+        assert target.parent == figdir.resolve(), f'figure path escapes figures dir: {name!r}'
+        target.write_bytes(base64.b64decode(b64))
         figs[name] = 'figures/' + fname
 
     qs = sorted(({'id':c['id'], 'g':c['group'], 's':c['subelement'],
@@ -118,9 +130,34 @@ for p in POOLS:
     # so it is deliberately not shipped in pools.json.
     report.append((p['name'], len(qs), len(groups), examLen, passing, len(figs), len(withdrawn)))
 
+# ---- merge study-mode explanations (study only; never shown during an exam) ----
+EXPL = pathlib.Path('build/explanations.json')
+expl = json.loads(EXPL.read_text(encoding='utf-8')) if EXPL.exists() else {}
+expl.pop('_README', None)
+
+valid_ids = {q['id'] for p in out['pools'].values() for q in p['questions']}
+orphans = sorted(set(expl) - valid_ids)
+assert not orphans, f'explanations for unknown question ids: {orphans[:5]}'
+
+over, attached = [], 0
+for p in out['pools'].values():
+    for q in p['questions']:
+        e = expl.get(q['id'])
+        if not e:
+            continue
+        words = len(e['x'].split())
+        if words > 150:
+            over.append((q['id'], words))
+        q['x'] = e['x']
+        q['xs'] = e['src']
+        attached += 1
+assert not over, f'explanations over 150 words: {over[:5]}'
+
 pathlib.Path('build/pools.json').write_text(json.dumps(out, separators=(',',':')), encoding='utf-8')
 
 print(f"{'pool':16}{'qs':>5}{'grps':>6}{'exam':>6}{'pass':>6}{'figs':>6}{'wdrn':>6}")
 for r in report:
     print(f'{r[0]:16}{r[1]:5}{r[2]:6}{r[3]:6}{r[4]:6}{r[5]:6}{r[6]:6}')
 print('pools.json', round(pathlib.Path('build/pools.json').stat().st_size/1024), 'KB')
+total_q = sum(len(p['questions']) for p in out['pools'].values())
+print(f'explanations {attached}/{total_q} ({100*attached/total_q:.1f}%)')

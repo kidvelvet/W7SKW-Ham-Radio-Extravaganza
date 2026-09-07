@@ -1,0 +1,2119 @@
+{
+ "_README": "Explanations for correct answers, shown in study mode only. Keyed by question ID. 'src' names the authority, 'x' is the explanation (<150 words). Style: exam focused. Lead with the rule or principle that IS the answer, quote the decisive language, give a recall cue. Do not walk through why each distractor fails. Source priority: 47 CFR Part 97 > other FCC rules > ARRL > peer-reviewed engineering (IEEE/university) > third-party study sites as a last resort. Answers themselves are never modified by this file; extract.py asserts that.",
+ "E1A01": {
+  "src": "47 CFR §97.307(b); §97.301",
+  "x": "USB puts your energy above the displayed carrier frequency. Add the 3 kHz bandwidth to 14.348 and the signal reaches 14.351 MHz, while 20 meters stops at 14.350. That top 1 kHz falls outside the band, and §97.307(b) requires emissions to stay confined to the segment available to you."
+ },
+ "E1A02": {
+  "src": "47 CFR §97.307(b); §97.301",
+  "x": "LSB places energy below the displayed frequency, so a 3 kHz signal extends 3 kHz down. To keep all of it inside, set the carrier at least 3 kHz above the lower edge. USB works the mirror image: stay 3 kHz below the upper edge."
+ },
+ "E1A03": {
+  "src": "47 CFR §97.307(b); §97.305(c)",
+  "x": "Data on 20 meters must sit below 14.150 MHz, and USB extends upward from the carrier. Subtract the 2.8 kHz bandwidth from 14.150 and you get 14.1472 MHz. Take the segment edge and back off by the bandwidth."
+ },
+ "E1A04": {
+  "src": "47 CFR §97.307(b); §97.301(b)",
+  "x": "The 75-meter phone segment starts at 3.600 MHz. An LSB signal on 3.601 spreads roughly 3 kHz downward, reaching about 3.598, which puts most of it below the edge. Being inside the band with your carrier is not enough when the sidebands are not."
+ },
+ "E1A05": {
+  "src": "47 CFR §97.5(a)",
+  "x": "Section 97.5(a) requires the apparatus to be under the physical control of a person named in an amateur license grant or authorized for alien reciprocal operation. Vessel registry decides which rules apply; the licensing requirement itself does not change."
+ },
+ "E1A06": {
+  "src": "47 CFR §97.303(h)(3)",
+  "x": "On the four discrete 60-meter channels, phone, data and RTTY are offset 1.5 kHz below center so the suppressed-carrier signal lands centered in the channel. CW carries no sidebands, so it is transmitted right at the center frequency."
+ },
+ "E1A07": {
+  "src": "47 CFR §97.313(k)",
+  "x": "Two limits apply on 2200 meters and the tighter one governs: 1.5 kW PEP at the transmitter, but only 1 watt EIRP radiated. Antennas at 137 kHz are so short compared with a wavelength that they radiate a tiny fraction of what you feed them."
+ },
+ "E1A08": {
+  "src": "47 CFR §97.219(b)",
+  "x": "In a message forwarding system the control operator of the originating station is primarily accountable for a violation in the message. Section 97.219(c) protects intermediate forwarding stations that pass it along inadvertently. Accountability sits with whoever wrote it."
+ },
+ "E1A09": {
+  "src": "47 CFR §97.313(l)",
+  "x": "On 630 meters the ceiling is 500 W PEP at the transmitter and 5 watts EIRP radiated. Pair it with the 2200-meter figure: 1 watt on 2200, 5 watts on 630, both EIRP."
+ },
+ "E1A10": {
+  "src": "47 CFR §97.11(a)",
+  "x": "Installing and operating an amateur station aboard a ship or aircraft \"must be approved by the master of the ship or pilot in command of the aircraft.\" Their authority over the vessel outranks your license. Section 97.11(b) adds that the station must be independent of the vessel's own radio gear."
+ },
+ "E1A11": {
+  "src": "47 CFR §97.5(a)(2)",
+  "x": "A US-registered vessel carries US jurisdiction with it into international waters, so any FCC-issued amateur license is sufficient. No endorsement, no maritime permit, and no foreign authorization is needed while you are aboard."
+ },
+ "E1B01": {
+  "src": "47 CFR §97.3(a)(43)",
+  "x": "The definition: \"An emission, or frequencies outside the necessary bandwidth of a transmission, the level of which may be reduced without affecting the information being transmitted.\" That last clause is the test. If removing it costs you nothing, it was spurious."
+ },
+ "E1B02": {
+  "src": "47 CFR §97.307(f)(2)",
+  "x": "No non-phone emission may exceed the bandwidth of a communications quality phone signal of the same modulation type. On HF that benchmark is about 3 kHz, so digital voice and SSTV are held to the same width as an SSB conversation."
+ },
+ "E1B03": {
+  "src": "47 CFR §97.13(b)",
+  "x": "A station within 1600 meters, which is 1 mile, of an FCC monitoring facility must protect it from harmful interference. Fail to do so and the FCC may impose operating restrictions on your station."
+ },
+ "E1B04": {
+  "src": "47 CFR §97.303(b)",
+  "x": "Amateurs are secondary on 70 centimeters and must not cause harmful interference to the radiolocation service. If your repeater is the source, the obligation is immediate: cease operating or change the repeater so the interference stops."
+ },
+ "E1B05": {
+  "src": "47 CFR §97.3(a)(33); §97.203(e)",
+  "x": "The National Radio Quiet Zone is a rectangle across Maryland, Virginia and West Virginia protecting the National Radio Astronomy Observatory at Green Bank. Its telescopes listen for signals far weaker than anything a transmitter nearby would leave intact."
+ },
+ "E1B06": {
+  "src": "47 CFR §97.15(a); 47 CFR Part 17",
+  "x": "The 200-foot threshold is not the only trigger. A structure at or near a public use airport may require FAA notification and FCC registration under Part 17 at heights well below 200 feet, because the limit there follows the airport's glide slope."
+ },
+ "E1B07": {
+  "src": "PRB-1, 101 FCC 2d 952 (1985); 47 CFR §97.15(b)",
+  "x": "PRB-1 is the FCC's limited preemption of state and local zoning as it applies to amateur antenna structures. It reaches land use and zoning rules, not private deed restrictions or homeowner association covenants, which are contracts rather than government regulation."
+ },
+ "E1B08": {
+  "src": "47 CFR §97.121(a)",
+  "x": "When your station interferes with domestic broadcast reception on receivers of good engineering design, the FCC may impose quiet hours: you avoid transmitting on the offending frequencies during specified times. The remedy restricts when and where you operate rather than shutting you down."
+ },
+ "E1B09": {
+  "src": "47 CFR §97.407(a)",
+  "x": "Any FCC-licensed amateur station may operate under RACES rules once it is certified by the civil defense organization responsible for the area served. The license alone is not enough, and no separate class of station license exists for RACES."
+ },
+ "E1B10": {
+  "src": "47 CFR §97.407(b)",
+  "x": "RACES operation uses the ordinary amateur allocations. Every frequency and emission authorized to the control operator by license class remains available, shared with the amateur service. There is no separate block of RACES-only spectrum."
+ },
+ "E1B11": {
+  "src": "PRB-1, 101 FCC 2d 952 (1985); 47 CFR §97.15(b)",
+  "x": "Local regulation must reasonably accommodate amateur service communications and represent the minimum practical regulation needed to serve the locality's legitimate purpose. Reasonable accommodation is the operative phrase, and it does not mean a jurisdiction has to permit any structure you want."
+ },
+ "E1C01": {
+  "src": "47 CFR §97.303(h)(3)",
+  "x": "All 60-meter emissions are limited to 2.8 kHz occupied bandwidth, data included. One figure covers every mode on the band, which matches the width of an ordinary SSB signal."
+ },
+ "E1C02": {
+  "src": "47 CFR §97.117",
+  "x": "International transmissions are \"limited to communications incidental to the purposes of the amateur service and to remarks of a personal character.\" One sentence covering every DX contact you will ever make, and the answer restates it."
+ },
+ "E1C03": {
+  "src": "47 CFR §97.303(g)(2)",
+  "x": "After notifying the UTC you wait 30 days. If nothing comes back saying your station sits within 1 kilometer of a power line carrier system using those frequencies, you may operate. Silence after 30 days is your clearance."
+ },
+ "E1C04": {
+  "src": "CITEL Inter-American Convention; FCC International Bureau",
+  "x": "The International Amateur Radio Permit comes out of the CITEL convention and lets US amateurs operate in participating countries across the Americas without applying for a separate license in each one. Think of IARP as the Western Hemisphere counterpart to CEPT."
+ },
+ "E1C05": {
+  "src": "47 CFR §97.115(c)",
+  "x": "Section 97.115(c) bars third-party traffic under automatic control, \"except a station transmitting a RTTY or data emission.\" Automated digital forwarding systems keep working; automated phone relay of third-party messages does not."
+ },
+ "E1C06": {
+  "src": "FCC Public Notice DA 16-1048",
+  "x": "Operating under CEPT abroad requires you to carry proof of your authority: your FCC license plus a copy of Public Notice DA 16-1048, which is the document establishing that US amateurs may use CEPT privileges. Carry both, because a foreign administration has no other way to verify you."
+ },
+ "E1C07": {
+  "src": "47 CFR §97.303(g)(2)",
+  "x": "Before operating on 2200 or 630 meters you notify the Utilities Technology Council of your call sign, the band or bands you intend to use, and the coordinates of your antenna's fixed location. The point is to check you are clear of power line carrier systems sharing those frequencies."
+ },
+ "E1C08": {
+  "src": "47 CFR §97.213(b)",
+  "x": "A telecommand station must include provisions limiting transmission to no more than 3 minutes if the control link fails. Without it a stuck transmitter could hold a frequency indefinitely with nobody able to stop it."
+ },
+ "E1C09": {
+  "src": "47 CFR §97.307(f)(1)",
+  "x": "Below 29.0 MHz no angle-modulated emission may have a modulation index greater than 1 at the highest modulation frequency. Holding the index at 1.0 keeps the occupied bandwidth from expanding into neighboring HF signals."
+ },
+ "E1C10": {
+  "src": "47 CFR §97.307(d)",
+  "x": "For transmitters installed after January 1, 2003, spurious emissions below 30 MHz must be at least 43 dB below the mean power of the fundamental. Above 30 MHz the requirement tightens to 60 dB, so keep the two figures paired."
+ },
+ "E1C11": {
+  "src": "CEPT Recommendation T/R 61-01; FCC Public Notice DA 16-1048",
+  "x": "CEPT is the European arrangement that lets a US amateur operate in participating countries, and their amateurs operate here, without a separate license application. IARP does the same job in the Americas."
+ },
+ "E1C12": {
+  "src": "47 CFR §97.305(c)",
+  "x": "The emission table authorizes phone across the whole 630-meter band. Very little voice happens there in practice because the band is 7 kHz wide and power is capped at 5 watts EIRP, but the rules permit it throughout."
+ },
+ "E1D01": {
+  "src": "47 CFR §97.3(a)(46)",
+  "x": "Definition, verbatim: \"Telemetry. A one-way transmission of measurements at a distance from the measuring instrument.\" One-way and measurements are the two elements. Telemetry reports data outward; telecommand sends control the other direction."
+ },
+ "E1D02": {
+  "src": "47 CFR §97.211(b)",
+  "x": "Section 97.211(b) permits a space telecommand station to \"transmit special codes intended to obscure the meaning of telecommand messages.\" The reason is security: anyone able to decode the commands could take over the spacecraft."
+ },
+ "E1D03": {
+  "src": "47 CFR §97.3(a)(45)",
+  "x": "A space telecommand station is the ground station that commands the satellite, transmitting to \"initiate, modify, or terminate functions\" of a space station. Telecommand goes up and controls; telemetry comes down and reports."
+ },
+ "E1D04": {
+  "src": "47 CFR §97.119(a)",
+  "x": "A balloon telemetry beacon is an amateur station like any other, so §97.119(a) applies in full and the call sign must go out. Nothing in the rules requires altitude, position or speed to be transmitted, however common those are in practice."
+ },
+ "E1D05": {
+  "src": "47 CFR §97.213(d)",
+  "x": "Section 97.213(d) requires a photocopy of the station license and a label showing the name, address and telephone number of the licensee and at least one designated control operator, posted conspicuously at the station. Since every listed item appears in the rule, the inclusive answer is right."
+ },
+ "E1D06": {
+  "src": "47 CFR §97.215(c)",
+  "x": "Model craft telecommand is capped at 1 watt. Section 97.215 also waives on-air identification for those transmissions, provided a label with your call sign and address is affixed to the transmitter."
+ },
+ "E1D07": {
+  "src": "47 CFR §97.207(c)",
+  "x": "Space stations get 40, 20, 15 and 10 meters on HF, specifically the 7.0 to 7.1 MHz and 14.00 to 14.25 MHz segments plus the 17, 15, 12 and 10 meter bands. Below 40 meters nothing is allocated, since satellite work needs frequencies that pass through the ionosphere."
+ },
+ "E1D08": {
+  "src": "47 CFR §97.207(c)(2)",
+  "x": "On VHF only 2 meters carries a space station allocation, at 144 to 146 MHz. Note this is the lower half of the band only, not all of 144 to 148, which is why 145.8 to 146.0 shows up as a satellite subband in practice."
+ },
+ "E1D09": {
+  "src": "47 CFR §97.207(c)(2)",
+  "x": "Two UHF bands are authorized: 435 to 438 MHz on 70 centimeters and 2400 to 2450 MHz on 13 centimeters. The 435 MHz segment carries most amateur satellite downlinks you will actually hear."
+ },
+ "E1D10": {
+  "src": "47 CFR §97.211(a)",
+  "x": "Eligibility comes from designation, not license class. Any amateur station designated by the space station licensee may act as its telecommand station, and the control operator then works within the privileges of the license held."
+ },
+ "E1D11": {
+  "src": "47 CFR §97.209(a)",
+  "x": "Any amateur station may be an Earth station, and any class of operator may control one, within their own privileges. An Earth station is simply a ground station communicating through a satellite, which is what most operators are doing on the birds."
+ },
+ "E1D12": {
+  "src": "47 CFR §97.207(e); §97.203(g); §97.211(d)",
+  "x": "One-way transmission is normally prohibited, but three station types are given explicit permission: space stations, beacons and telecommand stations. Each has a purpose that cannot work as a two-way exchange."
+ },
+ "E1E01": {
+  "src": "47 CFR §97.527",
+  "x": "Section 97.527 allows reimbursement for out-of-pocket expenses incurred \"in preparing, processing, administering, or coordinating an examination.\" Actual costs only. VEs receive no payment for their time, and §97.509(e) makes charging beyond that a serious violation."
+ },
+ "E1E02": {
+  "src": "47 CFR §97.523",
+  "x": "All VECs must cooperate in maintaining one question pool per written element, each holding at least ten times the number of questions used on a single exam. The VECs own the pools jointly. The FCC does not write the questions."
+ },
+ "E1E03": {
+  "src": "47 CFR §97.521",
+  "x": "A VEC is an organization that has entered into a written agreement with the FCC to coordinate, prepare and administer amateur license examinations. The agreement with the Commission is what makes an organization a VEC."
+ },
+ "E1E04": {
+  "src": "47 CFR §97.525(a)",
+  "x": "Accreditation is the VEC confirming that a candidate meets the FCC's requirements: correct license class, at least 18 years old, and never revoked or suspended. The VEC may also decline anyone it judges not competent or whose integrity is in question."
+ },
+ "E1E05": {
+  "src": "47 CFR §97.509(j)",
+  "x": "On a failing grade the VE team returns the application document to the examinee and tells them the grade. Nothing goes to the VEC. The paperwork is theirs to keep, and they may test again the same day if the session allows it."
+ },
+ "E1E06": {
+  "src": "47 CFR §97.509(c)",
+  "x": "Responsibility is individual, not collective. The rule states that the administering VEs are responsible for the proper conduct and necessary supervision of each examination, and each VE must observe the examinee throughout. No one gets to defer to the team lead."
+ },
+ "E1E07": {
+  "src": "47 CFR §97.509(c); §97.511",
+  "x": "Section 97.511 requires each examinee to comply with the instructions given by the administering VEs. If a candidate will not, the VE terminates that examination immediately. There is no warning step written into the rules."
+ },
+ "E1E08": {
+  "src": "47 CFR §97.509(d)",
+  "x": "A VE may not examine a spouse, child, grandchild, stepchild, parent, grandparent, stepparent, sibling, stepsibling, aunt, uncle, niece, nephew, or in-law. The list is long and specific, and the point is avoiding any appearance of favoritism."
+ },
+ "E1E09": {
+  "src": "47 CFR §97.509(e)",
+  "x": "Fraudulent administration or certification may result in revocation of the VE's station license grant and suspension of the operator license grant. The penalty falls on the examiner's own license, which is what gives the volunteer system its teeth."
+ },
+ "E1E10": {
+  "src": "47 CFR §97.509(m)",
+  "x": "After a successful examination the VEs submit the application document to the coordinating VEC according to that VEC's instructions. It goes to the VEC rather than straight to the FCC, and the VEC forwards it onward."
+ },
+ "E1E11": {
+  "src": "47 CFR §97.509(i)",
+  "x": "Three VEs must certify both that the examinee is qualified for the license grant and that they themselves complied with the administering VE requirements. Three signatures, and they attest to their own conduct as well as the candidate's result."
+ },
+ "E1F01": {
+  "src": "47 CFR §97.305(c); §97.311(b)",
+  "x": "Spread spectrum is authorized only above 222 MHz, where there is enough spectrum for a signal to spread without swamping narrowband users. Section 97.313(j) also caps SS at 10 watts PEP."
+ },
+ "E1F02": {
+  "src": "47 CFR §97.107(a)",
+  "x": "A Canadian amateur operating here works under the terms of their Canadian license, capped at US Amateur Extra privileges. They keep their own license's conditions, and the Extra ceiling means the arrangement can never grant more than a US amateur could hold."
+ },
+ "E1F03": {
+  "src": "47 CFR §97.315(b)(1)",
+  "x": "Certification is not required if the amplifier was constructed or modified by an amateur for use at an amateur station. Home-built and amateur-modified gear stays outside the certification regime, which is what keeps homebrewing legal."
+ },
+ "E1F04": {
+  "src": "47 CFR §97.3(a)(30)",
+  "x": "Line A runs roughly parallel to and south of the US border with Canada, from Aberdeen, Washington eastward. It exists to protect Canadian land mobile services, so stations north of it face extra restrictions."
+ },
+ "E1F05": {
+  "src": "47 CFR §97.303(f); §97.3(a)(30)",
+  "x": "North of Line A the 420 to 430 MHz segment is off limits, protecting Canadian users of that spectrum. The rest of 70 centimeters, from 430 to 450 MHz, remains available. If you live near the northern border, know this range."
+ },
+ "E1F06": {
+  "src": "47 CFR §1.931",
+  "x": "A Special Temporary Authority grants short-term operation outside the normal rules, and for amateurs the usual basis is experimental communications. An STA is temporary and specific, granted for a stated purpose and period."
+ },
+ "E1F07": {
+  "src": "47 CFR §97.113(a)(2), (3)",
+  "x": "Contacting a business is not itself prohibited. What the rules forbid is communication in which you or your employer holds a pecuniary interest. Ordering a pizza for the club picnic is fine; calling in a parts order for your job is not."
+ },
+ "E1F08": {
+  "src": "47 CFR §97.113(a)(2)",
+  "x": "Section 97.113(a)(2) bars \"communications for hire or for material compensation, direct or indirect, paid or promised, except as otherwise provided in these rules.\" Amateur radio is a noncommercial service, and that principle drives most of §97.113."
+ },
+ "E1F09": {
+  "src": "47 CFR §97.113(a)(4)",
+  "x": "A mesh network is still an amateur station, so every content rule applies to it. Encryption to obscure meaning stays prohibited no matter how modern the transport. Passwords sent in the clear are the price of operating under Part 97."
+ },
+ "E1F10": {
+  "src": "47 CFR §97.201(a)",
+  "x": "Auxiliary stations require a Technician class license or higher. Novice is the one class excluded. Section 97.201(b) also confines auxiliary stations to 2 meters and shorter wavelengths."
+ },
+ "E1F11": {
+  "src": "47 CFR §97.317(a)(1)",
+  "x": "For certification the amplifier must meet the §97.307 spurious emission standards \"when operated at the lesser of 1.5 kW PEP or its full output power.\" Two other conditions ride along: no more than 15 dB gain, and no amplification at all between 26 and 28 MHz."
+ },
+ "G1A01": {
+  "src": "47 CFR §97.301(b), (d)",
+  "x": "Four HF bands hold Extra-only segments at the bottom end: 80, 40, 20 and 15 meters. A General may not transmit there. Learn those four together, because G1A08 asks the same thing from the Extra side."
+ },
+ "G1A02": {
+  "src": "47 CFR §97.305(c)",
+  "x": "Thirty meters is CW and data only, for everyone. No phone, no image, no exceptions by license class. It is also a narrow band shared with other services, which is why the FCC keeps voice off it entirely."
+ },
+ "G1A03": {
+  "src": "47 CFR §97.305(c)",
+  "x": "Same band, same reason as G1A02. Thirty meters allows only CW and data emissions, so image transmission is out along with phone. If a question about 30 meters offers a mode other than CW or data, that mode is prohibited."
+ },
+ "G1A05": {
+  "src": "47 CFR §97.301(d)",
+  "x": "On 40 meters the General phone privileges begin at 7.175 MHz. Everything from 7.125 to 7.175 is reserved for Extra. Remember 7.175 as your lower edge on 40 meter voice."
+ },
+ "G1A06": {
+  "src": "47 CFR §97.303",
+  "x": "Secondary status cuts both ways. You must not cause harmful interference to the primary service, and you have to accept whatever interference it sends your way. You still get to operate there. You just have no standing to complain."
+ },
+ "G1A07": {
+  "src": "47 CFR §97.305(a)",
+  "x": "CW is authorized \"on any frequency authorized to the control operator,\" and a General holds the whole 10-meter band, 28.0 to 29.7 MHz. So CW is legal across all of it. That §97.305(a) principle answers a lot of CW questions."
+ },
+ "G1A08": {
+  "src": "47 CFR §97.301(b)",
+  "x": "The bands with Extra-exclusive segments are 80, 40, 20 and 15 meters. Same four as G1A01, viewed from the other direction. No exclusive Extra spectrum exists on 30, 17, 12 or 10 meters."
+ },
+ "G1A09": {
+  "src": "47 CFR §97.301(d)",
+  "x": "General phone on 15 meters runs 21.275 to 21.450 MHz, so 21300 kHz sits comfortably inside. Watch the units when a question mixes kHz and MHz: 21300 kHz is 21.300 MHz."
+ },
+ "G1A10": {
+  "src": "47 CFR §97.205(b)",
+  "x": "Section 97.205(b) excludes 28.0 to 29.5 MHz from repeater use, which leaves the top of the band. Repeaters on 10 meters live above 29.5 MHz, and 29.6 MHz is the common simplex-repeater output."
+ },
+ "G1A11": {
+  "src": "47 CFR §97.301",
+  "x": "Where a General does not get the whole voice segment, the missing piece is always at the bottom, reserved for Extra. Generals work the upper portion. That pattern holds on every band, so the answer is the upper part of the segment."
+ },
+ "G1B01": {
+  "src": "47 CFR §97.15(a)",
+  "x": "Structures over 200 feet above ground require FAA notification and FCC registration, and so do shorter ones near a public use airport. Two hundred feet is the number, and note it is measured above ground level at the site, not above sea level."
+ },
+ "G1B02": {
+  "src": "47 CFR §97.203(b)",
+  "x": "A beacon \"must not concurrently transmit on more than 1 channel in the same amateur service frequency band, from the same station location.\" One beacon per band per site. Nothing stops you running beacons on several different bands."
+ },
+ "G1B03": {
+  "src": "47 CFR §97.3(a)(9)",
+  "x": "The definition gives the purpose directly: a beacon transmits \"for the purposes of observation of propagation and reception or other related experimental activities.\" Propagation observation is the phrase to match."
+ },
+ "G1B04": {
+  "src": "47 CFR §97.113(c)",
+  "x": "You generally may not retransmit non-amateur signals, but §97.113(c) carves out propagation and weather forecast information originating from US Government stations. It must be occasional rather than routine, which the rule states plainly."
+ },
+ "G1B05": {
+  "src": "47 CFR §97.111(b)(5)",
+  "x": "Section 97.111(b) lists the permitted one-way transmissions, and paragraph (5) covers \"transmissions necessary to assisting persons learning, or improving proficiency in, the international Morse code.\" Code practice made the list; general broadcasting never does."
+ },
+ "G1B06": {
+  "src": "47 CFR §97.15(b); PRB-1, 101 FCC 2d 952 (1985)",
+  "x": "This is the PRB-1 standard, written into §97.15(b). Local regulation of amateur antenna structures \"must have a reasonable and clearly defined objective\" and constitute the minimum practical regulation, and it must reasonably accommodate amateur communications. Reasonable accommodation and minimum practical are the two phrases."
+ },
+ "G1B07": {
+  "src": "47 CFR §97.113(a)(4)",
+  "x": "Q signals, prosigns and the usual on-air shorthand are fine. What the rule forbids is \"messages encoded for the purpose of obscuring their meaning.\" Standard abbreviations aid communication rather than hide it, so intent is the dividing line."
+ },
+ "G1B08": {
+  "src": "47 CFR §97.111(a)(1)",
+  "x": "You may work amateurs anywhere except in countries whose administrations have notified the ITU that they object. The objection must be filed with the ITU. Same rule tested in T1D01 on the Technician exam."
+ },
+ "G1B09": {
+  "src": "47 CFR §97.203(d)",
+  "x": "On HF the only segment where a beacon may run under automatic control is 28.20 to 28.30 MHz. Ten meters again, and the same range the Technician exam asks about."
+ },
+ "G1B10": {
+  "src": "47 CFR §97.203(c)",
+  "x": "Section 97.203(c) is one line: beacon transmitter power \"must not exceed 100 W.\" A beacon exists to report whether a path is open, and more power would only distort that picture."
+ },
+ "G1B11": {
+  "src": "47 CFR §97.101(a)",
+  "x": "Where Part 97 is silent, stations must operate \"in accordance with good engineering and good amateur practice,\" and the FCC decides what that means. Not the ARRL, not your club, not the frequency coordinator. The Commission is the arbiter."
+ },
+ "G1C01": {
+  "src": "47 CFR §97.313(c)(1)",
+  "x": "10.140 MHz sits in the 30-meter band, 10.100 to 10.150 MHz, and §97.313(c)(1) caps that whole segment at 200 watts PEP for everyone. Thirty meters is the low-power band, so the answer is 200 watts."
+ },
+ "G1C02": {
+  "src": "47 CFR §97.313(b)",
+  "x": "Twelve meters carries no special restriction, so the general ceiling applies: 1.5 kW PEP, or 1500 watts. Only a short list of segments deviates from that, and 30 meters is the one most likely to appear on your exam."
+ },
+ "G1C03": {
+  "src": "47 CFR §97.303(h)(3)",
+  "x": "The rule requires that on all 60-meter spectrum, \"amateur operators shall ensure that their emissions do not occupy more than 2.8 kHz.\" That figure matches a normal SSB signal, which is why standard voice gear works there unmodified."
+ },
+ "G1C04": {
+  "src": "47 CFR §97.313(i)",
+  "x": "Sixty-meter power is specified as ERP referenced to a dipole, so the FCC needs to know your antenna gain to police it. If you use anything other than a dipole, keep the manufacturer's gain data or your own calculations in your station records."
+ },
+ "G1C05": {
+  "src": "47 CFR §97.313(b)",
+  "x": "A General on 10 meters gets the full 1500 watts PEP. The 200-watt cap that applies to Technicians on 28.0 to 28.5 MHz is tied to the operator class, not the band, so it does not follow you after you upgrade."
+ },
+ "G1C06": {
+  "src": "47 CFR §97.313(b)",
+  "x": "The 1.8 MHz band is 160 meters, and it carries no special power restriction. The general limit applies: 1500 watts PEP. When a power question names a band with no listed exception, 1500 watts is the default."
+ },
+ "G1C07": {
+  "src": "47 CFR §97.309(a)(4)",
+  "x": "An amateur station may use any digital technique \"whose technical characteristics have been documented publicly.\" Public documentation is what keeps a mode from counting as an obscuring code. No FCC approval or certification is needed, only publication."
+ },
+ "G1C11": {
+  "src": "47 CFR §97.313; §97.3(a)(9)",
+  "x": "All amateur power limits are written as PEP output measured at the transmitter, not input power and not what the amplifier draws from the wall. Section 97.3 defines PEP as the average power supplied to the antenna transmission line at the crest of the modulation envelope."
+ },
+ "G1D01": {
+  "src": "47 CFR §97.505(a); §97.501",
+  "x": "Element credit for an expired license survives indefinitely, as long as the license was General, Advanced or Extra and was not revoked. You show proof of the old grant and the VEs give credit for the written element it represented. Revocation is the one thing that kills it."
+ },
+ "G1D02": {
+  "src": "47 CFR §97.509(b)(3)(i)",
+  "x": "A VE may administer exams one full class below their own license. General class VEs administer Technician exams only. Extra or Advanced is needed for General exams, and Extra alone for Extra exams."
+ },
+ "G1D03": {
+  "src": "47 CFR §97.9(b)",
+  "x": "An unexpired CSCE gives you the new privileges immediately, before the FCC database catches up. With a General CSCE in hand a Technician may work any General or Technician segment. Identify with the AG indicator while doing it, per §97.119(f)(2)."
+ },
+ "G1D04": {
+  "src": "47 CFR §97.509(a), (b)(3)(i)",
+  "x": "Every amateur exam session takes a team of at least three accredited VEs, and for a Technician exam each must hold General or higher. Three is the number, and all three observe the entire examination."
+ },
+ "G1D05": {
+  "src": "47 CFR §97.7",
+  "x": "The station is a US station, so US rules follow it regardless of where the operator is sitting. Section 97.7 requires a control operator holding an FCC operator/primary station license. Your physical location does not change what the station needs."
+ },
+ "G1D06": {
+  "src": "47 CFR §97.119(f)(2)",
+  "x": "The AG indicator is required whenever you use the General privileges you have not yet been granted on paper. Operating inside Technician limits needs no indicator. Once the upgrade appears in the FCC database, you stop using AG entirely."
+ },
+ "G1D07": {
+  "src": "47 CFR §97.509(b)(1)",
+  "x": "Volunteer Examiners are accredited by a Volunteer Examiner Coordinator, the VEC. The FCC certifies VECs and the VECs accredit individual VEs. The Commission never accredits a VE directly."
+ },
+ "G1D08": {
+  "src": "47 CFR §97.509(b)(3), (4)",
+  "x": "Citizenship is not a requirement anywhere in §97.509. What matters is holding an FCC-granted license of General class or above, being at least 18, and never having had a license revoked or suspended."
+ },
+ "G1D09": {
+  "src": "47 CFR §97.505(b)",
+  "x": "A CSCE is good for 365 days of element credit. One year, and then the credit is gone and the element must be passed again. Note that it gives operating privileges too, under §97.9(b), until the upgrade posts."
+ },
+ "G1D10": {
+  "src": "47 CFR §97.509(b)(2)",
+  "x": "A VE must be at least 18 years of age. There is no upper age limit and no minimum time licensed, just 18 and the required license class."
+ },
+ "G1D11": {
+  "src": "47 CFR §97.505(a); §97.501(b)",
+  "x": "Once the two-year grace period lapses the license is gone, but the element credit is not. Show proof of the expired General grant and you keep Element 3 credit. You still have to sit the current Element 2 exam, because that credit does not carry."
+ },
+ "G1D12": {
+  "src": "47 CFR §97.507; ITU Radio Regulations",
+  "x": "A remotely controlled station is operating where the transmitter is, not where you are. Point the radio at South America and that country's regulations govern the transmission. Your US license does not extend its rules abroad."
+ },
+ "G1E01": {
+  "src": "47 CFR §97.115(b)(2)",
+  "x": "A third party is disqualified if they were previously licensed and that license was revoked or suspended and not reinstated. Ordinary unlicensed people are welcome to speak. The bar is aimed at someone the FCC has already sanctioned."
+ },
+ "G1E02": {
+  "src": "47 CFR §97.205(b); §97.301",
+  "x": "The repeater's control operator sets what the repeater may transmit, and 10-meter privileges require General or higher. A Technician may feed the input on 2 meters, but the General class control operator is what makes the 10-meter output legal."
+ },
+ "G1E03": {
+  "src": "47 CFR §97.221(c)",
+  "x": "Outside the automatic control segments, an automatically controlled digital station may only respond. Section 97.221(c) requires that it be \"responding to interrogation by a station under local or remote control,\" and that its transmissions stay within 500 Hz."
+ },
+ "G1E04": {
+  "src": "47 CFR §97.13(b); §97.303; §97.311(b)",
+  "x": "Three separate rules each impose a duty to avoid interference: proximity to an FCC monitoring station, operating on a secondary allocation, and running spread spectrum. Since every listed condition carries that obligation, the inclusive answer is correct."
+ },
+ "G1E05": {
+  "src": "47 CFR §97.115(a)(2); §97.117",
+  "x": "Even with a third-party agreement in place, the content limits of §97.117 still apply: matters incidental to amateur radio and remarks of a personal character, plus emergency and disaster relief traffic. An agreement opens the door, it does not remove the content rules."
+ },
+ "G1E06": {
+  "src": "ITU Radio Regulations Art. 5; 47 CFR §97.301",
+  "x": "The ITU divides the world into three regions. Region 1 is Europe, Africa and northern Asia, Region 3 is the rest of Asia and Oceania, and Region 2 is the Americas. North and South America are Region 2."
+ },
+ "G1E07": {
+  "src": "47 CFR §97.111",
+  "x": "Section 97.111 lists who an amateur station may communicate with, and unlicensed Part 15 devices are not on that list. Sharing spectrum with Wi-Fi in the 2.4 GHz band does not create permission to work those stations. No part of the band."
+ },
+ "G1E08": {
+  "src": "47 CFR §97.313(j)",
+  "x": "Spread spectrum is capped hard: \"No station may transmit with a transmitter output exceeding 10 W PEP when the station is transmitting a SS emission type.\" Ten watts, because SS energy spreads across spectrum other users occupy."
+ },
+ "G1E10": {
+  "src": "47 CFR §97.101(a); NCDXF/IARU International Beacon Project",
+  "x": "Those five frequencies carry the International Beacon Project network, where synchronized beacons around the world transmit in rotation so operators can gauge propagation. Transmitting there breaks a shared resource, which §97.101(a) treats as poor amateur practice."
+ },
+ "G1E11": {
+  "src": "47 CFR §97.221(b)",
+  "x": "Automatic control for digital stations is wide open on 6 meters and everything shorter. On HF it is confined to narrow slices such as 28.120 to 28.189 MHz and 21.090 to 21.100 MHz. Above 50 MHz anywhere, below it only in listed segments."
+ },
+ "G1E12": {
+  "src": "47 CFR §97.115",
+  "x": "Section 97.115 sets conditions on third-party traffic but says nothing about how the station is controlled. Remote control neither adds restrictions nor removes them. If the message would be legal at the radio, it is legal from a distance."
+ },
+ "T0A01": {
+  "src": "IEEE 1187 battery safety; ARRL Handbook",
+  "x": "A lead-acid battery can deliver hundreds of amps into a dead short. A dropped wrench across the terminals will glow red, spray molten metal, and can rupture the case. Lead-acid also vents hydrogen, so an arc near a charging battery risks an explosion."
+ },
+ "T0A02": {
+  "src": "IEC 60479 (effects of current on the human body)",
+  "x": "Current through the body can burn tissue, disrupt breathing, and stop the heart through ventricular fibrillation. All three are real, so the inclusive answer is right. Current is what injures you, which is why fairly low voltages can still kill."
+ },
+ "T0A03": {
+  "src": "NFPA 70 (National Electrical Code)",
+  "x": "In US practice black insulation marks the hot conductor. White is neutral and green or bare is ground. Treat any black or red wire as live until you have proven otherwise with a meter."
+ },
+ "T0A04": {
+  "src": "NFPA 70; ARRL Handbook",
+  "x": "A fuse is a deliberate weak point that opens when current climbs past its rating, cutting power before the wiring overheats. It protects the circuit and the building, not the equipment plugged into it."
+ },
+ "T0A05": {
+  "src": "NFPA 70",
+  "x": "The fuse rating is chosen for the wire behind it. Fit a 20-amp fuse to wiring sized for 5 amps and the fuse will happily pass current that overheats the conductors, so the wiring becomes the fuse. That is how electrical fires start."
+ },
+ "T0A06": {
+  "src": "NFPA 70; ARRL Handbook",
+  "x": "Good practice stacks up: bond equipment to a common ground, use three-wire cords, and disconnect power before working inside a chassis. All the listed measures are sound, so the inclusive answer is correct."
+ },
+ "T0A07": {
+  "src": "NFPA 70 Article 810; ARRL Handbook",
+  "x": "Mount the arrester on a grounded panel where the feed lines enter the building. Bleeding the surge to ground at the entry point keeps it out of the shack. An arrester deep inside the house has already let the strike travel past everything you wanted to protect."
+ },
+ "T0A08": {
+  "src": "NFPA 70",
+  "x": "In series with the hot conductor only. Interrupting the hot line stops current and leaves the equipment at ground potential. Fusing the neutral instead could open it while the chassis stays connected to a live hot wire, which is worse than no fuse."
+ },
+ "T0A09": {
+  "src": "NFPA 70 Article 250; ARRL Handbook",
+  "x": "Bond every ground rod and earth connection together with heavy wire or strap. Separate grounds sitting at different potentials during a surge will push current through your equipment as it equalizes. One bonded system, not several isolated ones."
+ },
+ "T0A10": {
+  "src": "IEEE 1187 battery safety",
+  "x": "Fast charging or discharging generates heat and drives the chemistry harder than it is meant to go, producing gas inside the cell. Lead-acid vents hydrogen; lithium cells can go into thermal runaway. Overheating and out-gassing are the hazards."
+ },
+ "T0A11": {
+  "src": "ARRL Handbook; capacitor safety practice",
+  "x": "Filter capacitors hold their charge after the power is off, sometimes at lethal voltage for a long time. Switching off is not the same as being safe. Verify with a meter and discharge through a resistor before reaching inside."
+ },
+ "T0A12": {
+  "src": "IEC 61010 (measurement equipment safety)",
+  "x": "Both the meter and its leads have voltage ratings, and the leads are usually the weak link. Using probes rated below the voltage you are measuring risks flashover to your hands. Confirm the rating covers the circuit before you touch anything."
+ },
+ "T0B01": {
+  "src": "NFPA 70 Article 250; ARRL Antenna Book",
+  "x": "Keep ground conductors short and direct. A lightning surge rises so fast that the conductor's inductance dominates, and every extra foot or bend adds impedance that pushes the surge to find another route, possibly through your equipment."
+ },
+ "T0B02": {
+  "src": "OSHA 1926 Subpart M; ARRL Antenna Book",
+  "x": "Climbing requires a proper climbing harness, a helper or observer on the ground, and gear inspected before use. All the listed requirements are genuine, so the inclusive answer is right."
+ },
+ "T0B03": {
+  "src": "OSHA 1926 Subpart M",
+  "x": "Never. There is no tower short enough or job quick enough to make solo climbing acceptable. If something goes wrong up there, an observer on the ground is the only thing standing between an accident and a fatality."
+ },
+ "T0B04": {
+  "src": "OSHA 1926.1408; ARRL Antenna Book",
+  "x": "Look for overhead power lines and stay clear of them. A tower section or antenna being raised is a long conductor swinging through the air, and contact with a distribution line is usually fatal. Survey the site before anything goes up."
+ },
+ "T0B05": {
+  "src": "ARRL Antenna Book; rigging practice",
+  "x": "Wire through the turnbuckle body stops it from unwinding as wind vibration works it loose over months. Guy tension slowly slackens otherwise, and a loose guy lets the tower move in ways it was never designed to."
+ },
+ "T0B06": {
+  "src": "ARRL Antenna Book; OSHA clearance guidance",
+  "x": "Site the antenna so that if the whole thing falls, no part reaches within 10 feet of the power wires. Plan for the failure, not just the installation. Height plus guy radius decides how far away that has to be."
+ },
+ "T0B07": {
+  "src": "ARRL Antenna Book; manufacturer safety guidance",
+  "x": "Never climb a crank-up tower unless it is fully retracted or mechanical locks are in place. The cable is the only thing holding the sections apart, and a cable failure with a climber aboard turns the tower into a guillotine."
+ },
+ "T0B08": {
+  "src": "NFPA 70 Article 250; ARRL Antenna Book",
+  "x": "Give each tower leg its own eight-foot ground rod, then bond the rods to the tower and to each other. Multiple paths share the surge current, and bonding keeps every part of the system at the same potential while it happens."
+ },
+ "T0B09": {
+  "src": "NFPA 70; utility safety practice",
+  "x": "Utility poles carry high-voltage lines, and the pole is the utility's property besides. Climbing one or attaching hardware puts you within reach of conductors that will kill you long before you touch them."
+ },
+ "T0B10": {
+  "src": "NFPA 70 Article 250; lightning protection practice",
+  "x": "Avoid sharp bends. A fast surge does not follow a tight corner well, and the added inductance can make it jump the bend to something nearby. Sweeping curves keep the current on the conductor you chose for it."
+ },
+ "T0B11": {
+  "src": "NFPA 70; 47 CFR §97.15(b)",
+  "x": "Local electrical codes govern grounding, generally adopting the National Electrical Code. The FCC regulates your transmissions, not your wiring, so grounding requirements come from the locality rather than Part 97."
+ },
+ "T0C01": {
+  "src": "47 CFR §1.1310; ICNIRP guidelines",
+  "x": "Radio waves are non-ionizing. Their photons lack the energy to strip electrons from atoms, so RF cannot ionize tissue the way X-rays or gamma rays do. Its effect at high levels is heating, which is what the exposure rules are written around."
+ },
+ "T0C02": {
+  "src": "47 CFR §1.1310 (MPE limits)",
+  "x": "The 30 to 300 MHz range has the most restrictive limits, so of these bands 50 MHz is the answer. The human body is roughly resonant at those frequencies, absorbing energy most efficiently, so the allowable exposure is set lowest there."
+ },
+ "T0C03": {
+  "src": "47 CFR §1.1310; FCC OET Bulletin 65",
+  "x": "Exposure limits are averaged over time, so transmitting half as much doubles the power density you may produce. Drop from 100 percent to 50 percent duty cycle and the allowable density goes up by a factor of two."
+ },
+ "T0C04": {
+  "src": "FCC OET Bulletin 65",
+  "x": "Power, frequency, antenna gain and pattern, and how close people get all feed into the exposure calculation, along with duty cycle. Every listed factor genuinely matters, so the inclusive answer is right."
+ },
+ "T0C05": {
+  "src": "47 CFR §1.1310; IEEE C95.1",
+  "x": "The body absorbs RF more efficiently at some frequencies than others, peaking where a person is about a half wavelength tall. Limits are tightened where absorption is greatest, which is why the VHF range is the most restrictive."
+ },
+ "T0C06": {
+  "src": "47 CFR §97.13(c); FCC OET Bulletin 65",
+  "x": "You may use the FCC's calculation tables, run the equations yourself, or measure with calibrated field-strength equipment. All are acceptable, so the inclusive answer applies. OET Bulletin 65 is the document that lays out the methods."
+ },
+ "T0C07": {
+  "src": "IEEE C95.1; ARRL Handbook",
+  "x": "Touching a radiating antenna concentrates RF current at the contact point and produces a burn that is deep and slow to heal. It happens at surprisingly modest power. Mount antennas where nobody can reach them while you transmit."
+ },
+ "T0C08": {
+  "src": "FCC OET Bulletin 65",
+  "x": "Move the antennas. Exposure falls steeply with distance, so relocating an antenna farther from people is usually more effective than cutting power, and it costs you nothing on the air."
+ },
+ "T0C09": {
+  "src": "47 CFR §97.13(c)",
+  "x": "Re-evaluate whenever anything in the transmitter or antenna system changes. A new amplifier, a different antenna, or a relocated feed point all alter the exposure picture, so the original evaluation no longer describes your station."
+ },
+ "T0C10": {
+  "src": "47 CFR §1.1310; FCC OET Bulletin 65",
+  "x": "The limits are based on average exposure over a period, not on peak power. A transmitter sending half the time delivers half the average energy, so duty cycle scales the exposure directly."
+ },
+ "T0C11": {
+  "src": "FCC OET Bulletin 65",
+  "x": "Duty cycle is the percentage of the averaging period during which the transmitter is actually transmitting. SSB and CW have low duty cycles because you are receiving much of the time; FM and digital modes run far higher."
+ },
+ "T0C12": {
+  "src": "ICNIRP guidelines; IEEE C95.1",
+  "x": "Ionizing radiation carries enough energy per photon to break chemical bonds and damage DNA directly. RF does not come close, so its only established hazard at high levels is heating. Different mechanism entirely, not simply a weaker version."
+ },
+ "T0C13": {
+  "src": "47 CFR §97.13(c); §97.103(a)",
+  "x": "The station licensee. Section 97.13(c) puts the duty on the licensee before allowing the station to transmit, and §97.103(a) makes the licensee responsible for proper operation generally. It does not shift to the control operator or the equipment maker."
+ },
+ "T1A01": {
+  "src": "47 CFR §97.1(c)",
+  "x": "Section 97.1 lists five principles behind the amateur service. Paragraph (c) is the one tested here: the rules provide for \"advancing skills in both the communication and technical phases of the art.\" On the exam, look for the choice that names skills and covers both sides of the hobby, operating and technical. That pairing is the giveaway."
+ },
+ "T1A02": {
+  "src": "47 CFR Part 97; 47 U.S.C. §151",
+  "x": "The FCC writes Part 97 and enforces it. Every rule on this exam traces back to the Commission. Any question asking who regulates, licenses, or enforces amateur radio in the United States has the same answer."
+ },
+ "T1A03": {
+  "src": "47 CFR §97.119(b)(2)",
+  "x": "Voice identification must be in English, and the rule adds that \"use of a phonetic alphabet as an aid for correct station identification is encouraged.\" Encouraged is the word to spot. Pair \"encouraged\" with \"phone emissions\" and you have the answer."
+ },
+ "T1A04": {
+  "src": "47 CFR §97.23",
+  "x": "Section 97.23 requires your license grant to carry an email address where you can receive electronic correspondence. That is the channel the FCC uses: an email with a link to download your grant. Two things to hold onto for the exam. It comes from the FCC, and it arrives electronically."
+ },
+ "T1A05": {
+  "src": "47 CFR §97.7(a)",
+  "x": "A control operator must be a person \"for whom an amateur operator/primary station license grant appears on the ULS consolidated licensee database.\" The ULS entry is the proof. Until your grant posts there you are not licensed to transmit, whatever paperwork you are holding."
+ },
+ "T1A06": {
+  "src": "47 CFR §97.203(c), (d)",
+  "x": "Section 97.203(d) lists the segments where a beacon may run under automatic control. The only HF one is 28.200 to 28.300 MHz on ten meters. Memorize that range. Worth carrying alongside it: §97.203(c) caps beacon power at 100 watts."
+ },
+ "T1A07": {
+  "src": "47 CFR §97.3(a)(41)",
+  "x": "Straight from the definitions: \"Space station. An amateur station located more than 50 km above the Earth's surface.\" Altitude is the entire definition. Fifty kilometers is the number to remember, and how the station got up there does not enter into it."
+ },
+ "T1A08": {
+  "src": "47 CFR §97.3(a)(22)",
+  "x": "A frequency coordinator is an entity recognized by local amateurs \"that recommends transmit/receive channels and associated operating and technical parameters\" for repeater and auxiliary stations. Recommends, not assigns. The answer you want is the one built around recommending channels."
+ },
+ "T1A09": {
+  "src": "47 CFR §97.3(a)(22)",
+  "x": "Same definition, other half of the sentence. A coordinator is one \"recognized in a local or regional area by amateur operators whose stations are eligible to be auxiliary or repeater stations.\" When the question asks who selects a coordinator, look for the choice describing local amateurs rather than any national organization."
+ },
+ "T1A10": {
+  "src": "47 CFR §97.407(a)",
+  "x": "No station may transmit in RACES unless it \"is certified by a civil defense organization as registered with that organization.\" Your operator license alone is not enough. The exam is testing that second piece: enrollment with the served civil defense organization, in place beforehand."
+ },
+ "T1A11": {
+  "src": "47 CFR §97.101(d)",
+  "x": "One sentence: \"No amateur operator shall willfully or maliciously interfere with or cause interference to any radio communication or signal.\" Willful or malicious is the exam language and it matches the answer nearly word for word."
+ },
+ "T1B01": {
+  "src": "47 CFR §97.301(e)",
+  "x": "Technicians get one slice of HF phone: 28.300 to 28.500 MHz on ten meters. The rest of the Technician HF allocation is CW and data only. Learn the pair 28.300 and 28.500 as your phone window and this question and T1B06 both fall out of it."
+ },
+ "T1B02": {
+  "src": "47 CFR §97.301(a); §97.207(a)",
+  "x": "Working the ISS happens on 2 meters and 70 centimeters, and Technicians hold full privileges on both. Section 97.207(a) adds that any class of operator may work a space station within the privileges they hold. No upgrade required."
+ },
+ "T1B03": {
+  "src": "47 CFR §97.301(a)",
+  "x": "The 6-meter band runs 50.0 to 54.0 MHz, so 52.525 MHz sits inside it. That frequency is also the national FM simplex calling channel on 6 meters, which makes it easy to remember."
+ },
+ "T1B04": {
+  "src": "47 CFR §97.301(a)",
+  "x": "The 2-meter band is 144 to 148 MHz, so 146.52 MHz falls in it. You will meet 146.52 constantly: it is the national FM simplex calling frequency. Knowing that one number answers this question without doing any band math."
+ },
+ "T1B05": {
+  "src": "47 CFR §97.301, §97.305",
+  "x": "Technicians may run digital modes on all of their HF, VHF and UHF allocations, subject to the emission types §97.305 authorizes for each segment. When a question lists several Technician bands and asks where digital is allowed, the answer is usually all of them."
+ },
+ "T1B06": {
+  "src": "47 CFR §97.301(e), §97.305",
+  "x": "Ten meters is the only HF band where a Technician may use phone, in the 28.300 to 28.500 MHz segment. The Technician allocations on 80, 40 and 15 meters are CW and data only. One HF band for voice, and it is 10 meters."
+ },
+ "T1B07": {
+  "src": "47 CFR §97.305(a), (c)",
+  "x": "The bottom 100 kHz of both 6 meters and 2 meters is reserved for CW: 50.0 to 50.1 MHz and 144.0 to 144.1 MHz. These are the weak-signal segments where operators work long-haul contacts, and voice would swamp them. Remember it as the first 100 kHz of each band."
+ },
+ "T1B08": {
+  "src": "47 CFR §97.303",
+  "x": "Where amateur radio is secondary, another service holds the primary allocation. You may transmit there, but you must not interfere with the primary users and you have to accept interference from them. Secondary means you yield, not that the segment is off limits."
+ },
+ "T1B09": {
+  "src": "47 CFR §97.101(a), §97.301",
+  "x": "Your emitted signal occupies bandwidth on both sides of the dial reading, and neither your display nor the far end is perfectly calibrated. Sitting right on the edge can push sidebands outside the band. Section 97.101(a) requires good engineering and good amateur practice, so leave yourself margin."
+ },
+ "T1B10": {
+  "src": "47 CFR §97.305(c)",
+  "x": "Every amateur band above 50 MHz has at least some segment where SSB phone is authorized. The emission table in §97.305(c) is the source. If a question asks where SSB may be used above 50 MHz, the answer covers all those bands rather than any single one."
+ },
+ "T1B11": {
+  "src": "47 CFR §97.313(c)(2)",
+  "x": "Technician HF work is capped at 200 watts PEP on the 80, 40, 15 and 10 meter segments. That number is written directly into §97.313(c)(2). Two numbers carry most of the power questions: 200 watts on Technician HF, 1500 watts nearly everywhere else."
+ },
+ "T1B12": {
+  "src": "47 CFR §97.313(b)",
+  "x": "The blanket limit for any amateur station is 1.5 kW PEP, which is 1500 watts, and that is what applies to a Technician above 30 MHz. Section 97.313(a) still requires you to use the minimum power needed, but 1500 watts is the ceiling the exam is asking for."
+ },
+ "T1C01": {
+  "src": "47 CFR §97.17(a); §97.9(a)",
+  "x": "Section 97.17(a) states that no new license grant will be issued for Novice or Advanced Class. Five classes still exist on paper and existing holders keep theirs, but the FCC issues only three today: Technician, General, Amateur Extra."
+ },
+ "T1C02": {
+  "src": "47 CFR §97.19(a)",
+  "x": "Any licensed amateur named in an operator or club station grant may apply for a vanity call sign. There is no license class requirement to request one, though which call signs are available to you does depend on your class."
+ },
+ "T1C03": {
+  "src": "47 CFR §97.117",
+  "x": "The rule is a single sentence, and the answer quotes it nearly verbatim: transmissions to a different country are \"limited to communications incidental to the purposes of the amateur service and to remarks of a personal character.\" Look for that phrasing and pick it."
+ },
+ "T1C04": {
+  "src": "47 CFR §97.23",
+  "x": "Your grant has to show an email address the FCC can actually reach you at. Section 97.23 states plainly that undeliverable correspondence may result in revocation of the station license or suspension of the operator license. Keep the address current after any move or provider change."
+ },
+ "T1C05": {
+  "src": "FCC sequential call sign system; 47 CFR §97.19",
+  "x": "Group D covers Novice and Technician licensees and uses the 1x3 format: one letter, one numeral, three letters. KF1XXX fits. Count the characters on each choice and take the one shaped 1x3."
+ },
+ "T1C06": {
+  "src": "47 CFR §97.5(a)(2); §97.11(a)",
+  "x": "Section 97.5(a)(2) extends your authority to a vessel documented or registered in the United States, and §97.11(a) requires that installing and operating the station be approved by the master of the ship. Both conditions apply: a US-documented vessel, and the master's permission."
+ },
+ "T1C07": {
+  "src": "47 CFR §97.21(a)(3); §1.949",
+  "x": "Renewal may be filed starting 90 days before the expiration date. Do not confuse this with the grace period, which is a separate two-year window that only opens after expiration. Ninety days before, two years after."
+ },
+ "T1C08": {
+  "src": "47 CFR §97.25",
+  "x": "The rule is one line: \"An amateur service license is normally granted for a 10-year term.\" Ten years, every class, with no exam to renew."
+ },
+ "T1C09": {
+  "src": "47 CFR §97.21(b)",
+  "x": "Once a license expires you get a two-year filing grace period to apply for renewal. Miss that window and you retake the exams. Pair it with the 90-day figure from T1C07: file 90 days early, or salvage it within 2 years."
+ },
+ "T1C10": {
+  "src": "47 CFR §97.5(a)",
+  "x": "Passing the exam does not put you on the air. Your authority begins when the operator and station license grant appears in the FCC database. Check ULS, and once your call sign is there, transmit."
+ },
+ "T1C11": {
+  "src": "47 CFR §97.21(b)",
+  "x": "The grace period protects your call sign and lets you renew without retesting. It does not authorize transmitting. An expired license is an expired license, so you stay off the air until the renewal grant appears."
+ },
+ "T1D01": {
+  "src": "47 CFR §97.111(a)(1)",
+  "x": "You may work any country except one whose administration has told the ITU it objects to amateur communications with the United States. The objection has to be filed with the ITU, and the FCC publishes the list. Very few countries are on it, but that ITU notification is the test the question is after."
+ },
+ "T1D02": {
+  "src": "47 CFR §97.113(b)",
+  "x": "Section 97.113(b) is blunt: an amateur station \"shall not engage in any form of broadcasting.\" Other one-way transmissions such as beacons, telecommand and brief tuning are allowed where the rules name them. Broadcasting is the one that is always out."
+ },
+ "T1D03": {
+  "src": "47 CFR §97.113(a)(4); §97.211(b); §97.215(b)",
+  "x": "Encoding to hide meaning is prohibited, with two narrow exceptions. Section 97.211(b) lets a telecommand station send codes to a space station, and §97.215(b) says model craft control signals do not count as obscuring codes. Space stations and model craft: those are the only two."
+ },
+ "T1D04": {
+  "src": "47 CFR §97.113(a)(4), (c)",
+  "x": "Music by phone emission is prohibited except where this section allows it, and the one opening is in §97.113(c): retransmitting manned spacecraft communications, \"including incidental music,\" with prior NASA approval. Music is only ever legal here as a byproduct of that retransmission."
+ },
+ "T1D05": {
+  "src": "47 CFR §97.113(a)(3)(ii)",
+  "x": "You may tell other amateurs that gear is available for sale or trade, \"provided that such activity is not conducted on a regular basis.\" Two conditions ride on this answer: it has to be equipment normally used in an amateur station, and it cannot become a routine business."
+ },
+ "T1D06": {
+  "src": "47 CFR §97.113(a)(4)",
+  "x": "Obscene or indecent words or language appear on the prohibited list in §97.113(a)(4) with no exception, no time-of-day allowance, and no band where it becomes acceptable. When a question offers a conditional answer here, the flat prohibition is the right one."
+ },
+ "T1D07": {
+  "src": "47 CFR §97.3(a)(7); §97.201",
+  "x": "An auxiliary station carries communications point to point inside a system of cooperating amateur stations. A link feeding a remote receiver back to the main repeater transmitter is the textbook case. Section 97.201(b) restricts auxiliary stations to 2 meters and shorter."
+ },
+ "T1D08": {
+  "src": "47 CFR §97.113(a)(3)(iii)",
+  "x": "Pay for operating is barred except in a few listed cases. The one here: a control operator may accept compensation \"as an incident of a teaching position\" when the station is used as part of classroom instruction at an educational institution. Teacher, classroom, part of instruction."
+ },
+ "T1D09": {
+  "src": "47 CFR §97.113(b)",
+  "x": "Amateurs may not support program production or news gathering, with one carve-out: communications \"directly related to the immediate safety of human life or the protection of property\" where no other means is reasonably available at the time. Safety of life or property is the phrase to match."
+ },
+ "T1D10": {
+  "src": "47 CFR §97.3(a)(10)",
+  "x": "The definition is short: \"Broadcasting. Transmissions intended for reception by the general public, either direct or relayed.\" Intent and audience decide it. Whether anyone actually listens does not matter, and neither does the mode."
+ },
+ "T1D11": {
+  "src": "47 CFR §97.215(a)",
+  "x": "Telecommand of model craft is the exception to identifying. Section 97.215(a) drops the identification requirement for transmissions directed only to the model, provided a label with your call sign and address is fixed to the transmitter. Note also §97.215(c): 1 watt maximum."
+ },
+ "T1D12": {
+  "src": "47 CFR §97.119(a)",
+  "x": "There is no such thing as an anonymous test transmission. Section 97.119(a) applies to everything you put on the air, so identify with your assigned call sign even when you are only checking an antenna or setting drive level."
+ },
+ "T1E01": {
+  "src": "47 CFR §97.7",
+  "x": "Section 97.7 opens with it: \"When transmitting, each amateur station must have a control operator.\" There is no exception anywhere in Part 97, including automatic control, where the control operator simply does not have to be at the control point. The answer is never."
+ },
+ "T1E02": {
+  "src": "47 CFR §97.301; §97.207(c)",
+  "x": "Satellite work follows the same rule as everything else. If your license class authorizes the uplink frequency, you may be the control operator; if it does not, you may not. Check the uplink against your privileges and the question answers itself."
+ },
+ "T1E03": {
+  "src": "47 CFR §97.103(b)",
+  "x": "The station licensee designates the control operator. The FCC presumes the licensee is also the control operator unless station records document otherwise, which is why that presumption is worth remembering alongside this answer."
+ },
+ "T1E04": {
+  "src": "47 CFR §97.103(b); §97.301",
+  "x": "Privileges follow the control operator's license class, not the station owner's and not the equipment's. An Extra may operate a Technician's station across Extra segments, and a Technician at an Extra's station is still held to Technician limits."
+ },
+ "T1E05": {
+  "src": "47 CFR §97.3(a)(14)",
+  "x": "Definition, word for word: \"Control point. The location at which the control operator function is performed.\" It is where the operator does the controlling, which may be nowhere near the transmitter."
+ },
+ "T1E06": {
+  "src": "47 CFR §97.301",
+  "x": "Frequency privileges come from the control operator's license class, and no provision lets a Technician work an Extra-only segment. Not with an Extra present, not with permission, not for a special event. The answer is at no time."
+ },
+ "T1E07": {
+  "src": "47 CFR §97.103(a)",
+  "x": "When the two are different people, §97.103(a) makes \"both persons equally responsible\" for proper operation. Responsibility is shared rather than transferred, so the answer naming both the control operator and the station licensee is the one."
+ },
+ "T1E08": {
+  "src": "47 CFR §97.3(a)(6); §97.205(d)",
+  "x": "Automatic control means the station complies with the rules without a control operator present at the control point. A repeater is the everyday example, and §97.205(d) specifically authorizes repeaters to be automatically controlled."
+ },
+ "T1E09": {
+  "src": "47 CFR §97.109(c)",
+  "x": "Section 97.109(c) is one line: \"When a station is being remotely controlled, the control operator must be at the control point. Any station may be remotely controlled.\" Any station. Remote control carries no eligibility restriction, unlike automatic control."
+ },
+ "T1E10": {
+  "src": "47 CFR §97.3(a)(39)",
+  "x": "Remote control is defined as a control operator who \"indirectly manipulates the operating adjustments in the station through a control link.\" The internet is simply one kind of control link. You are still operating the radio yourself, just from somewhere else."
+ },
+ "T1E11": {
+  "src": "47 CFR §97.3(a)(13)",
+  "x": "Straight from the definitions: a control operator is \"an amateur operator designated by the licensee of a station to be responsible for the transmissions from that station to assure compliance with the FCC Rules.\" Designated by the licensee, responsible for compliance."
+ },
+ "T1F01": {
+  "src": "47 CFR §97.103(c)",
+  "x": "The station licensee \"must make the station and the station records available for inspection upon request by an FCC representative.\" No warrant, no advance notice, and no set hours in the rule. Upon request is the standard."
+ },
+ "T1F02": {
+  "src": "47 CFR §97.119(a)",
+  "x": "Tactical calls like Race Headquarters or Net Control are fine for traffic handling, but they satisfy nothing legally. Your FCC-assigned call sign still has to go out at least every 10 minutes during a communication and at the end of it."
+ },
+ "T1F03": {
+  "src": "47 CFR §97.119(a)",
+  "x": "The identification requirement is at least every 10 minutes during a communication and at the end of each one. Note what is not required: you do not have to identify at the beginning. Ten minutes and at the end."
+ },
+ "T1F04": {
+  "src": "47 CFR §97.119(b)(2)",
+  "x": "Identification by phone must be \"by a phone emission in the English language.\" You may hold the entire rest of the contact in any language you like. The call sign itself goes out in English."
+ },
+ "T1F05": {
+  "src": "47 CFR §97.119(b)(1), (2)",
+  "x": "A station running phone may identify by voice or by sending CW. Both are authorized under §97.119(b), and CW is permitted on any frequency the control operator may use. Look for the answer that allows either one."
+ },
+ "T1F06": {
+  "src": "47 CFR §97.119(c)",
+  "x": "Self-assigned indicators are allowed as long as they do not conflict with an indicator specified elsewhere in the rules or with a prefix assigned to another country. Common ones like /M, /P and /AG all qualify, which is why the inclusive answer is correct."
+ },
+ "T1F07": {
+  "src": "47 CFR §97.115(a)(2)",
+  "x": "Third-party traffic with a foreign station requires a third-party agreement between the United States and that country, with an exception for emergency and disaster relief. Absent an agreement or an emergency, the unlicensed person cannot speak."
+ },
+ "T1F08": {
+  "src": "47 CFR §97.3(a)(47)",
+  "x": "The definition names all three parties: a message from the control operator of one amateur station (first party) to the control operator of another (second party) on behalf of another person (third party). Count the parties in each choice and pick the one with all three."
+ },
+ "T1F09": {
+  "src": "47 CFR §97.3(a)(40)",
+  "x": "Definition: \"Repeater. An amateur station that simultaneously retransmits the transmission of another amateur station on a different channel or channels.\" Simultaneously and on a different channel are what separate a repeater from a store-and-forward digipeater."
+ },
+ "T1F10": {
+  "src": "47 CFR §97.205(g)",
+  "x": "Section 97.205(g) protects the repeater operator: the control operator of a repeater that inadvertently retransmits violative communications \"is not accountable\" for them. Accountability stays with whoever put the signal into the input, which is the originating station."
+ },
+ "T1F11": {
+  "src": "47 CFR §97.5(b)(2)",
+  "x": "A club station license needs at least four members and a trustee who holds an operator license. Four is the number the exam wants. The trustee is designated by a club officer and must be a licensed amateur."
+ },
+ "T2A01": {
+  "src": "ARRL 2 m band plan",
+  "x": "Standard 2-meter repeater offset is 600 kHz, plus or minus depending on where in the band the output sits. Your radio usually picks the direction automatically. Pair it with the 70 cm figure: 600 kHz on 2 meters, 5 MHz on 70 centimeters."
+ },
+ "T2A02": {
+  "src": "ARRL 2 m band plan",
+  "x": "146.520 MHz is the national FM simplex calling frequency, the channel to try when you want a direct contact without a repeater. It shows up on the Technician exam more than once, so commit the number."
+ },
+ "T2A03": {
+  "src": "ARRL 70 cm band plan",
+  "x": "On 70 centimeters the standard offset is 5 MHz. The band is far wider than 2 meters, so a larger split is practical and keeps the repeater's own transmitter from desensing its receiver."
+ },
+ "T2A04": {
+  "src": "ARRL Operating Manual; 47 CFR §97.119(a)",
+  "x": "Give the other station's call sign, then your own. That is all a repeater contact needs. Long CQ calls are for HF; on a repeater people are monitoring and a short directed call gets answered faster."
+ },
+ "T2A05": {
+  "src": "ARRL Operating Manual",
+  "x": "Answer with their call sign first, then yours. Their call tells them you are replying to them rather than to someone else who called at the same moment, and your call tells them who you are."
+ },
+ "T2A06": {
+  "src": "ARRL Operating Manual",
+  "x": "Repeat CQ a few times, say \"this is,\" give your call sign, then stop and listen. The rhythm matters: calling too long means you are transmitting while someone is trying to answer you."
+ },
+ "T2A07": {
+  "src": "ARRL Operating Manual",
+  "x": "Offset is the difference between the repeater's transmit and receive frequencies. The repeater listens on one and talks on the other, and your radio shifts by the same amount in the opposite direction so the pair line up."
+ },
+ "T2A08": {
+  "src": "ITU-R Rec. M.1172; ARRL Operating Manual",
+  "x": "CQ means calling any station. It is a general invitation to anyone listening rather than a call to a particular operator. When you want one specific station, use their call sign instead."
+ },
+ "T2A09": {
+  "src": "ARRL Operating Manual",
+  "x": "Give your call sign followed by \"listening.\" It tells the repeater's users that you are there and available without committing them to answer. Shorter and less intrusive than calling CQ, which is why it is the convention on FM."
+ },
+ "T2A10": {
+  "src": "ARRL band plans; 47 CFR §97.101(a)",
+  "x": "A band plan is voluntary. It divides a band by mode and activity so weak-signal work, FM, satellites and digital modes stay out of each other's way. The FCC does not enforce it, but ignoring it counts against good amateur practice under §97.101(a)."
+ },
+ "T2A11": {
+  "src": "ARRL Operating Manual",
+  "x": "Simplex means transmitting and receiving on one frequency, talking directly to the other station with no repeater in between. Duplex is the opposite, with separate transmit and receive frequencies."
+ },
+ "T2B01": {
+  "src": "ARRL Operating Manual",
+  "x": "Reverse swaps your transmit and receive frequencies so you hear the repeater's input instead of its output. Use it to find out whether you can hear the other station directly. If you can, you both might move to simplex and leave the repeater free."
+ },
+ "T2B02": {
+  "src": "TIA-603; ARRL Operating Manual",
+  "x": "CTCSS stands for Continuous Tone-Coded Squelch System, a low-frequency tone sent under your voice that tells the repeater the signal is meant for it. Motorola's trade name PL is the same thing. The tone sits below the audio passband, so you never hear it."
+ },
+ "T2B03": {
+  "src": "ARRL Operating Manual",
+  "x": "In a linked network, whatever one repeater receives goes out on all of them. That extends coverage across a region, so a handheld in one city can reach someone hundreds of miles away through the chain."
+ },
+ "T2B04": {
+  "src": "ARRL Operating Manual",
+  "x": "Hearing a repeater does not mean it can hear you. The usual causes are a wrong or missing CTCSS tone, an incorrect offset, or simply being too far away for your low-power signal to reach the input. All three are common, so the inclusive answer is right."
+ },
+ "T2B05": {
+  "src": "TIA-603 deviation limits; FM modulation theory",
+  "x": "FM deviation follows your audio level, so talking too loudly drives deviation past what the system allows. The transmitter's limiter clamps the peaks and the receiver loses them, which sounds like your audio cutting out exactly when you get emphatic. Back off the mic."
+ },
+ "T2B06": {
+  "src": "ITU-T Rec. Q.23",
+  "x": "DTMF is Dual-Tone Multi-Frequency, the same tones a telephone keypad produces. Each button sends two tones at once, one from a row group and one from a column group, and the pair identifies the digit unambiguously."
+ },
+ "T2B07": {
+  "src": "ETSI TS 102 361 (DMR)",
+  "x": "Program the group's ID into your radio. A talkgroup is a numeric identifier rather than a frequency, so joining one is a configuration change, not a tuning change. You stay on the same repeater channel either way."
+ },
+ "T2B08": {
+  "src": "47 CFR §97.101(b)",
+  "x": "Part 97 settles this: licensees and control operators \"must cooperate in selecting transmitting channels,\" and \"no frequency will be assigned for the exclusive use of any station.\" Nobody owns a frequency, so the two stations work it out between themselves."
+ },
+ "T2B09": {
+  "src": "ARRL band plans",
+  "x": "Simplex channels give stations close enough to hear each other directly a place to go. A repeater covers a wide area, so two people a mile apart holding a long conversation through one blocks everybody else for no benefit."
+ },
+ "T2B10": {
+  "src": "ITU-R Rec. M.1172",
+  "x": "QRM is interference from other stations. Its partner QRN is natural noise such as static from lightning. Keep them straight: QRM is people, QRN is nature."
+ },
+ "T2B11": {
+  "src": "ITU-R Rec. M.1172",
+  "x": "QSY means changing frequency. As a question it asks whether you should change; as a statement it announces that you are. Do not confuse it with QSL, which is acknowledgment of receipt."
+ },
+ "T2B12": {
+  "src": "ETSI TS 102 361 (DMR)",
+  "x": "The color code is a 4-bit access value carried in every DMR burst. Your radio's programmed code must match the repeater's or it will be ignored. It performs the same job for DMR that a CTCSS tone does for FM, keeping nearby systems on the same frequency from triggering each other."
+ },
+ "T2B13": {
+  "src": "ARRL Operating Manual; FM receiver design",
+  "x": "Squelch mutes the receiver audio until a signal appears, sparing you a constant hiss between transmissions. Set it just past the point where the noise stops. Crank it higher than that and weak stations will not break through."
+ },
+ "T2B14": {
+  "src": "ETSI TS 102 361 (DMR)",
+  "x": "A talkgroup is a numeric identifier that sorts traffic on a shared digital system. Your radio only unmutes for the groups you have selected, so a single repeater carries many conversations while each user hears only the ones they signed up for."
+ },
+ "T2C01": {
+  "src": "47 CFR §97.103(a); §97.403",
+  "x": "Part 97 applies at all times, with no exception for emergencies, drills or field operations. Sections 97.403 and 97.405 do not suspend the rules; they permit any means of radiocommunication when life or property is in immediate danger. Everything else still stands."
+ },
+ "T2C02": {
+  "src": "ARRL Public Service Communications Manual",
+  "x": "Net control calls the net to order and directs who transmits and when. On a busy net a dozen stations may need to pass traffic, and without one station deciding the order, everyone doubles and nothing moves."
+ },
+ "T2C03": {
+  "src": "ITU phonetic alphabet; 47 CFR §97.119(b)(2)",
+  "x": "Spell the word using the standard phonetic alphabet: Alfa, Bravo, Charlie. Unusual names and street addresses are exactly where a listener's brain fills in the wrong word, and phonetics remove the guess."
+ },
+ "T2C04": {
+  "src": "47 CFR §97.407",
+  "x": "RACES is the Radio Amateur Civil Emergency Service, defined in Part 97 subpart E for civil defense communications during a national, regional or local emergency. It runs on amateur frequencies but under the direction of a civil defense organization."
+ },
+ "T2C05": {
+  "src": "ARRL National Traffic System",
+  "x": "Traffic means formal messages passed between stations, typically radiograms with a set format. It is the business the net exists to move, as distinct from the conversation around it."
+ },
+ "T2C06": {
+  "src": "ARRL Amateur Radio Emergency Service",
+  "x": "ARES is made up of licensed amateurs who have registered their skills and equipment with the ARRL for public service work. Membership is voluntary and open to any licensee willing to serve, with no government certification involved."
+ },
+ "T2C07": {
+  "src": "ARRL Public Service Communications Manual",
+  "x": "Transmit only when net control directs you to, unless you have an emergency. That single discipline is what separates a net from a pile-up. A genuine emergency always overrides the order of business."
+ },
+ "T2C08": {
+  "src": "Winlink Global Radio Email; ARRL",
+  "x": "Winlink moves email over radio using addresses built from amateur call signs. It lets stations exchange messages with the regular internet when local connectivity is gone, which is why it turns up in emergency work."
+ },
+ "T2C09": {
+  "src": "47 CFR §97.403; §97.405",
+  "x": "Yes, but only when human life or property is in immediate danger. Section 97.403 permits \"any means of radiocommunication at its disposal\" in that situation. It is a genuine emergency provision, not a convenience, and it does not cover drills."
+ },
+ "T2C10": {
+  "src": "ARRL National Traffic System radiogram format",
+  "x": "The preamble carries the handling data: message number, precedence, station of origin, check, place of origin, and time and date filed. None of it is the message itself. It is what lets any station in the chain track and account for the traffic."
+ },
+ "T2C11": {
+  "src": "ARRL National Traffic System radiogram format",
+  "x": "Check is the count of words or word equivalents in the text. The receiving operator counts what they wrote down and compares. If the numbers disagree, something was lost or added and the message gets repeated."
+ },
+ "T2C12": {
+  "src": "47 CFR §97.407(a)",
+  "x": "RACES is the one requiring certification. No station may transmit in RACES unless it is certified by a civil defense organization as registered with that organization. ARES asks only that you volunteer; RACES needs the served agency to enroll you first."
+ },
+ "T3A01": {
+  "src": "ITU-R Rec. P.1406; ARRL Antenna Book",
+  "x": "Your signal arrives by several paths at once, direct plus reflections off buildings and terrain. Those copies add or cancel depending on how their phases line up. At 2 meters a half wavelength is about a foot, so moving the antenna a few feet swings you from a null into a peak."
+ },
+ "T3A02": {
+  "src": "ITU-R Rec. P.833 (vegetation attenuation)",
+  "x": "Leaves and wet wood absorb RF, and the effect climbs sharply with frequency. At UHF and microwave a stand of trees can eat enough signal to drop a marginal path entirely. Strong signals survive; weak ones do not."
+ },
+ "T3A03": {
+  "src": "ARRL VHF/UHF band plans",
+  "x": "Weak-signal CW and SSB work above 50 MHz is horizontally polarized by convention. FM and repeaters use vertical. Mixing the two costs you signal, so match whatever the activity you are joining uses."
+ },
+ "T3A04": {
+  "src": "ARRL Antenna Book",
+  "x": "An antenna responds to the component of the field aligned with it. Cross-polarize the two ends of a line-of-sight path and much of the energy is simply not coupled, typically costing 20 dB or more. The signal weakens rather than disappearing."
+ },
+ "T3A05": {
+  "src": "ARRL Antenna Book",
+  "x": "VHF and UHF reflect well off buildings, water towers and hillsides. If the direct path is blocked, swing the beam off-axis and hunt for a surface that bounces you in. Aiming away from the repeater to work it feels wrong and often works."
+ },
+ "T3A06": {
+  "src": "ARRL Handbook",
+  "x": "Picket fencing is the rapid flutter you hear from a moving vehicle. The car passes through multipath peaks and nulls in quick succession, chopping the signal at a rate that sounds like running a stick along a fence."
+ },
+ "T3A07": {
+  "src": "ITU-R Rec. P.838 (rain attenuation)",
+  "x": "Above roughly 10 GHz, raindrops are a meaningful fraction of a wavelength and scatter and absorb the signal. Heavy precipitation can cut a microwave path badly. The same rain does essentially nothing at HF or VHF."
+ },
+ "T3A08": {
+  "src": "ARRL Antenna Book; ITU-R Rec. P.533",
+  "x": "Ionospheric signals reach you by more than one route, often with slightly different path lengths that shift as the layers move. Those copies drift in and out of phase, so the sum rises and falls irregularly. Same physics as VHF multipath, just on a far larger scale."
+ },
+ "T3A09": {
+  "src": "ARRL Antenna Book",
+  "x": "The ionosphere twists the polarization of a passing wave, and what comes out is elliptical with a component in nearly every orientation. Because some energy is always available to either orientation, vertical or horizontal antennas both work on HF skip."
+ },
+ "T3A10": {
+  "src": "ITU-R Rec. P.1406; digital communications theory",
+  "x": "Delayed copies of the signal smear one symbol into the next, which is intersymbol interference. The receiver starts misreading bits and the error rate climbs. It is why data modes struggle on paths that voice tolerates."
+ },
+ "T3A11": {
+  "src": "ITU-R Rec. P.533; ARRL Handbook",
+  "x": "The ionosphere, roughly 50 to 400 km up, where solar radiation strips electrons from gas atoms. Those free electrons bend HF waves back toward Earth. Strictly it is refraction rather than reflection, though the exam and everyday usage both say reflect."
+ },
+ "T3A12": {
+  "src": "ITU-R Rec. P.838",
+  "x": "Little effect. At 28 and 50 MHz the wavelength is meters long while raindrops are millimeters, far too small to scatter the wave meaningfully. Weather only starts mattering to signal strength up in the microwave bands."
+ },
+ "T3B01": {
+  "src": "Maxwell's equations; IEEE Std 145",
+  "x": "The electric and magnetic fields sit at right angles to each other, and both are perpendicular to the direction of travel. That geometry falls straight out of Maxwell's equations and holds for every electromagnetic wave."
+ },
+ "T3B02": {
+  "src": "IEEE Std 145 (antenna terminology)",
+  "x": "Polarization is defined by the orientation of the electric field. Vertical electric field means a vertically polarized wave. The magnetic field is always perpendicular to it, so naming one fixes the other."
+ },
+ "T3B03": {
+  "src": "Maxwell's equations",
+  "x": "An electric field and a magnetic field, each regenerating the other as the wave travels. Neither exists alone in a propagating wave, which is exactly why it is called electromagnetic."
+ },
+ "T3B04": {
+  "src": "Maxwell's equations; NIST",
+  "x": "Radio waves are light, so they travel at c, about 300,000,000 meters per second in free space. Nothing about being invisible makes them slower. In coaxial cable the speed drops, which is what velocity factor accounts for."
+ },
+ "T3B05": {
+  "src": "Wave relationship c = fλ",
+  "x": "Wavelength and frequency are inversely related through c = f times lambda. Since c is fixed, raising frequency shortens wavelength. That is why 2 meters is a much higher frequency than 80 meters."
+ },
+ "T3B06": {
+  "src": "Wave relationship c = fλ",
+  "x": "Wavelength in meters equals 300 divided by frequency in MHz. The 300 comes from the speed of light expressed as 300 million meters per second divided by a million. Check it: 300 over 146 MHz is about 2 meters."
+ },
+ "T3B07": {
+  "src": "47 CFR §97.301; ARRL band plans",
+  "x": "Amateur bands carry a wavelength nickname alongside their frequency range. The 146 MHz band is 2 meters, 28 MHz is 10 meters, and so on. Run 300 divided by the frequency and the band name appears."
+ },
+ "T3B08": {
+  "src": "47 CFR §97.3(b)(13)",
+  "x": "Part 97 defines it outright: \"VHF (very high frequency). The frequency range 30-300 MHz.\" The 2-meter and 6-meter bands both live here. Each band above it starts where the last one ends, at ten times the frequency."
+ },
+ "T3B09": {
+  "src": "47 CFR §97.3(b)(12)",
+  "x": "From the same definitions list: \"UHF (ultra high frequency). The frequency range 300-3000 MHz.\" That covers the 70-centimeter band. Note the decade pattern: HF 3 to 30 MHz, VHF 30 to 300, UHF 300 to 3000."
+ },
+ "T3B10": {
+  "src": "47 CFR §97.3(b)(4)",
+  "x": "\"HF (high frequency). The frequency range 3-30 MHz.\" This is the skip territory, holding 80 through 10 meters. Learn the three ranges as one chain and all three questions come free."
+ },
+ "T3B11": {
+  "src": "NIST; Maxwell's equations",
+  "x": "About 300,000,000 meters per second, which is 3 times 10 to the eighth. The precise figure is 299,792,458 m/s, and rounding to 300 million is what makes the 300 divided by frequency shortcut work."
+ },
+ "T3B12": {
+  "src": "Maxwell's equations; special relativity",
+  "x": "They all travel at the same speed. In free space c does not depend on frequency, so a 1.8 MHz signal and a 10 GHz signal arrive together. Frequency changes wavelength, never velocity."
+ },
+ "T3C01": {
+  "src": "ITU-R Rec. P.533; ARRL Handbook",
+  "x": "UHF passes straight through the ionosphere instead of bending back down. Without that return path you are limited to what the horizon allows, so a simplex UHF contact ends where line of sight does."
+ },
+ "T3C02": {
+  "src": "ITU-R Rec. P.533; ARRL Handbook",
+  "x": "HF signals refract off the ionosphere and come back to Earth hundreds or thousands of miles away. That skip is routine on HF and rare above it, which is the main practical difference between the two."
+ },
+ "T3C03": {
+  "src": "ARRL Handbook",
+  "x": "Aurora scatters VHF signals off rapidly moving, uneven curtains of ionized gas. The constant motion Doppler-smears the signal, leaving CW with a rough buzz and SSB barely intelligible. That raspy sound is the giveaway."
+ },
+ "T3C04": {
+  "src": "ARRL Handbook; ITU-R Rec. P.534",
+  "x": "Sporadic E is the usual explanation for sudden strong openings on 10, 6 and 2 meters. Dense patches form in the E region around 60 miles up and reflect signals well above the frequencies the ionosphere normally returns. They come and go without warning."
+ },
+ "T3C05": {
+  "src": "ITU-R Rec. P.526 (diffraction)",
+  "x": "A wave passing a sharp edge such as a ridgeline or a building corner bends slightly around it and re-radiates into the shadow behind. Knife-edge diffraction is why a station tucked behind a hill can still be workable."
+ },
+ "T3C06": {
+  "src": "ITU-R Rec. P.834; ARRL Handbook",
+  "x": "Tropospheric ducting traps VHF and UHF signals in a layer of the lower atmosphere that guides them like a waveguide. Paths of 300 miles or more open up, most often over water and in stable weather."
+ },
+ "T3C07": {
+  "src": "ARRL Handbook",
+  "x": "Six meters is the sweet spot for meteor scatter. Lower frequencies suffer too much ordinary ionospheric interference, higher ones reflect poorly off the brief ionized trails. Bursts last from a fraction of a second to a few seconds."
+ },
+ "T3C08": {
+  "src": "ITU-R Rec. P.834; ARRL Handbook",
+  "x": "A temperature inversion puts warm air above cool air, reversing the normal gradient. The sharp change in refractive index at that boundary bends signals back down instead of letting them escape, forming the duct."
+ },
+ "T3C09": {
+  "src": "NOAA Space Weather Prediction Center; ARRL Handbook",
+  "x": "Ten meters via the F region works from dawn until shortly after sunset, and only when sunspot numbers are high. The band depends on solar ultraviolet to ionize the F layer enough to bend 28 MHz, so it usually closes after dark."
+ },
+ "T3C10": {
+  "src": "NOAA Space Weather Prediction Center; ARRL Handbook",
+  "x": "At solar maximum the F region ionizes strongly enough to return 10 meters and sometimes even 6. Both bands go quiet at the bottom of the cycle. The sunspot count is what decides whether they open."
+ },
+ "T3C11": {
+  "src": "ITU-R Rec. P.834 (4/3 Earth radius model)",
+  "x": "Air density falls with altitude, so a radio wave bends gently downward as it travels, following the curve of the Earth a little way past where light would leave. Engineers model it as a 4/3 Earth radius, putting the radio horizon roughly 15 percent farther out."
+ },
+ "T4A01": {
+  "src": "ARRL Handbook; power supply sizing",
+  "x": "Mobile gear runs on a nominal 13.8 volts, matching a car's charging system rather than the 12 V battery label. A 50-watt final is only about half efficient, so it pulls near 150 watts from the supply. Divide by 13.8 and you land around 11 amps, which is why 12 A is the sensible rating."
+ },
+ "T4A02": {
+  "src": "ARRL Handbook",
+  "x": "An SWR meter is built for a frequency range and a power range, and it reads wrong outside either. A meter made for HF will not measure 440 MHz, and a QRP meter reading 100 watts may be damaged. Match both to your station."
+ },
+ "T4A03": {
+  "src": "Ohm's law; ARRL Handbook",
+  "x": "At 12 amps even a small wire resistance costs real voltage, because the drop is current times resistance. Long or thin wire starves the radio on transmit peaks, which shows up as low power or a reset. Short and thick keeps the resistance negligible."
+ },
+ "T4A04": {
+  "src": "ARRL Handbook; WSJT-X documentation",
+  "x": "FT8 is generated and decoded in software, so the radio's audio output feeds the computer's input and the computer's output feeds the radio's mic input. The sound card does the modulating and demodulating; the radio just moves the audio to and from RF."
+ },
+ "T4A05": {
+  "src": "ARRL Handbook",
+  "x": "Put it in the feed line between transmitter and antenna, because that is the only place the forward and reflected power actually exist. A meter anywhere else is not measuring what reaches the antenna."
+ },
+ "T4A06": {
+  "src": "ARRL Handbook",
+  "x": "Three signals: audio out of the radio into the computer, audio out of the computer into the radio, and a keying line to switch the transmitter on. Two audio paths and one control line. Modern USB interfaces bundle all three into one cable."
+ },
+ "T4A07": {
+  "src": "ARRL Handbook",
+  "x": "Receive audio flows from the transceiver's speaker or headphone jack into the computer's line input. That is the path the decoding software listens on. The return path runs the other way, computer output into the radio's microphone or accessory input."
+ },
+ "T4A08": {
+  "src": "IEEE skin-effect theory; ARRL Handbook",
+  "x": "RF current rides on the surface of a conductor rather than through its middle, so what matters is surface area and low inductance, not cross-sectional area. Flat strap gives you far more perimeter and less inductance per foot than round wire of the same weight."
+ },
+ "T4A09": {
+  "src": "Battery capacity definition (ampere-hours)",
+  "x": "Ampere-hours divided by amps leaves hours. A 20 Ah battery feeding a 2 A load runs about 10 hours on paper. Real batteries deliver less under heavy load and in the cold, so treat the figure as an upper bound."
+ },
+ "T4A10": {
+  "src": "ARRL Handbook; ETSI TS 102 361 (DMR)",
+  "x": "A hotspot is a low-power digital transceiver that bridges your handheld to a digital voice network over your internet connection. It covers your house, not your county. The reach comes from the network, not from RF."
+ },
+ "T4A11": {
+  "src": "ARRL Handbook; vehicle electrical practice",
+  "x": "Run the negative lead back to the battery's chassis ground rather than picking up a convenient sheet metal screw. Body panels are joined by welds and bolts that make poor, noisy RF connections, and the resulting voltage drop shows up as alternator whine in your audio."
+ },
+ "T4A12": {
+  "src": "ARRL Handbook",
+  "x": "An electronic keyer turns paddle movements into properly timed dots and dashes at a set speed. You still send the code yourself; the keyer handles the timing so the character spacing stays even."
+ },
+ "T4B01": {
+  "src": "ARRL Handbook; SSB transmitter design",
+  "x": "Too much microphone gain drives the transmitter past its linear range, so the output no longer follows the input. The result is distorted audio and splatter onto neighboring frequencies. Set gain by ALC indication rather than by ear."
+ },
+ "T4B02": {
+  "src": "ARRL Handbook",
+  "x": "Either the keypad or the VFO knob will do it. Direct entry gets you to a known frequency instantly; the knob is for tuning around and finding what is there. Most radios offer both because the two tasks are different."
+ },
+ "T4B03": {
+  "src": "ARRL Handbook; FM receiver design",
+  "x": "Squelch mutes audio below a threshold, so a weak signal that fails to cross it never reaches the speaker. Back the control off until the receiver hisses continuously and the weak station comes through. You trade quiet for sensitivity."
+ },
+ "T4B04": {
+  "src": "FM discriminator theory; ARRL Handbook",
+  "x": "An FM detector converts frequency shifts to audio using a response curve centered on the carrier. Tune slightly off and the signal sits on a nonlinear part of that curve, so the recovered audio comes out distorted."
+ },
+ "T4B05": {
+  "src": "ARRL Handbook",
+  "x": "Scanning steps the receiver through a range of frequencies or memory channels, pausing when it finds a signal that breaks squelch. It is how you find activity without turning the knob yourself."
+ },
+ "T4B06": {
+  "src": "ARRL Handbook",
+  "x": "RIT, also labeled Clarifier, shifts your receive frequency slightly without moving your transmit frequency. Voice pitch on SSB depends on how closely the two stations are tuned, so a small nudge brings a high or low sounding voice back to natural."
+ },
+ "T4B07": {
+  "src": "ETSI TS 102 361 (DMR)",
+  "x": "A code plug is the configuration file loaded into a DMR radio: channels, frequencies, color codes, talkgroups and contacts. Nothing works until it is programmed, which is why DMR users trade code plugs for their local systems."
+ },
+ "T4B08": {
+  "src": "ARRL Handbook; matched filter theory",
+  "x": "Noise arrives across the whole passband while the signal occupies only part of it, so a filter matched to the mode admits the signal and rejects the rest. CW needs a few hundred hertz, SSB a couple of kilohertz. Using the right one is often worth more than more antenna."
+ },
+ "T4B09": {
+  "src": "ETSI TS 102 361 (DMR)",
+  "x": "Enter the group's identification code. A DMR talkgroup is a number rather than a frequency, so selecting one is a matter of telling the radio which ID to unmute for. Everyone stays on the same channel."
+ },
+ "T4B10": {
+  "src": "ARRL Handbook; matched filter theory",
+  "x": "Communications-quality SSB voice occupies roughly 2.4 kHz, so a 2400 Hz filter passes the intelligence and rejects everything else. Go wider and you let in noise you do not need; go much narrower and the voice starts sounding muffled."
+ },
+ "T4B11": {
+  "src": "JARL D-STAR system specification",
+  "x": "D-STAR sends your call sign as digital data in every transmission, so the radio must be programmed with it before it will transmit properly. The network uses that call sign for routing, which is why it is not optional the way a memory label is."
+ },
+ "T5A01": {
+  "src": "SI base units (BIPM); IEEE Std 270",
+  "x": "Current is measured in amperes, usually shortened to amps. One ampere is a specific number of electrons flowing past a point each second. In Ohm's law it is the letter I, which trips people up until you have seen it a few times."
+ },
+ "T5A02": {
+  "src": "SI derived units (BIPM)",
+  "x": "Power is measured in watts. One watt is one joule of energy per second, which is why power always describes a rate rather than an amount. Volts times amps gives you watts in a DC circuit."
+ },
+ "T5A03": {
+  "src": "IEEE Std 270",
+  "x": "Electron flow through a circuit is called current. Think of the three basics as a set: voltage pushes, current flows, resistance opposes."
+ },
+ "T5A04": {
+  "src": "SI derived units (BIPM)",
+  "x": "Frequency is the count of complete cycles per second. One cycle takes the waveform positive, back through zero, negative, and back to the start. Sixty cycles per second is 60 hertz."
+ },
+ "T5A05": {
+  "src": "Ohm's law; IEEE Std 270",
+  "x": "A difference in voltage, also called potential difference, is what makes electrons move. No difference means no flow, no matter how good the conductor. Voltage is the push behind the current."
+ },
+ "T5A06": {
+  "src": "SI derived units (BIPM)",
+  "x": "The hertz, named for Heinrich Hertz, who first demonstrated radio waves. One hertz is one cycle per second, so 7 MHz means seven million cycles every second."
+ },
+ "T5A07": {
+  "src": "Solid-state physics; ARRL Handbook",
+  "x": "Metal atoms hold their outermost electrons loosely, leaving a sea of free electrons that drift when voltage is applied. Insulators bind their electrons tightly, so nothing moves. Free electrons are what conduction requires."
+ },
+ "T5A08": {
+  "src": "Materials science; ARRL Handbook",
+  "x": "Glass holds its electrons tightly and conducts essentially nothing, which is why it appears in antenna standoffs and high-voltage insulators. Metals do the opposite."
+ },
+ "T5A09": {
+  "src": "IEEE Std 270",
+  "x": "Alternating current reverses direction repeatedly, flowing one way then the other. Direct current keeps going the same way. House wiring and radio signals are AC; a battery supplies DC."
+ },
+ "T5A10": {
+  "src": "SI derived units (BIPM)",
+  "x": "Power is the rate at which energy gets used, measured in watts. Energy is the total consumed over time. Your radio draws 100 watts of power; running it an hour consumes 100 watt-hours of energy."
+ },
+ "T5A11": {
+  "src": "Ohm's law",
+  "x": "Resistance opposes both AC and DC alike. A 50-ohm resistor is 50 ohms either way. Reactance, from capacitors and inductors, is the property that behaves differently with AC, and it is not the same thing as resistance."
+ },
+ "T5B01": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Milli means one thousandth, so multiply by 1000 going from amperes to milliamperes: 1.5 A is 1500 mA. Moving to a smaller unit always makes the number bigger."
+ },
+ "T5B02": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Kilo means a thousand, so divide by 1000: 1,500,000 Hz becomes 1500 kHz. Divide again and you get 1.5 MHz, which is the same frequency written a third way."
+ },
+ "T5B03": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Kilo is a thousand, so a kilovolt is 1000 volts. The same prefix works everywhere: kilohertz, kilowatt, kilometer all mean a thousand of the base unit."
+ },
+ "T5B04": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Micro means one millionth, so a microvolt is one millionth of a volt. That is the scale of signals arriving at your receiver's antenna terminals, which is why receiver sensitivity is quoted in microvolts."
+ },
+ "T5B05": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Milli is one thousandth, so divide by 1000: 500 mW is 0.5 watts. Handheld radios on low power and QRP rigs live in this range."
+ },
+ "T5B06": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Divide milliamperes by 1000 to reach amperes: 3000 mA is 3 A. Same conversion as T5B01, run the other direction."
+ },
+ "T5B07": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Multiply MHz by 1000 to get kHz: 3.525 MHz is 3525 kHz. This one is worth knowing cold, since 3.525 MHz is the bottom of the Technician CW segment on 80 meters."
+ },
+ "T5B08": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Pico is a trillionth and micro is a millionth, six decimal places apart. So a million picofarads makes 1 microfarad. Capacitor values run small enough that pF and uF are the units you actually see."
+ },
+ "T5B09": {
+  "src": "Decibel definition, 10·log₁₀(P₂/P₁)",
+  "x": "Doubling power is always 3 dB, whatever the starting point. 5 to 10 watts is a doubling, so 3 dB. Worth memorizing alongside its opposite: halving power is minus 3 dB."
+ },
+ "T5B10": {
+  "src": "Decibel definition, 10·log₁₀(P₂/P₁)",
+  "x": "From 12 to 3 watts is one quarter the power, which is two halvings. Each halving costs 3 dB, so the total is minus 6 dB. The minus sign matters, since power went down."
+ },
+ "T5B11": {
+  "src": "Decibel definition, 10·log₁₀(P₂/P₁)",
+  "x": "A ten times change is 10 dB, so 20 to 200 watts is 10 dB. Two rules cover nearly every decibel question on this exam: doubling is 3 dB, ten times is 10 dB."
+ },
+ "T5B12": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Divide kHz by 1000 to reach MHz: 28400 kHz is 28.400 MHz. That frequency sits in the Technician phone segment on 10 meters, between 28.300 and 28.500."
+ },
+ "T5B13": {
+  "src": "SI prefixes (BIPM)",
+  "x": "Giga is a billion, so divide MHz by 1000: 2425 MHz is 2.425 GHz. This lands in the 13-centimeter band, shared with Wi-Fi and microwave ovens."
+ },
+ "T5C01": {
+  "src": "IEEE Std 270; ARRL Handbook",
+  "x": "Capacitance is the ability to store energy in an electric field, which a capacitor does between two plates separated by an insulator. Its partner is inductance, which stores energy in a magnetic field instead."
+ },
+ "T5C02": {
+  "src": "SI derived units (BIPM)",
+  "x": "The farad, named for Michael Faraday. A full farad is enormous, so practical parts are marked in microfarads or picofarads."
+ },
+ "T5C03": {
+  "src": "IEEE Std 270; ARRL Handbook",
+  "x": "Inductance stores energy in a magnetic field, which is what a coil of wire does when current flows through it. Electric field means capacitance; magnetic field means inductance."
+ },
+ "T5C04": {
+  "src": "SI derived units (BIPM)",
+  "x": "The henry, named for Joseph Henry. Like the farad it is a large unit, so you will see millihenries and microhenries on real components."
+ },
+ "T5C05": {
+  "src": "IEEE Std 270",
+  "x": "Impedance is measured in ohms, the same unit as resistance, because both describe opposition to current. That shared unit is why a 50-ohm feed line matches a 50-ohm antenna."
+ },
+ "T5C06": {
+  "src": "SI unit symbols (BIPM)",
+  "x": "kHz, with a lowercase k and a capital H. The capital H honors Hertz as a person's name, and SI uses a small k for kilo. Case is not decorative here."
+ },
+ "T5C07": {
+  "src": "SI unit symbols (BIPM)",
+  "x": "MHz, capital M and capital H. The capital M distinguishes mega from milli, which uses a lowercase m. Mixing them up changes the value by a factor of a billion."
+ },
+ "T5C08": {
+  "src": "Joule's law",
+  "x": "Power equals current times voltage, P = I x E. The PIE memory wheel holds all three arrangements: cover P and you get I times E, cover I and you get P over E."
+ },
+ "T5C09": {
+  "src": "Joule's law",
+  "x": "Multiply volts by amps: 13.8 x 10 = 138 watts. This is the everyday case of a mobile radio on a 13.8-volt supply, so the numbers are worth recognizing."
+ },
+ "T5C10": {
+  "src": "Joule's law",
+  "x": "12 volts times 2.5 amperes gives 30 watts. Straight multiplication, no rearranging needed when the question hands you both volts and amps."
+ },
+ "T5C11": {
+  "src": "Joule's law",
+  "x": "Rearrange P = I x E into I = P / E, then divide: 120 watts over 12 volts is 10 amperes. When the question gives you power and asks for current, divide by the voltage."
+ },
+ "T5C12": {
+  "src": "IEEE Std 270; AC circuit theory",
+  "x": "Impedance is the total opposition to alternating current, combining plain resistance with reactance from capacitance and inductance. Reactance varies with frequency, which is why impedance does too."
+ },
+ "T5D01": {
+  "src": "Ohm's law",
+  "x": "I = E / R. Current equals voltage divided by resistance. The Ohm's law triangle has E on top with I and R below, so covering the quantity you want shows the arithmetic."
+ },
+ "T5D02": {
+  "src": "Ohm's law",
+  "x": "E = I x R. Voltage equals current times resistance. With E on top of the triangle, the two below multiply together."
+ },
+ "T5D03": {
+  "src": "Ohm's law",
+  "x": "R = E / I. Resistance equals voltage divided by current. All three forms are the same equation rearranged, so learning the triangle once covers every version."
+ },
+ "T5D04": {
+  "src": "Ohm's law",
+  "x": "Resistance wanted, so divide voltage by current: 90 volts over 3 amperes is 30 ohms. Sanity check by working backward, since 3 amps through 30 ohms does give 90 volts."
+ },
+ "T5D05": {
+  "src": "Ohm's law",
+  "x": "12 volts divided by 1.5 amperes gives 8 ohms. Fractional currents make people reach for a calculator, but 12 over 1.5 is the same as 24 over 3."
+ },
+ "T5D06": {
+  "src": "Ohm's law",
+  "x": "Divide 12 volts by 4 amperes for 3 ohms. Note the phrasing: drawing 4 amperes from a 12-volt source is the same information as 12 volts across the circuit."
+ },
+ "T5D07": {
+  "src": "Ohm's law",
+  "x": "Current wanted, so divide voltage by resistance: 120 over 80 is 1.5 amperes. When the answer lands between whole numbers, that is usually a sign you divided in the right order."
+ },
+ "T5D08": {
+  "src": "Ohm's law",
+  "x": "200 volts across 100 ohms gives 2 amperes. Connected across simply means the full voltage appears at the resistor's terminals."
+ },
+ "T5D09": {
+  "src": "Ohm's law",
+  "x": "240 volts over 24 ohms is 10 amperes. The tidy numbers here make it a good place to check that you are dividing volts by ohms rather than the reverse."
+ },
+ "T5D10": {
+  "src": "Ohm's law",
+  "x": "Voltage wanted, so multiply: 0.5 amperes times 2 ohms is 1 volt. Small currents through small resistances produce small voltages, which is the sanity check on this one."
+ },
+ "T5D11": {
+  "src": "Ohm's law",
+  "x": "1 ampere through 10 ohms gives 10 volts. Multiplying by one keeps this simple, and it makes the pattern for the next question obvious."
+ },
+ "T5D12": {
+  "src": "Ohm's law",
+  "x": "2 amperes through 10 ohms is 20 volts. Same resistor as T5D11 with twice the current, so twice the voltage. That proportionality is Ohm's law in one line."
+ },
+ "T5D13": {
+  "src": "Kirchhoff's current law",
+  "x": "Series. One path means every electron passes through every component, so the current is identical everywhere. What differs in a series circuit is the voltage across each part."
+ },
+ "T5D14": {
+  "src": "Kirchhoff's voltage law",
+  "x": "Parallel. Each branch connects to the same two points, so each sees the same voltage. Current divides among the branches according to their resistances. Series shares current, parallel shares voltage."
+ },
+ "T6A01": {
+  "src": "Ohm's law; IEEE Std 270",
+  "x": "A resistor opposes current, and how strongly is its resistance in ohms. It is the component you add when a circuit would otherwise pass more current than something downstream can survive."
+ },
+ "T6A02": {
+  "src": "IEEE Std 270; ARRL Handbook",
+  "x": "A potentiometer is a resistor with a movable contact that taps somewhere along its element. Turning the shaft moves that tap, which is why it works as a volume control. Same part, different name: a variable resistor."
+ },
+ "T6A03": {
+  "src": "IEEE Std 270",
+  "x": "Resistance. The wiper slides along a resistive track, changing how much of that track sits in the circuit. Everything else follows from that, since changing resistance is what changes the voltage or current you are adjusting."
+ },
+ "T6A04": {
+  "src": "IEEE Std 270; ARRL Handbook",
+  "x": "A capacitor stores energy in an electric field between two plates. Its partner is the inductor, which stores energy magnetically. Electric field means capacitor, every time."
+ },
+ "T6A05": {
+  "src": "ARRL Handbook",
+  "x": "Two conductive surfaces separated by an insulator is the physical description of a capacitor. The insulator is called the dielectric, and no current flows through it. Energy is held in the field across the gap."
+ },
+ "T6A06": {
+  "src": "IEEE Std 270; ARRL Handbook",
+  "x": "An inductor stores energy in a magnetic field. Current through a wire creates that field, and winding the wire into a coil concentrates it. Magnetic field means inductor."
+ },
+ "T6A07": {
+  "src": "ARRL Handbook",
+  "x": "An inductor is literally a coil of wire, sometimes wound on a core to strengthen the field. That coiled shape is exactly how it is drawn on a schematic, which makes it one of the easier symbols to recognize."
+ },
+ "T6A08": {
+  "src": "IEEE Std 315 (graphic symbols)",
+  "x": "Read the name as a description. Single-pole means one common input; double-throw means it can connect to either of two outputs. So one circuit gets routed to one of two destinations."
+ },
+ "T6A09": {
+  "src": "IEEE Std 315 (graphic symbols)",
+  "x": "Component 3 shows two terminals with a single hinged lever between them. One contact in, one contact out, one moving arm, so single-pole single-throw. A double-throw switch would show a second contact for the lever to reach."
+ },
+ "T6A10": {
+  "src": "IEEE battery standards; ARRL Handbook",
+  "x": "Nickel-metal hydride, lithium-ion and lead-acid are all rechargeable, so the inclusive answer is right. These are the chemistries in handhelds, battery packs and station backup supplies precisely because they can be cycled."
+ },
+ "T6A11": {
+  "src": "IEEE battery standards",
+  "x": "Carbon-zinc is the classic disposable cell, and its chemical reaction does not usefully reverse. Trying to charge one risks leaking or rupturing it. It is the odd one out among the chemistries this pool asks about."
+ },
+ "T6B01": {
+  "src": "Semiconductor physics; ARRL Handbook",
+  "x": "Forward voltage depends on the semiconductor material. Ordinary silicon diodes drop about 0.7 volts, germanium closer to 0.3, and Schottky types lower still. Since it varies by type, the answer that says so is correct."
+ },
+ "T6B02": {
+  "src": "Semiconductor physics",
+  "x": "A diode conducts in one direction and blocks the other. That one-way behavior is what makes rectifiers possible, turning alternating current into current that flows only one way."
+ },
+ "T6B03": {
+  "src": "ARRL Handbook",
+  "x": "A transistor works as a switch when driven hard between fully off and fully on. A small base or gate current controls a much larger current, with no moving parts and switching speeds no mechanical switch can touch."
+ },
+ "T6B04": {
+  "src": "Semiconductor physics",
+  "x": "A bipolar transistor is three regions of doped semiconductor, either NPN or PNP. The three regions give it its three leads, and the thin middle region is what lets a small current control a large one."
+ },
+ "T6B05": {
+  "src": "Semiconductor physics; ARRL Handbook",
+  "x": "Gate, drain and source belong to the field-effect transistor. A bipolar transistor uses emitter, base and collector instead. Learn the two sets as pairs and either question gives you the other."
+ },
+ "T6B06": {
+  "src": "IEEE Std 315; ARRL Handbook",
+  "x": "A stripe on the body marks the cathode end. On the schematic symbol the cathode is the bar the triangle points into, so the painted stripe matches the drawn bar. Conventional current flows into the triangle and out past the stripe."
+ },
+ "T6B07": {
+  "src": "Semiconductor physics",
+  "x": "Forward current makes an LED light. Electrons crossing the junction release their energy as photons instead of heat, and the semiconductor material sets the color. Reverse the polarity and it simply stays dark."
+ },
+ "T6B08": {
+  "src": "IEEE Std 270",
+  "x": "Field Effect Transistor. The name describes how it works: voltage on the gate creates an electric field that widens or pinches the channel current flows through. The gate draws almost no current, unlike a bipolar transistor's base."
+ },
+ "T6B09": {
+  "src": "IEEE Std 270",
+  "x": "Anode and cathode. Current enters at the anode and leaves at the cathode when the diode is forward biased. The cathode is the striped end on the part and the bar on the symbol."
+ },
+ "T6B10": {
+  "src": "ARRL Handbook",
+  "x": "A transistor provides power gain, using a small input signal to control a much larger output drawn from the power supply. Transformers can raise voltage but never add power. Only an active device with a supply behind it can."
+ },
+ "T6B11": {
+  "src": "IEEE Std 270",
+  "x": "Gain describes any increase the amplifier produces, whether in voltage, current or power. All three are legitimate ways to express it, so the inclusive answer is correct. Which one matters depends on the job the stage is doing."
+ },
+ "T6B12": {
+  "src": "IEEE Std 270",
+  "x": "Emitter, base and collector. The base is the thin control region in the middle; current flows between emitter and collector under its command. Pair this with the FET set of gate, drain and source."
+ },
+ "T6C01": {
+  "src": "IEEE Std 315 (graphic symbols)",
+  "x": "A schematic uses standard symbols to show what is connected to what. It is not a picture of the physical layout, which is why the same schematic can describe boards that look nothing alike."
+ },
+ "T6C02": {
+  "src": "IEEE Std 315",
+  "x": "Component 1 is drawn as a sharp zigzag in the signal path, which is the standard resistor symbol. Here it sits between the input terminals and the transistor's base, limiting the current that reaches it."
+ },
+ "T6C03": {
+  "src": "IEEE Std 315",
+  "x": "Component 2 is a circle containing a vertical bar with two angled leads, one carrying an arrowhead. That is a bipolar transistor. The bar is the base, and the arrow marks the emitter and tells you it is an NPN."
+ },
+ "T6C04": {
+  "src": "IEEE Std 315",
+  "x": "Component 3 is the small dome or loop shape at the top of the drawing, the standard symbol for a lamp. It sits in the transistor's collector circuit, so the transistor switching on is what lights it."
+ },
+ "T6C05": {
+  "src": "IEEE Std 315",
+  "x": "Component 4 is the stack of alternating long and short parallel lines, which is the battery symbol. The long line is positive and the short one negative. More pairs of lines simply suggest more cells."
+ },
+ "T6C06": {
+  "src": "IEEE Std 315",
+  "x": "Component 6 is two parallel plates with one side curved, the symbol for a capacitor. It sits from the rectifier output to ground, which is the classic filter position where it smooths the pulsating DC."
+ },
+ "T6C07": {
+  "src": "IEEE Std 315",
+  "x": "Component 8 is a diode triangle with two small arrows pointing away from it. Those arrows mean the junction emits light, making it a light emitting diode. Arrows pointing toward the symbol instead would mean a photodiode."
+ },
+ "T6C08": {
+  "src": "IEEE Std 315",
+  "x": "Component 9 is a resistor zigzag with an arrow touching it, which marks an adjustable tap along the element. That makes it a variable resistor. The same symbol with three connected terminals is a potentiometer."
+ },
+ "T6C09": {
+  "src": "IEEE Std 315",
+  "x": "Component 4 is two coils drawn facing each other with lines between them representing the core. That is a transformer, and here it takes the AC input down to a lower voltage before the rectifier."
+ },
+ "T6C10": {
+  "src": "IEEE Std 315",
+  "x": "Component 3 is a coil with an arrow tapping it. Coil means inductor, and the arrow means adjustable, so it is a variable inductor. The same arrow convention marks the variable capacitors elsewhere in this figure."
+ },
+ "T6C11": {
+  "src": "IEEE Std 315",
+  "x": "Component 4 is the triangle at the top right, the standard antenna symbol. It sits at the output end of the tuned network, which is exactly where the antenna belongs in a matching circuit."
+ },
+ "T6C12": {
+  "src": "IEEE Std 315",
+  "x": "A schematic accurately shows component connections and nothing more. It does not tell you where parts sit on the board, how long the wires are, or what anything physically looks like. Connections are the whole point."
+ },
+ "T6D01": {
+  "src": "Semiconductor physics; ARRL Handbook",
+  "x": "A rectifier passes current in one direction only, so an AC input comes out as DC that varies but never reverses. Adding a filter capacitor after it smooths that pulsating output into something steady."
+ },
+ "T6D02": {
+  "src": "IEEE Std 270",
+  "x": "A relay is a switch operated by an electromagnet rather than by hand. A small control current pulls the contacts closed, letting a low-power circuit switch a much larger one while keeping the two electrically separate."
+ },
+ "T6D03": {
+  "src": "ARRL Handbook; EMC practice",
+  "x": "Shielding wraps a grounded conductor around the signal wire so stray fields terminate on the shield instead of the conductor inside. It blocks interference in both directions, keeping noise out and your signal in."
+ },
+ "T6D04": {
+  "src": "IEEE Std 270",
+  "x": "A meter displays an electrical quantity as a number, whether on a digital readout or a moving pointer against a scale. The quantity depends on what you set it to measure."
+ },
+ "T6D05": {
+  "src": "ARRL Handbook",
+  "x": "A regulator holds output voltage steady as the input voltage or the load current changes. Without one, your radio would see the supply sag every time the transmitter keyed up."
+ },
+ "T6D06": {
+  "src": "Faraday's law; ARRL Handbook",
+  "x": "A transformer changes AC voltage using two coils sharing a magnetic field. The turns ratio sets the change, so fewer turns on the secondary gives a lower voltage. It only works on AC, since a changing field is what couples the coils."
+ },
+ "T6D07": {
+  "src": "ARRL Handbook",
+  "x": "LEDs are the standard visual indicator: low current, long life, and no filament to burn out. That is why the front panel of every modern radio is covered in them."
+ },
+ "T6D08": {
+  "src": "LC resonance theory",
+  "x": "A capacitor combined with an inductor forms a resonant circuit. Their opposing reactances cancel at one frequency, and that frequency is where the circuit responds most strongly. It is the basis of every filter and tuned stage in your radio."
+ },
+ "T6D09": {
+  "src": "IEEE Std 270",
+  "x": "An integrated circuit packs many semiconductors and other components onto one chip. It is how a function that once filled a chassis now fits in a package smaller than your fingernail."
+ },
+ "T6D10": {
+  "src": "ARRL Handbook; semiconductor physics",
+  "x": "Component 2 is the transistor, and its job in this circuit is controlling current. A small current into the base governs the much larger current flowing through the lamp, so the transistor acts as the switch or amplifier."
+ },
+ "T6D11": {
+  "src": "LC resonance theory",
+  "x": "An inductor and a capacitor together, wired in series or in parallel. Either arrangement resonates, though they behave oppositely at that frequency: series presents minimum impedance, parallel presents maximum."
+ },
+ "T7A01": {
+  "src": "IEEE Std 270; ARRL Handbook",
+  "x": "Sensitivity is how weak a signal the receiver can still detect, usually quoted in microvolts. Its partner term is selectivity, which is about separating signals rather than hearing faint ones. Detect means sensitivity."
+ },
+ "T7A02": {
+  "src": "IEEE Std 270",
+  "x": "A transceiver is a receiver and transmitter in one box, sharing circuitry such as the VFO and often the filters. The word itself is the two terms fused together."
+ },
+ "T7A03": {
+  "src": "ARRL Handbook; superheterodyne theory",
+  "x": "A mixer combines two frequencies and produces their sum and difference, which is how a signal gets shifted to another frequency. It is the heart of every superheterodyne receiver, converting incoming signals down to a fixed intermediate frequency."
+ },
+ "T7A04": {
+  "src": "IEEE Std 270; ARRL Handbook",
+  "x": "Selectivity is the ability to separate a wanted signal from others nearby, and it comes mostly from the receiver's filters. Sensitivity hears the weak one; selectivity ignores the loud neighbor."
+ },
+ "T7A05": {
+  "src": "IEEE Std 270",
+  "x": "An oscillator generates a signal at a chosen frequency, converting DC from the supply into AC at radio frequency. Every transmitter and receiver contains at least one, since without a generated reference there is nothing to mix against."
+ },
+ "T7A06": {
+  "src": "ARRL Handbook",
+  "x": "A transverter shifts a transceiver's whole operating range onto another band, converting both transmit and receive. It lets an HF radio work a microwave band without replacing the radio, which is common practice on the higher bands."
+ },
+ "T7A07": {
+  "src": "ARRL Handbook",
+  "x": "PTT means push to talk, and grounding that input switches the radio from receive to transmit. A foot switch, a microphone button, or a computer interface all work the same way: connect the line to ground and the transmitter keys."
+ },
+ "T7A08": {
+  "src": "IEEE Std 270; modulation theory",
+  "x": "Modulation is impressing information onto a carrier by varying one of its properties. Change the amplitude and you get AM, the frequency and you get FM. Speech plus carrier equals modulation."
+ },
+ "T7A09": {
+  "src": "ARRL Handbook",
+  "x": "SSB and CW-FM place different demands on an amplifier. SSB is a varying envelope needing linear amplification, while FM and CW have constant amplitude and can tolerate more efficient nonlinear operation. The switch sets the amplifier up correctly for the mode you picked."
+ },
+ "T7A10": {
+  "src": "ARRL Handbook",
+  "x": "An RF power amplifier raises the transmitter's output, taking a few watts in and producing many more using energy from its own supply. Remember §97.313(a) still applies: use the minimum power needed."
+ },
+ "T7A11": {
+  "src": "ARRL Handbook",
+  "x": "The VFO sets the frequency you transmit and receive on, and it is what moves when you turn the tuning knob. Variable is the operative word, distinguishing it from a crystal oscillator locked to one frequency."
+ },
+ "T7B01": {
+  "src": "FM deviation limits; ARRL Handbook",
+  "x": "Over-deviation means your audio is driving the transmitter past its allowed frequency swing, which splatters into adjacent channels and sounds distorted. Backing away from the microphone lowers the audio level and brings deviation back in range."
+ },
+ "T7B02": {
+  "src": "ARRL Handbook; receiver front-end design",
+  "x": "The fault is usually in the consumer receiver, not your transmitter. Broadcast sets are built cheaply with poor front-end filtering, so a strong nearby signal on any frequency can overload the input stage. Your signal is legal and on frequency; their radio simply cannot reject it."
+ },
+ "T7B03": {
+  "src": "ARRL Handbook; EMC practice",
+  "x": "Interference comes from many directions: arcing power lines, switching supplies, LED lighting, and consumer electronics of every kind. Since all the listed sources genuinely cause it, the inclusive answer is right."
+ },
+ "T7B04": {
+  "src": "ARRL Handbook; transmitter protection circuits",
+  "x": "High SWR means power is reflecting back into the transmitter, and solid-state finals protect themselves by folding back output. Low power with everything else normal usually points at the antenna system rather than the radio."
+ },
+ "T7B05": {
+  "src": "ARRL Handbook; EMC practice",
+  "x": "When a receiver cannot reject your signal, the fix belongs at that receiver. A filter at its antenna input blocks your frequency before it reaches the overloaded front end. Filtering your own transmitter does nothing if your signal is already clean."
+ },
+ "T7B06": {
+  "src": "ARRL Handbook; FCC RFI guidance",
+  "x": "Start by proving your own station is clean. Check that it is working properly and that it does not interfere with your own equipment on the same channel. That tells you whether the problem is yours to fix or theirs, and it is the answer any FCC inquiry would expect."
+ },
+ "T7B07": {
+  "src": "ARRL Handbook; filter theory",
+  "x": "A band-reject filter, also called a notch or trap, attenuates the commercial FM broadcast band while passing 2 meters. The broadcast station is legal and strong, so the practical fix is keeping its energy out of your receiver's front end."
+ },
+ "T7B08": {
+  "src": "ARRL Handbook; FCC RFI guidance",
+  "x": "Work through it cooperatively: make sure your own station is clean, then help the neighbor identify the offending device, since consumer gear must accept interference under Part 15. All the listed steps are reasonable, so the inclusive answer is correct."
+ },
+ "T7B09": {
+  "src": "ARRL Handbook; EMC practice",
+  "x": "Start with the connectors. Loose or improperly installed coax fittings let signal leak in and out, and they are by far the most common cause of cable TV interference. It costs nothing to check and usually solves it."
+ },
+ "T7B10": {
+  "src": "ARRL Handbook",
+  "x": "Distorted repeater audio has several likely causes: over-deviation from talking too loudly, RF getting back into the microphone circuit, or simply operating too far from the repeater. All are genuine, so the inclusive answer is right."
+ },
+ "T7B11": {
+  "src": "ARRL Handbook; ferrite suppression",
+  "x": "A clip-on ferrite choke adds impedance to common-mode RF riding on the microphone cable, stopping your own transmitted signal from feeding back into the audio stages. That feedback is a classic cause of distorted transmit audio in a high-RF shack."
+ },
+ "T7C01": {
+  "src": "ARRL Handbook",
+  "x": "A dummy load absorbs your output so you can test and tune without radiating. It lets you key up, check power and adjust settings without occupying a frequency or interfering with anyone."
+ },
+ "T7C02": {
+  "src": "ARRL Handbook",
+  "x": "An antenna analyzer sweeps a range of frequencies and shows SWR or impedance across it, so you can see where the antenna is actually resonant. An SWR meter tells you the situation at one frequency while transmitting; the analyzer maps the whole picture without transmitting."
+ },
+ "T7C03": {
+  "src": "ARRL Handbook",
+  "x": "A 50-ohm non-inductive resistor on a heat sink. Fifty ohms matches normal feed line, non-inductive keeps the impedance flat across frequency, and the heat sink handles the power, since every watt you send becomes heat."
+ },
+ "T7C04": {
+  "src": "Transmission line theory",
+  "x": "A 1:1 reading means no reflected power, so the load impedance matches the line exactly. SWR is a ratio and 1:1 is the ideal floor. It can never read below that."
+ },
+ "T7C05": {
+  "src": "ARRL Handbook; transmitter protection circuits",
+  "x": "Reflected power from a mismatch stresses the output transistors with voltage and current they were not designed for. Solid-state finals have no tolerance for it, so the radio reduces power to protect them. Tube amplifiers were far more forgiving, which is why this behavior surprises older operators."
+ },
+ "T7C06": {
+  "src": "Transmission line theory",
+  "x": "Any SWR above 1:1 indicates a mismatch between feed line and antenna, and 4:1 is a substantial one. The number tells you the degree of mismatch, not what caused it, so it could be the antenna, the feed line, or a connector."
+ },
+ "T7C07": {
+  "src": "Joule heating; transmission line theory",
+  "x": "Lost power becomes heat in the conductors and the dielectric. It does not radiate and it does not come back. That is why a long run of lossy cable at UHF can waste more power than the radio delivers to the antenna."
+ },
+ "T7C08": {
+  "src": "ARRL Handbook",
+  "x": "A directional wattmeter measures forward and reflected power separately, and SWR follows directly from their ratio. Many meters do that calculation for you and show SWR on the scale."
+ },
+ "T7C09": {
+  "src": "ARRL Handbook",
+  "x": "Moisture is the usual killer. Water wicks into the braid and dielectric, raising loss and corroding the shield, and the damage travels well beyond the entry point. Sealing connectors properly is the cheapest maintenance you can do."
+ },
+ "T7C10": {
+  "src": "Polymer degradation; ARRL Handbook",
+  "x": "Sunlight breaks down the polymer jacket over time, leaving it cracked and brittle. Once cracked it admits water, and moisture is what actually ruins the cable. UV resistance protects the jacket so the jacket can protect the coax."
+ },
+ "T7C11": {
+  "src": "Transmission line theory; ARRL Antenna Book",
+  "x": "Foam dielectric has less loss per foot because much of the insulation is air, which absorbs far less RF energy than solid polyethylene. The tradeoff is that foam is easier to crush and lets moisture migrate more readily if the jacket is breached."
+ },
+ "T7D01": {
+  "src": "IEEE Std 270",
+  "x": "A voltmeter measures electric potential, or the difference in potential between two points. Potential is the formal name for what everyone calls voltage."
+ },
+ "T7D02": {
+  "src": "Kirchhoff's voltage law",
+  "x": "In parallel, across the component. Voltage is a difference between two points, so you need probes on both sides of the part you are measuring. A voltmeter has very high resistance so it barely disturbs the circuit while connected."
+ },
+ "T7D03": {
+  "src": "Kirchhoff's current law",
+  "x": "In series, so the current you want to measure actually flows through the meter. That means breaking the circuit to insert it. An ammeter has very low resistance, which is why connecting one across a voltage source is a good way to destroy it."
+ },
+ "T7D04": {
+  "src": "IEEE Std 270",
+  "x": "An ammeter measures current, and it goes in series with the circuit. The name comes from ampere, the unit it reads."
+ },
+ "T7D05": {
+  "src": "Ohm's law",
+  "x": "An ohmmeter supplies a small known current from its own battery, measures the voltage that results, and applies Ohm's law to report resistance. That is why it needs power of its own and why the circuit under test must be unpowered."
+ },
+ "T7D06": {
+  "src": "ARRL Handbook; instrument protection",
+  "x": "The resistance setting expects the meter to supply the current, not receive it. Apply an external voltage in that mode and you push current through circuitry never designed for it, often taking out the meter or its fuse."
+ },
+ "T7D07": {
+  "src": "IEEE Std 270",
+  "x": "A multimeter reads voltage and resistance, and nearly all of them read current too. The name says it: multiple measurements in one instrument."
+ },
+ "T7D08": {
+  "src": "IPC J-STD-006; ARRL Handbook",
+  "x": "Acid-core solder is made for plumbing. Its flux is corrosive and stays active after the joint cools, quietly eating the connection and nearby traces. Electronics work uses rosin-core solder instead."
+ },
+ "T7D09": {
+  "src": "IPC J-STD-001 (soldering acceptability)",
+  "x": "A cold joint looks dull, rough or lumpy rather than smooth and shiny. It formed without enough heat for the solder to flow and wet the metal properly, so it may test fine today and fail intermittently later. Reheat it until it flows."
+ },
+ "T7D10": {
+  "src": "RC charging theory",
+  "x": "The ohmmeter's own small current charges the capacitor. As charge builds, the voltage across it rises and the meter interprets that as rising resistance, climbing toward infinity. Watching that behavior is a rough way to check whether a large capacitor is healthy."
+ },
+ "T7D11": {
+  "src": "Ohm's law; instrument protection",
+  "x": "Power the circuit down first. An ohmmeter works by injecting its own current, so any external voltage corrupts the reading and can damage the meter. Discharge any large capacitors before probing, too."
+ },
+ "T8A01": {
+  "src": "Modulation theory; ARRL Handbook",
+  "x": "SSB is amplitude modulation with the carrier and one sideband removed. All the information rode in the sidebands anyway, so stripping the rest saves bandwidth and power without losing anything. It remains AM at heart."
+ },
+ "T8A02": {
+  "src": "AX.25 protocol; ARRL Handbook",
+  "x": "VHF packet feeds its tones through an ordinary FM radio, so the modulation is FM or PM. The packet gear generates audio tones and the radio treats them like any other audio, which is why a standard 2-meter rig works unmodified."
+ },
+ "T8A03": {
+  "src": "ARRL Handbook; VHF/UHF band plans",
+  "x": "SSB is the weak-signal voice mode above 50 MHz. Its narrow bandwidth concentrates your power and lets the receiver use a tight filter, so contacts stay workable at signal levels where FM would deliver nothing but hiss."
+ },
+ "T8A04": {
+  "src": "ARRL Handbook",
+  "x": "Repeaters use FM or PM. FM's constant amplitude survives multipath and noise well, and its capture effect means the strongest signal takes the channel cleanly instead of two stations garbling each other."
+ },
+ "T8A05": {
+  "src": "Modulation theory",
+  "x": "CW is the narrowest of these, needing only about 150 Hz. There is no voice content to carry, just a carrier switched on and off, so the occupied bandwidth comes down to the keying speed."
+ },
+ "T8A06": {
+  "src": "ARRL band plans",
+  "x": "Upper sideband is the convention on 10 meters and everything above. Lower sideband is used on 160, 80 and 40 meters. The dividing line falls at 10 meters, so remember 20 meters and up is USB along with all of VHF and UHF."
+ },
+ "T8A07": {
+  "src": "Modulation theory",
+  "x": "SSB occupies roughly 3 kHz against 10 to 15 kHz for FM voice. Narrower bandwidth means your transmitter power is concentrated and the receiver can filter more tightly, which is why SSB reaches farther on the same watts."
+ },
+ "T8A08": {
+  "src": "Speech intelligibility research; ARRL Handbook",
+  "x": "About 3 kHz, which is roughly the range of frequencies that carry intelligible speech. That figure anchors several others worth knowing: the 2.8 kHz limit on 60 meters and the 2400 Hz receiver filter that gives the best signal-to-noise ratio."
+ },
+ "T8A09": {
+  "src": "TIA-603; ARRL Handbook",
+  "x": "Between 10 and 15 kHz. FM spreads energy across a band several times wider than the audio it carries, which is the price of its noise immunity. That is also why repeater channels are spaced 15 or 20 kHz apart."
+ },
+ "T8A10": {
+  "src": "ITU-R BT.470; NTSC standard",
+  "x": "About 6 MHz, the same width as a broadcast television channel. Moving full-motion video in real time takes roughly two thousand times the bandwidth of an SSB voice signal."
+ },
+ "T8A11": {
+  "src": "Modulation theory",
+  "x": "Roughly 150 Hz. Keying a carrier on and off creates sidebands proportional to the keying speed, so at normal code speeds the signal stays very narrow. That narrowness is why CW gets through when nothing else will."
+ },
+ "T8A12": {
+  "src": "FM capture effect",
+  "x": "FM's capture effect means the receiver locks onto the strongest signal and suppresses everything else, so you hear one station at a time. On SSB two stations on nearly the same frequency both come through, which is sometimes an advantage and sometimes a mess."
+ },
+ "T8B01": {
+  "src": "AMSAT; 47 CFR §97.3(a)(46)",
+  "x": "Beacons carry telemetry about the satellite itself: battery voltage, temperatures, and the state of its systems. Ground stations track that data to know whether the spacecraft is healthy and which transponder is active."
+ },
+ "T8B02": {
+  "src": "AMSAT operating guidance",
+  "x": "A linear transponder shares its limited output power among every signal passing through it. Running too much uplink power captures a disproportionate share and pushes everyone else down into the noise. It is the satellite equivalent of shouting over a conversation."
+ },
+ "T8B03": {
+  "src": "AMSAT; orbital mechanics",
+  "x": "Tracking software gives you when the satellite rises and sets, where to point the antenna in azimuth and elevation, and how much Doppler shift to expect. All of the listed outputs are standard, so the inclusive answer is correct."
+ },
+ "T8B04": {
+  "src": "AMSAT; 47 CFR §97.207",
+  "x": "Amateur satellites carry FM, SSB, CW and digital modes depending on the spacecraft. There is no single satellite mode, so the inclusive answer is right. FM birds are the easiest starting point with a handheld and a small beam."
+ },
+ "T8B05": {
+  "src": "47 CFR §97.3(a)(9); AMSAT",
+  "x": "A beacon is a steady transmission carrying the satellite's status information. It also gives you a reference signal for aiming your antenna and gauging Doppler before you try to work the transponder."
+ },
+ "T8B06": {
+  "src": "Orbital mechanics; NORAD two-line elements",
+  "x": "Keplerian elements are the numbers describing the orbit's size, shape and orientation, distributed as two-line element sets. Feed current elements into tracking software and it computes where the satellite will be. They go stale, so refresh them."
+ },
+ "T8B07": {
+  "src": "Doppler effect; AMSAT",
+  "x": "Relative motion between satellite and ground station shifts the received frequency, high as it approaches and low as it recedes. On a fast low orbit the shift is large enough that you retune continuously through a pass."
+ },
+ "T8B08": {
+  "src": "AMSAT mode designations",
+  "x": "The letters name the bands in order, uplink first. U is 70 centimeters and V is 2 meters, so U/V means you transmit on 70 centimeters and listen on 2 meters. Getting the order backwards is the classic beginner error."
+ },
+ "T8B09": {
+  "src": "AMSAT; antenna polarization theory",
+  "x": "The satellite tumbles or spins, so its antennas keep changing orientation relative to yours. As the polarization rotates in and out of alignment with your antenna, the signal rises and falls in a regular rhythm."
+ },
+ "T8B10": {
+  "src": "Orbital mechanics; AMSAT",
+  "x": "Low Earth Orbit, a few hundred kilometers up with a period near 100 minutes. That means fast passes lasting only ten or fifteen minutes, plenty of Doppler, and the need to track the satellite as it crosses."
+ },
+ "T8B11": {
+  "src": "47 CFR §97.207(f); §97.113(a)(4)",
+  "x": "Anyone may receive it. Satellite telemetry is transmitted in the clear precisely so that anyone can decode it, and encoding to obscure meaning would run against Part 97 anyway. Listening has never required a license."
+ },
+ "T8B12": {
+  "src": "AMSAT operating guidance",
+  "x": "Compare your downlink signal to the satellite's beacon. Matching the beacon means you are using a fair share of the transponder. Louder than the beacon means you are taking more than your share and squeezing out other stations."
+ },
+ "T8C01": {
+  "src": "ARRL Handbook; radio direction finding",
+  "x": "Radio direction finding locates a transmitter by taking bearings from several positions and seeing where they cross. It is the standard method for tracking down noise sources, stuck transmitters and deliberate interference."
+ },
+ "T8C02": {
+  "src": "ARRL Handbook",
+  "x": "A directional antenna, since the hunt depends on knowing which way the signal is coming from. An omnidirectional antenna hears the transmitter equally from everywhere, which tells you nothing about where to walk."
+ },
+ "T8C03": {
+  "src": "ARRL contest rules",
+  "x": "Contesting is working as many stations as possible inside a set time. Contacts are brief and formulaic because the goal is volume, which is also why contest operating sounds so different from ordinary conversation."
+ },
+ "T8C04": {
+  "src": "ARRL contest operating guidance",
+  "x": "Send your call sign and the required exchange, nothing more. Everyone on the band is trying to maximize contacts, so extra conversation costs both operators rate. Brevity is courtesy in a contest."
+ },
+ "T8C05": {
+  "src": "Maidenhead Locator System (IARU)",
+  "x": "A grid locator, or Maidenhead locator, compresses latitude and longitude into a short string such as FN31pr. Two letters, two digits and often two more letters narrow your position to a few kilometers, which is enough for VHF work and awards."
+ },
+ "T8C06": {
+  "src": "IRLP documentation; ITU-T Rec. Q.23",
+  "x": "You send DTMF tones, the same touch-tone digits a telephone keypad produces. The node decodes them as commands to connect to or disconnect from another node, so your radio's keypad becomes the dialing interface."
+ },
+ "T8C07": {
+  "src": "IETF RFC 3261 (SIP); VoIP standards",
+  "x": "Voice over Internet Protocol digitizes speech and carries it as data packets across the internet. Amateur linking systems use it to join distant repeaters, so the RF hop is local at each end and the internet covers the middle."
+ },
+ "T8C08": {
+  "src": "IRLP documentation",
+  "x": "IRLP links repeaters and other amateur systems over the internet. Every user is on real RF at their end; the internet only carries audio between nodes, which is why IRLP requires a radio to participate."
+ },
+ "T8C09": {
+  "src": "EchoLink documentation",
+  "x": "EchoLink allows a computer or smartphone to connect directly into the system without RF at that end. That is the distinction from IRLP, where every participant must be on the air."
+ },
+ "T8C10": {
+  "src": "EchoLink documentation; 47 CFR §97.5",
+  "x": "You register your call sign and provide proof of license before the system will admit you. Since EchoLink can key transmitters, it has to verify that everyone connecting is actually licensed."
+ },
+ "T8C11": {
+  "src": "ARRL Handbook",
+  "x": "A gateway is the station bridging amateur radio and the internet, passing traffic between the two. Winlink gateways and IRLP nodes are both examples of the same idea."
+ },
+ "T8D01": {
+  "src": "ARRL Handbook",
+  "x": "Packet, PSK31, FT8, RTTY and the rest are all digital modes, so the inclusive answer is right. What they share is encoding information as discrete symbols rather than as a continuously varying analog waveform."
+ },
+ "T8D02": {
+  "src": "WSJT-X documentation (Taylor and Franke, Princeton)",
+  "x": "FT8 is built for signals buried in noise, decoding reliably well below what an ear can hear. It trades speed and flexibility for sensitivity: fixed 15-second transmissions carrying a very small, highly structured message."
+ },
+ "T8D03": {
+  "src": "APRS specification (Bruninga, WB4APR)",
+  "x": "APRS carries position, weather data, short text messages and telemetry. All the listed types are genuine, so the inclusive answer applies. It is a general-purpose data channel that happens to be used mostly for position reporting."
+ },
+ "T8D04": {
+  "src": "ITU-R BT.470; NTSC standard",
+  "x": "NTSC is the analog color television standard used in North America before digital broadcasting, and amateurs use it for fast-scan TV. It is analog and full motion, which is what separates it from slow-scan TV."
+ },
+ "T8D05": {
+  "src": "APRS specification (Bruninga, WB4APR)",
+  "x": "APRS plots station positions on a live map, which makes it valuable for public service events where net control needs to see where everyone actually is. Real time and tactical are the words to match."
+ },
+ "T8D06": {
+  "src": "Digital modulation theory",
+  "x": "Phase Shift Keying. Information is encoded by shifting the carrier's phase rather than its amplitude or frequency. PSK31 uses it to fit a keyboard conversation into about 31 Hz of bandwidth."
+ },
+ "T8D07": {
+  "src": "ETSI TS 102 361 (DMR)",
+  "x": "DMR uses two-slot TDMA, interleaving two conversations in alternating time slots on one 12.5 kHz channel. Two independent contacts share the same frequency without hearing each other, which effectively doubles repeater capacity."
+ },
+ "T8D08": {
+  "src": "AX.25 protocol specification",
+  "x": "A packet frame carries the sender and destination call signs, the data payload, and a checksum for error detection. All the listed elements are part of the frame, so the inclusive answer is correct."
+ },
+ "T8D09": {
+  "src": "47 CFR §97.3(c)(1)",
+  "x": "CW stands for continuous wave, and Part 97 defines it as international Morse code telegraphy. In practice it means keying a carrier on and off. It remains the narrowest and most power-efficient way to get a message through a bad path."
+ },
+ "T8D10": {
+  "src": "WSJT-X documentation (Taylor and Franke, Princeton)",
+  "x": "WSJT-X supports FT8, FT4, meteor scatter, EME and other weak-signal work, so the inclusive answer is right. The common thread is decoding signals well below the noise floor using known message structure."
+ },
+ "T8D11": {
+  "src": "IETF error-control standards; AX.25",
+  "x": "ARQ means Automatic Repeat reQuest. The receiver checks each block for errors and asks for a resend when one fails, so the data arriving is correct rather than merely approximate. The cost is throughput on a poor path."
+ },
+ "T8D12": {
+  "src": "AREDN project; 47 CFR §97.113(a)(4)",
+  "x": "Mesh networking runs commercial Wi-Fi hardware on modified firmware, moving it onto amateur frequencies that overlap the Part 15 bands and allowing amateur power levels. It is still an amateur station, so encryption to obscure meaning stays prohibited."
+ },
+ "T9A01": {
+  "src": "IEEE Std 145; ARRL Antenna Book",
+  "x": "A beam antenna concentrates radiation in one direction instead of spreading it everywhere. The energy has to come from somewhere, so what it adds in front it takes from the sides and back. Yagis and quads are the common examples."
+ },
+ "T9A02": {
+  "src": "ARRL Antenna Book",
+  "x": "Loading inserts an inductor into a radiating element so a physically short antenna behaves electrically like a longer one. It is how a 2-meter-long mobile whip works on 40 meters. The coil buys resonance, not efficiency."
+ },
+ "T9A03": {
+  "src": "IEEE Std 145",
+  "x": "Antenna polarization is named for the orientation of the electric field it radiates. A vertical element produces a vertical electric field, so it is vertically polarized. Same definition used for the wave itself in T3B02."
+ },
+ "T9A04": {
+  "src": "ARRL Antenna Book; antenna efficiency theory",
+  "x": "That short rubber antenna is heavily loaded to resonate in a fraction of the length it needs, and loading raises losses while lowering radiation resistance. Much of your power warms the antenna instead of leaving it. It works, just inefficiently."
+ },
+ "T9A05": {
+  "src": "Resonance theory; ARRL Antenna Book",
+  "x": "Resonant length and frequency are inversely related, so a shorter dipole resonates higher. Trimming a dipole raises its resonant frequency, which is why you cut antennas long and shorten them in steps."
+ },
+ "T9A06": {
+  "src": "ARRL Antenna Book",
+  "x": "Of the usual choices, the Yagi has the most gain. Its driven element plus reflector and directors form an array that reinforces radiation forward and cancels it elsewhere. Adding more directors buys more gain and a narrower beam."
+ },
+ "T9A07": {
+  "src": "Faraday shielding; ARRL Antenna Book",
+  "x": "A vehicle body is a metal box that behaves like a Faraday shield, attenuating signals passing through it. Your handheld inside the car is partly enclosed by that shield, so both transmit and receive suffer. An external antenna solves it."
+ },
+ "T9A08": {
+  "src": "Resonance theory; ARRL Antenna Book",
+  "x": "At 146 MHz a wavelength is about 2.05 meters, so a quarter wave is near 20 inches. Trim slightly for end effect and you land at 19. You can rebuild that number any time from 300 divided by frequency."
+ },
+ "T9A09": {
+  "src": "ARRL Antenna Book",
+  "x": "A 5/8-wave whip concentrates radiation at a lower angle toward the horizon, which is exactly where distant stations are. That lower takeoff angle is the gain, and it matters more for mobile work than raw height ever will."
+ },
+ "T9A10": {
+  "src": "ARRL Antenna Book; dipole radiation pattern",
+  "x": "A dipole radiates strongest broadside, at right angles to the wire, and puts nulls off the ends. Point the wire across the path you want rather than at it. The pattern is a doughnut with the antenna through the hole."
+ },
+ "T9A11": {
+  "src": "IEEE Std 145",
+  "x": "Gain is the increase in signal in a chosen direction compared with a reference antenna, usually a dipole or an isotropic radiator. No antenna creates power. Gain is redistribution, taking from directions you do not need."
+ },
+ "T9B01": {
+  "src": "ARRL Antenna Book; connector weatherproofing practice",
+  "x": "Every outdoor connector needs sealing, whichever type it is, so the inclusive answer is right. Water entering a connector wicks into the coax and ruins it well beyond the joint, and that damage is invisible until performance falls off."
+ },
+ "T9B02": {
+  "src": "Transmission line theory; ARRL Antenna Book",
+  "x": "Fifty ohms is the amateur standard, and it is what transceivers, meters and dummy loads are built around. The figure is an engineering compromise between the impedances that minimize loss and maximize power handling in coax."
+ },
+ "T9B03": {
+  "src": "ARRL Antenna Book",
+  "x": "Coax is popular because it is forgiving. The shield confines the field inside the cable, so you can run it along metal, bury it, or coil it without upsetting the impedance. Open-wire line has lower loss but demands spacing from everything."
+ },
+ "T9B04": {
+  "src": "Impedance matching theory; ARRL Antenna Book",
+  "x": "A tuner matches the impedance the antenna system presents to what the transmitter wants to see, usually 50 ohms. Note what it does not do: it changes nothing at the antenna itself, so SWR on the feed line stays exactly where it was."
+ },
+ "T9B05": {
+  "src": "Transmission line theory; skin effect",
+  "x": "Loss rises with frequency. Skin effect crowds current into an ever thinner surface layer as frequency climbs, raising effective resistance, and dielectric losses grow too. A cable that is fine on 40 meters may be wasteful at 440 MHz."
+ },
+ "T9B06": {
+  "src": "MIL-STD-348; ARRL Antenna Book",
+  "x": "Type N maintains a constant 50-ohm impedance through the connector and seals well, so it performs properly above 400 MHz. UHF connectors have no controlled impedance, which becomes a real loss at those frequencies despite the name."
+ },
+ "T9B07": {
+  "src": "ARRL Antenna Book",
+  "x": "The PL-259, also called the UHF connector, is the familiar screw-on fitting on HF and VHF gear. Its name is historical rather than descriptive: it does not hold a constant impedance, so it is a poor choice at true UHF."
+ },
+ "T9B08": {
+  "src": "Transmission line theory",
+  "x": "Loss comes from conductor resistance, dielectric absorption, and radiation or leakage through an imperfect shield. All the listed mechanisms are genuine contributors, so the inclusive answer applies."
+ },
+ "T9B09": {
+  "src": "ARRL Antenna Book",
+  "x": "Readings that jump around, especially when the wind blows or you flex the cable, point at a loose or corroded connection rather than a design problem. A steady mismatch reads steady. Intermittent readings mean intermittent contact."
+ },
+ "T9B10": {
+  "src": "Transmission line theory; coax specifications",
+  "x": "Both are 50-ohm cable, but RG-213 is much larger, so its bigger conductor and thicker dielectric mean lower loss at any given frequency. That is the electrical difference; the physical one is that RG-58 is far easier to route."
+ },
+ "T9B11": {
+  "src": "Transmission line theory; ARRL Antenna Book",
+  "x": "Air-insulated hardline has the lowest loss, because air absorbs almost nothing compared with solid dielectric and the large center conductor has very little resistance. The tradeoffs are cost, weight, and the fact that it barely bends."
+ },
+ "T9B12": {
+  "src": "Transmission line theory; IEEE Std 270",
+  "x": "SWR expresses how well the load matches the line, derived from the ratio of forward to reflected power. A perfect match reflects nothing and reads 1:1. The number describes the relationship between line and load, not the quality of either alone."
+ }
+}
