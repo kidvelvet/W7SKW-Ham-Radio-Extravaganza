@@ -161,6 +161,12 @@ The service worker's cache name is a **content hash**, so each rebuild
 automatically retires the old cache. There is no version number to bump; devices
 pick up the new build on next launch.
 
+Every GitHub Pages site under this account shares one origin, and so one Cache
+Storage. The cache name therefore starts with `w7skw-ham-`, and the service
+worker only reads from its own cache and only deletes old `w7skw-ham-` caches.
+The W7SKW Morse Code Trainer uses `w7skw-cw-`, so neither app can serve or wipe
+the other's offline copy. `build.py` refuses to build if the two prefixes overlap.
+
 To preview locally:
 
 ```bash
